@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: #6c6c6c;
+    background-color: #efefef;
 }
 /* Custom styles for sidebar */
 .sidebar {
@@ -14,13 +14,15 @@ body{
     left: 0;
     width: 250px;
     height: 100%;
-    /* padding: 20px; */
-    background-color: #f8f9fa;
     transition: all 0.3s ease-in-out;
   }
 
+  .sidebar .sidebar-icon{
+    height: 120px;
+  }
+
   .sidebar .sidebar-icon img, .sidebar .sidebar-icon i{
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
     object-fit: cover;
   }
@@ -108,13 +110,39 @@ body{
     text-decoration: none;
     padding: 0;
     margin: 0;
+    background: transparent;
     height: 60px;
     color: #000;
-    background: linear-gradient(to right, rgba(0, 0, 255, 0.33) , transparent);
-    transition: all .3s ease-in;
+    transition: all .23s ease-in;
+    overflow: hidden;
   }
-  .list-icon a:hover{
-    padding-left: 1rem;
+
+  .list-icon a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background: linear-gradient(to right, rgba(0, 0, 255, 0.4) , transparent); */
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.4) , #efefef 75%);
+    z-index: -1;
+    transition: all .3s ease-in;
+    border-radius: 2em 0 0 2em;
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  .list-icon a:hover,.list-icon a:active,.list-icon a:focus{
+    padding-left: .8rem;
+  }
+
+  .list-icon a:hover::before,.list-icon a:active::before,.list-icon a:focus::before{
+    /* background: linear-gradient(to right, rgba(0, 0, 255, 0.4) , #efefef 70%); */
+    transform: translateX(0%);
+    /* Apply box shadow to three sides (left, top, and bottom) */
+    box-shadow: rgba(99, 99, 99, 0.505) 2px 1px 0px inset, rgba(99, 99, 99, 0.505) 5px 3px 5px inset;
+    
+    opacity: 1;
   }
 
   .list-icon i {
