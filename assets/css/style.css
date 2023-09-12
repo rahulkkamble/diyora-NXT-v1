@@ -1,164 +1,302 @@
-*,html{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #efefef;
+/* variables */
+:root {
+  --main-color: #605bff;
+  --main-light: #b9b6ff;
+  --main-light-hover: #9593e2;
+  --main-lighter: #f1f0ff;
+  --main-lighter-hover: #e0def4;
+  --body-bg-light: #fafafb;
+  --shadow--sm: 1px 2px 10px -3px var(--main-color);
+  --shadow--sm: 1px 2px 10px -3px #00000085;
+  --shadow--sm-inset: 1px 2px 10px -3px var(--main-color) inset;
+  --shadow--sm-inset-black: -4px 2px 10px -8px #00000085 inset;
 }
-/* Custom styles for sidebar */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    transition: all 0.3s ease-in-out;
-  }
 
-  .sidebar .sidebar-icon{
-    height: 120px;
-  }
+/* Reusable classes */
+.bg--main {
+  background-color: var(--main-color) !important;
+}
 
-  .sidebar .sidebar-icon img, .sidebar .sidebar-icon i{
-    /* height: 100%; */
-    width: 100%;
-    object-fit: cover;
-  }
+.btn.bg--main {
+  color: var(--body-bg-light) !important;
+}
 
-  .sidebar-toggler-icon i{
-    margin: auto;
-  }
-  .sidebar-toggler-icon i:hover{
-    cursor: pointer;
-  }
+.btn.bg--main:hover {
+  background-color: var(--main-lighter-hover) !important;
+  color: #000 !important;
+  box-shadow: var(--shadow--sm);
+}
 
-  .main-container {
-    margin-left: 250px;
-    padding: 20px;
-    transition: all .3s ease-in-out;
-  }
+.shadow--sm {
+  box-shadow: var(--shadow--sm) !important;
+}
 
-  .main-container.sidebar-active{
-    margin-left: 250px;
-  }
+.shadow--sm-inset {
+  box-shadow: var(--shadow--sm-inset) !important;
+}
 
-  .h-1rem {
-    height: 1rem !important;
-  }
+.shadow--sm-inset-black {
+  box-shadow: var(--shadow--sm-inset-black) !important;
+}
 
-  .h-2rem {
-    height: 2rem !important;
-  }
+.line--2 {
+  line-height: 2 !important;
+}
 
-  .w-2rem {
-    width: 2rem !important;
-  }
+.h-1rem {
+  height: 1rem !important;
+}
 
-  .w-1rem {
-    width: 1rem !important;
-  }
+.h-2rem {
+  height: 2rem !important;
+}
 
-  .h-50px {
+.w-2rem {
+  width: 2rem !important;
+}
+
+.w-1rem {
+  width: 1rem !important;
+}
+
+.h-50px {
+  height: 50px !important;
+}
+
+.h-80px {
+  height: 80px !important;
+}
+
+.h-100px {
+  height: 100px !important;
+}
+
+.w-50px {
+  width: 50px !important;
+}
+
+.w-80px {
+  width: 80px !important;
+}
+
+.w-100px {
+  width: 100px !important;
+}
+
+@media screen and (max-width: 767.5px) {
+  .h-100px {
     height: 50px !important;
   }
 
-  .h-80px {
-    height: 80px !important;
-  }
-
-  .h-100px {
-    height: 100px !important;
-  }
-
-  .w-50px {
+  .w-100px {
     width: 50px !important;
   }
 
+  .h-80px {
+    height: 40px !important;
+  }
+
   .w-80px {
-    width: 80px !important;
+    width: 40px !important;
   }
 
-  .w-100px {
-    width: 100px !important;
+  .h-50px {
+    height: 25px !important;
   }
 
-  @media (max-width: 767px) {
-    .sidebar {
-      /* transform: translateX(-250px); */
-      width: 3.5rem;
-      overflow: hidden;
-    }
-
-    .sidebar.active {
-      /* transform: translateX(0); */
-      width: 250px;
-    }
-
-    .main-container {
-      /* margin-left: 0; */
-      margin-left: 3.5rem;
-    }
+  .w-50px {
+    width: 25px !important;
   }
+}
 
-  /* Custom styles for list items with icons */
-  .list-icon a{
-    position: relative;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-    background: transparent;
-    height: 60px;
-    color: #000;
-    transition: all .23s ease-in;
+
+
+/* ====================================================
+=======================================================
+======================= ACTUAL START ==================
+=======================================================
+======================================================= */
+
+body {
+  background-color: var(--body-bg-light);
+}
+
+/* Custom styles for ==================== sidebar =======================*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar .sidebar-icon {
+  height: 120px;
+}
+
+.sidebar .sidebar-icon img,
+.sidebar .sidebar-icon i {
+  /* height: 100%; */
+  width: 100%;
+  object-fit: cover;
+}
+
+.sidebar-toggler-icon i {
+  margin: auto;
+}
+
+.sidebar-toggler-icon i:hover {
+  cursor: pointer;
+}
+
+.main-container {
+  margin-left: 250px;
+  padding: 20px;
+  transition: all .3s ease-in-out;
+}
+
+.main-container.sidebar-active {
+  margin-left: 250px;
+}
+
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 767.5px) {
+  .sidebar {
+    /* transform: translateX(-250px); */
+    width: 3.5rem;
     overflow: hidden;
   }
 
-  .list-icon a::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* background: linear-gradient(to right, rgba(0, 0, 255, 0.4) , transparent); */
-    background: linear-gradient(to right, rgba(0, 0, 255, 0.4) , #efefef 75%);
-    z-index: -1;
-    transition: all .3s ease-in;
-    border-radius: 2em 0 0 2em;
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  .list-icon a:hover,.list-icon a:active,.list-icon a:focus{
-    padding-left: .8rem;
+  .sidebar.active {
+    /* transform: translateX(0); */
+    width: 250px;
   }
 
-  .list-icon a:hover::before,.list-icon a:active::before,.list-icon a:focus::before{
-    /* background: linear-gradient(to right, rgba(0, 0, 255, 0.4) , #efefef 70%); */
-    transform: translateX(0%);
-    /* Apply box shadow to three sides (left, top, and bottom) */
-    box-shadow: rgba(99, 99, 99, 0.505) 2px 1px 0px inset, rgba(99, 99, 99, 0.505) 5px 3px 5px inset;
-    
-    opacity: 1;
-  }
-
-  .list-icon i {
-    margin-right: 10px;
+  .sidebar .sidebar-icon {
+    height: 60px;
+    width: 60px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    background-size: contain;
+    background-image: url(https://i.ibb.co/LdndQYT/diyora-logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
   }
 
-  .list-icon i::before {
-    font-size: 1.5rem;
-    margin: 0;
-    padding: 0;
+  .sidebar .sidebar-icon img {
+    opacity: 0;
   }
 
-  .list-icon span {
-    text-align: center;
-    line-height: 5rem;
+  .nav-link .nav-icon-bg>i {
+    font-size: .95rem;
   }
+
+  .nav-link {
+    padding: 0 .2rem !important;
+  }
+
+  .main-container {
+    /* margin-left: 0; */
+    margin-left: 3.5rem;
+  }
+}
+
+/* Custom styles for list items with icons */
+.list-icon a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  height: 60px;
+  color: #000;
+  transition: all .23s ease-in;
+  overflow: hidden;
+}
+
+.list-icon a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: linear-gradient(to right, rgba(0, 0, 255, 0.4) , transparent); */
+  background: linear-gradient(to right, var(--main-light), var(--body-bg-light) 35%);
+  z-index: -1;
+  transition: all .3s ease-in;
+  /* border-radius: 2em 0 0 2em; */
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.list-icon a:hover,
+.list-icon a:active,
+.list-icon a:focus {
+  /* box-shadow: -2px 5px 10px -8px #00000085; */
+  padding-left: .8rem;
+  z-index: 100;
+}
+
+.list-icon a:hover::before,
+.list-icon a:active::before,
+.list-icon a:focus::before {
+  /* background: linear-gradient(to right, rgba(0, 0, 255, 0.4) , #efefef 70%); */
+  transform: translateX(0%);
+  /* box-shadow: rgba(99, 99, 99, 0.505) 2px 1px 0px inset, rgba(99, 99, 99, 0.505) 5px 3px 5px inset; */
+  opacity: 1;
+}
+
+.list-icon i {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-icon i::before {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.list-icon span {
+  text-align: center;
+  line-height: 5rem;
+}
+
+/* for ========================= Header ========================= */
+.nav-link .nav-icon-bg {
+  display: flex;
+  border-radius: 1rem;
+  background-color: var(--main-lighter);
+  padding: 1rem;
+}
+
+.nav-link .nav-icon-bg:hover {
+  background-color: var(--main-lighter-hover);
+  box-shadow: var(--shadow--sm);
+}
+
+.nav-link .nav-icon-bg>i {
+  font-size: 1.1rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

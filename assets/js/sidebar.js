@@ -48,6 +48,15 @@ window.addEventListener("DOMContentLoaded", function () {
             clearInterval(timerForSidebarClosing);
             clearInterval(timerForSidebarOpening);
         });
+        // listItem.addEventListener('mouseenter', () => {
+        //     sidebar.classList.add('shadow--sm-inset-black');
+        // });
+        // listItem.addEventListener('mouseleave', () => {
+        //     sidebar.classList.remove('shadow--sm-inset-black');
+        // });
+        // listItem.addEventListener('click', () => {
+        //     sidebar.classList.add('shadow--sm-inset-black');
+        // });
     })
 
 
