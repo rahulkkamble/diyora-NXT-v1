@@ -5,6 +5,7 @@ window.addEventListener("DOMContentLoaded", function () {
     const mainContainer = document.querySelector('.main-container');
     const sidebarToggle = document.querySelector('.sidebar-toggler-icon');
     const listIcons = document.querySelectorAll('.sidebar .list-icon');
+    const listIconAncher = document.querySelectorAll('.sidebar .list-icon a');
     
     let timerForSidebarOpening;
     let timerForSidebarClosing;
@@ -54,9 +55,22 @@ window.addEventListener("DOMContentLoaded", function () {
         // listItem.addEventListener('mouseleave', () => {
         //     sidebar.classList.remove('shadow--sm-inset-black');
         // });
-        // listItem.addEventListener('click', () => {
-        //     sidebar.classList.add('shadow--sm-inset-black');
+        // listItem.addEventListener('click', (item) => {
+        //     console.log(item.target)
+        //     // sidebar.classList.add('shadow--sm-inset-black');
         // });
+    })
+    
+    listIconAncher.forEach((ancher) => {    
+        // click event for each ancher tag inside list-icon
+        ancher.addEventListener('click', () => {
+            // removing all active classes from each ancher tag when clicked on any ancher tag
+            listIconAncher.forEach( a => {
+                a.classList.remove('active');
+            });
+            // add active class to currently targeted ancher tag
+            ancher.classList.add('active');
+        })
     })
 
 

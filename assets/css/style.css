@@ -8,6 +8,7 @@ html {
 /* variables */
 :root {
   --main-color: #605bff;
+  --main-dark: #2f2bae;
   --main-light: #b9b6ff;
   --main-light-hover: #9593e2;
   --main-lighter: #f1f0ff;
@@ -117,8 +118,8 @@ html {
 }
 
 section{
-  padding-top: 40px !important;
-  padding-bottom: 40px !important;
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
 }
 
 @media screen and (max-width: 767.5px) {
@@ -147,8 +148,8 @@ section{
   }
 
   section{
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
   }
 }
 
@@ -283,15 +284,26 @@ body {
 
 .list-icon a:hover,
 .list-icon a:active,
-.list-icon a:focus {
+.list-icon a:focus,
+.list-icon a.active {
   /* box-shadow: -2px 5px 10px -8px #00000085; */
   padding-left: .8rem;
   z-index: 100;
 }
 
+.list-icon a:hover span,
+.list-icon a:active span,
+.list-icon a:focus span,
+.list-icon a.active span {
+  color: var(--main-dark);
+  text-shadow: 1px 1px 5px var(--main-light-hover);
+  font-weight: 500;
+}
+
 .list-icon a:hover::before,
 .list-icon a:active::before,
-.list-icon a:focus::before {
+.list-icon a:focus::before,
+.list-icon a.active::before {
   /* background: linear-gradient(to right, rgba(0, 0, 255, 0.4) , #efefef 70%); */
   transform: translateX(0%);
   /* box-shadow: rgba(99, 99, 99, 0.505) 2px 1px 0px inset, rgba(99, 99, 99, 0.505) 5px 3px 5px inset; */
@@ -314,6 +326,7 @@ body {
 .list-icon span {
   text-align: center;
   line-height: 5rem;
+  transition: all .3s ease-in-out;
 }
 
 /* for ========================= Header ========================= */
