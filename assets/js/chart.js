@@ -117,7 +117,9 @@ if (document.querySelector("#chart-line")) {
 };
 
 // doughnut chart
-if (document.querySelector("#chart-line")) {
+if (document.querySelector("#doughnut-chart")) {
+  document.getElementById('doughnut-chart').style.maxHeight = "300px";
+  var ctx3 = document.getElementById('doughnut-chart').getContext('2d');
 
   var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
   var yValues = [55, 49, 44, 24, 15];
@@ -128,14 +130,13 @@ if (document.querySelector("#chart-line")) {
     "#e8c3b9",
     "#1e7145"
   ];
-
-  new Chart("#doughnut-chart", {
+  new Chart(ctx3, {
     type: "doughnut",
     data: {
       labels: xValues,
       datasets: [{
         backgroundColor: barColors,
-        data: yValues
+        data: yValues,
       }]
     },
     options: {
