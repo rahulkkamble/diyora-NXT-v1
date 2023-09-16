@@ -23,8 +23,8 @@ if (document.querySelector("#chart-line")) {
   gradientStroke1.addColorStop(0, "rgba(94,94,255,.05)");
   var gradientStroke2 = ctx2.createLinearGradient(0, 230, 0, 100);
   gradientStroke2.addColorStop(1, "rgba(251,93,239,1)");
-  gradientStroke2.addColorStop(0.5, "rgba(176,142,247,1)");
-  gradientStroke2.addColorStop(0, "rgba(94,94,255,1)");
+  gradientStroke2.addColorStop(0.8, "rgba(176,142,247,1)");
+  gradientStroke2.addColorStop(0.3, "rgba(94,94,255,1)");
 
   new Chart(ctx2, {
     type: "line",
