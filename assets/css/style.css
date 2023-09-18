@@ -14,6 +14,7 @@ html {
   --main-lighter: #f1f0ff;
   --main-lighter-hover: #e0def4;
   --body-bg-light: #fafafb;
+  --border-xs: .1px solid rgba(201, 190, 190, 0.655);
   --shadow--sm: 1px 2px 10px -3px var(--main-color);
   --shadow--sm: 1px 2px 10px -3px #00000085;
   --shadow--sm-inset: 1px 2px 10px -3px var(--main-color) inset;
@@ -429,6 +430,15 @@ body {
 }
 
 /* Top selling products */
-.product-card{
-  
+.recent-order-table td,
+.recent-order-table thead{
+  border: none;
+}
+
+.recent-order-table thead>tr{
+  border-bottom: var(--border-xs);
+}
+
+.table-responsive{
+  max-height: 400px;
 }
