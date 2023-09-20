@@ -481,14 +481,32 @@ body {
   border-bottom: var(--border-xs);
 }
 
-.table-responsive {
+.product-card,
+.table-card{
   max-height: 450px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .product-image-medium {
   position: relative;
   width: 96px;
+  flex-shrink: 0;
   height: 96px;
+  margin-right: 1rem;
+  border-radius: 14px;
   background: linear-gradient(225deg, #EBEBEB 0%, #FDFDFD 54.69%, #F1F1F1 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.product-image-medium img{
+  height: 100%;
+  width: 100%;
+}
+
+img.bottom-line{
+  position: relative;
+  z-index: 1000;
 }
