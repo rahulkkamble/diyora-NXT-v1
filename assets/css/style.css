@@ -118,6 +118,18 @@ html {
   width: 100px !important;
 }
 
+.fs-7{
+  font-size: .9rem !important;
+}
+
+.fs-8{
+  font-size: .8rem !important;
+}
+
+.fs-9{
+  font-size: .75rem !important;
+}
+
 @media screen and (max-width: 767.5px) {
   .h-100px {
     height: 50px !important;
@@ -440,5 +452,5 @@ body {
 }
 
 .table-responsive{
-  max-height: 400px;
+  max-height: 450px;
 }

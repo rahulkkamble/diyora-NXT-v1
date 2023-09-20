@@ -1,47 +1,3 @@
-// Your dynamic data
-var dynamicData = [
-    {
-        customer: "Deepak Kapri",
-        productName: "inina bridal solitaire Ring",
-        productImage: "https://img.icons8.com/arcade/64/diamond-ring.png",
-        date: "04-09-23",
-        status: "Delivered",
-        totalAmount: 146660,
-    },
-    {
-        customer: "Divine Khatri",
-        productName: "inina bridal solitaire Ring",
-        productImage: "https://img.icons8.com/ios/50/ring-front-view.png",
-        date: "05-09-23",
-        status: "Pending",
-        totalAmount: 246660,
-    },
-    {
-        customer: "Magenta Maria",
-        productName: "inina bridal solitaire Ring",
-        productImage: "https://img.icons8.com/officel/16/ring-front-view.png",
-        date: "06-09-23",
-        status: "Pending",
-        totalAmount: 140000,
-    },
-    {
-        customer: "Aman Gupta",
-        productName: "inina bridal solitaire Ring",
-        productImage: "https://img.icons8.com/color/48/engagement-ring--v1.png",
-        date: "02-09-23",
-        status: "Pending",
-        totalAmount: 300000,
-    },
-    {
-        customer: "Swati Tiwari",
-        productName: "inina bridal solitaire Ring",
-        productImage: "https://img.icons8.com/plasticine/100/diamond-ring.png",
-        date: "07-09-23",
-        status: "Pending",
-        totalAmount: 45000,
-    },
-    // Add more data as needed
-];
 
 // Function to create a table row for each data item
 function createTableRow(data) {
@@ -77,10 +33,39 @@ function createTableRow(data) {
 // Populate the table with dynamic data
 var tableBody = document.querySelector('#recent-order-table tbody');
 
-dynamicData.forEach(function(dataItem) {
-    var row2 = createTableRow(dataItem);
-    tableBody.appendChild(row2);
-});
+async function getData() {
+    const response = await fetch('./assets/js/orders.json');
+    const data = await response.json();
+    return data;
+}
 
-// Initialize DataTables
-var dataTable = new DataTable(document.querySelector('#recent-order-table'));
+// Function that uses getData
+async function processData() {
+    try {
+        const dataArray = await getData();
+        dataArray.forEach(dataItem => {
+            var row = createTableRow(dataItem);
+            tableBody.appendChild(row);
+        });
+
+        // Initialize DataTables
+        var dataTable = new DataTable(document.querySelector('#recent-order-table'), {
+            "pageLength": 5,
+            "language": {
+                "lengthMenu": "Show <select class='form-select form-select-sm'>" +
+                              "<option value='5'>5</option>" +
+                              "<option value='10'>10</option>" +
+                              "<option value='25'>25</option>" +
+                              "<option value='50'>50</option>" +
+                              "<option value='-1'>All</option>" +
+                              "</select> entries"
+            }
+        });
+
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+// Call processData to initiate the data retrieval and processing
+processData();
