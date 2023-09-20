@@ -1,0 +1,12 @@
+:root {
+  --text: rgba(3, 2, 41, 1);
+  --actiongreen: rgba(81, 156, 102, 1);
+  --black-60: rgba(69, 70, 78, 1);
+  --primary-100: rgba(85, 112, 241, 1);
+  --label-1-regular-font-family: "Inter-Regular", Helvetica;
+  --label-1-regular-font-weight: 400;
+  --label-1-regular-font-size: 12px;
+  --label-1-regular-letter-spacing: 0px;
+  --label-1-regular-line-height: normal;
+  --label-1-regular-font-style: normal;
+}

@@ -1,0 +1,1983 @@
+.dashboard {
+  background-color: #fafafb;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.dashboard .div {
+  background-color: #fafafb;
+  width: 1440px;
+  height: 1047px;
+  position: relative;
+}
+
+.dashboard .frame {
+  display: inline-flex;
+  flex-direction: column;
+  height: 115px;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 27.25px 12px;
+  position: absolute;
+  top: 120px;
+  left: 1104px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.dashboard .frame-2 {
+  display: flex;
+  width: 282.79px;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.dashboard .text {
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  height: 48px;
+}
+
+.dashboard .overlap-group {
+  position: relative;
+  width: 129px;
+  height: 48px;
+}
+
+.dashboard .text-wrapper {
+  position: absolute;
+  width: 129px;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 800;
+  color: var(--text);
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .text-wrapper-2 {
+  position: absolute;
+  width: 104px;
+  top: 29px;
+  left: 0;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .frame-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.dashboard .element-wrapper {
+  display: flex;
+  width: 59px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 9px 10px;
+  position: relative;
+  background-color: #519c661a;
+  border-radius: 10px;
+}
+
+.dashboard .element {
+  position: relative;
+  width: fit-content;
+  margin-top: -7.5px;
+  margin-bottom: -5.5px;
+  margin-left: -5px;
+  margin-right: -5px;
+  font-family: var(--label-1-regular-font-family);
+  font-weight: var(--label-1-regular-font-weight);
+  color: var(--actiongreen);
+  font-size: var(--label-1-regular-font-size);
+  letter-spacing: var(--label-1-regular-letter-spacing);
+  line-height: var(--label-1-regular-line-height);
+  font-style: var(--label-1-regular-font-style);
+}
+
+.dashboard .graph {
+  position: relative;
+  width: 138.79px;
+  height: 32.5px;
+  margin-left: -9.4px;
+  transform: rotate(180deg);
+}
+
+.dashboard .overlap-group-2 {
+  position: absolute;
+  width: 129px;
+  height: 33px;
+  top: 0;
+  left: 0;
+}
+
+.dashboard .graph-copy {
+  position: absolute;
+  width: 129px;
+  height: 32px;
+  top: 0;
+  left: 0;
+  transform: rotate(-180deg);
+}
+
+.dashboard .img {
+  position: absolute;
+  width: 129px;
+  height: 16px;
+  top: 17px;
+  left: 0;
+  transform: rotate(-180deg);
+}
+
+.dashboard .rectangle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 24px;
+  left: 137px;
+  background-color: #54cc8b;
+  border-radius: 2px;
+}
+
+.dashboard .group {
+  position: absolute;
+  width: 438px;
+  height: 408px;
+  top: 259px;
+  left: 980px;
+}
+
+.dashboard .overlap {
+  position: relative;
+  width: 432px;
+  height: 408px;
+}
+
+.dashboard .analytics {
+  position: absolute;
+  width: 432px;
+  height: 408px;
+  top: 0;
+  left: 0;
+}
+
+.dashboard .overlap-group-3 {
+  position: relative;
+  width: 430px;
+  height: 408px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.dashboard .text-wrapper-3 {
+  position: absolute;
+  top: 25px;
+  left: 24px;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 700;
+  color: var(--text);
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .menu {
+  position: absolute;
+  width: 14px;
+  height: 4px;
+  top: 36px;
+  left: 381px;
+}
+
+.dashboard .rectangle-2 {
+  position: absolute;
+  width: 178px;
+  height: 126px;
+  top: 90px;
+  left: 25px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px #0000000d;
+}
+
+.dashboard .rectangle-3 {
+  position: absolute;
+  width: 178px;
+  height: 126px;
+  top: 90px;
+  left: 215px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px #0000000d;
+}
+
+.dashboard .text-wrapper-4 {
+  position: absolute;
+  top: 140px;
+  left: 71px;
+  font-family: "Nunito", Helvetica;
+  font-weight: 700;
+  color: #030229;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .text-wrapper-5 {
+  position: absolute;
+  top: 140px;
+  left: 255px;
+  font-family: "Nunito", Helvetica;
+  font-weight: 700;
+  color: #030229;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .rectangle-4 {
+  position: absolute;
+  width: 178px;
+  height: 126px;
+  top: 236px;
+  left: 25px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px #0000000d;
+}
+
+.dashboard .rectangle-5 {
+  position: absolute;
+  width: 178px;
+  height: 126px;
+  top: 236px;
+  left: 217px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px #0000000d;
+}
+
+.dashboard .text-wrapper-6 {
+  position: absolute;
+  top: 287px;
+  left: 96px;
+  font-family: "Nunito", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .text-wrapper-7 {
+  top: 287px;
+  left: 235px;
+  font-weight: 700;
+  color: #000000;
+  font-size: 18px;
+  position: absolute;
+  font-family: "Nunito", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .top-nav {
+  position: absolute;
+  width: 1352px;
+  height: 96px;
+  top: 0;
+  left: 88px;
+  background-color: #ffffff;
+}
+
+.dashboard .text-wrapper-8 {
+  position: absolute;
+  top: 32px;
+  left: 30px;
+  font-family: "Poppins", Helvetica;
+  font-weight: 500;
+  color: var(--black-60);
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .group-2 {
+  position: absolute;
+  width: 444px;
+  height: 48px;
+  top: 24px;
+  left: 878px;
+}
+
+.dashboard .button {
+  position: absolute;
+  width: 165px;
+  height: 42px;
+  top: 3px;
+  left: 279px;
+  background-color: #605bff;
+  border-radius: 10px;
+  all: unset;
+  box-sizing: border-box;
+}
+
+.dashboard .div-wrapper {
+  position: relative;
+  width: 107px;
+  height: 22px;
+  top: 10px;
+  left: 40px;
+}
+
+.dashboard .text-wrapper-9 {
+  width: 105px;
+  top: 0;
+  left: 0;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  position: absolute;
+  font-family: "Nunito", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .overlap-group-wrapper {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 0;
+  left: 64px;
+}
+
+.dashboard .overlap-group-4 {
+  position: relative;
+  height: 48px;
+  border-radius: 24px;
+}
+
+.dashboard .img-2 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 12px;
+  left: 12px;
+}
+
+.dashboard .div-2 {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 0;
+  left: 0;
+  background-color: #605bff1a;
+  border-radius: 24px;
+}
+
+.dashboard .ic-outline-settings-wrapper {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 0;
+  left: 192px;
+  background-color: #605bff1a;
+  border-radius: 24px;
+}
+
+.dashboard .tabler-message-wrapper {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 0;
+  left: 128px;
+  background-color: #605bff1a;
+  border-radius: 24px;
+}
+
+.dashboard .div-3 {
+  position: absolute;
+  width: 88px;
+  height: 1047px;
+  top: 0;
+  left: 0;
+}
+
+.dashboard .overlap-2 {
+  position: relative;
+  height: 1047px;
+}
+
+.dashboard .menu-2 {
+  position: absolute;
+  width: 88px;
+  height: 1047px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.dashboard .log-out {
+  position: absolute;
+  width: 50px;
+  height: 80px;
+  top: 876px;
+  left: 21px;
+}
+
+.dashboard .profile-photo {
+  position: absolute;
+  width: 50px;
+  height: 43px;
+  top: 0;
+  left: 0;
+  background-color: #f7f7f8;
+  border-radius: 12px;
+}
+
+.dashboard .overlap-group-5 {
+  height: 43px;
+  background-color: #ffc6d4;
+  border-radius: 12px;
+  background-image: url(./img/rectangle-115.png);
+  background-size: 100% 100%;
+}
+
+.dashboard .logout {
+  position: absolute;
+  width: 19px;
+  height: 17px;
+  top: 64px;
+  left: 13px;
+  opacity: 0.4;
+  background-image: url(./img/logout.svg);
+  background-size: 100% 100%;
+}
+
+.dashboard .logo-and-company {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 82px;
+  left: 14px;
+}
+
+.dashboard .subtract {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: -1605px;
+  left: 25803px;
+  object-fit: cover;
+}
+
+.dashboard .d-LOGO-wrapper {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 26px;
+  left: 19px;
+  background-color: #000000;
+  border-radius: 25px;
+}
+
+.dashboard .d-LOGO {
+  position: absolute;
+  width: 35px;
+  height: 41px;
+  top: 3px;
+  left: 10px;
+}
+
+.dashboard .active {
+  display: flex;
+  flex-direction: column;
+  width: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 20px;
+  position: absolute;
+  top: 150px;
+  left: 16px;
+  background-color: var(--primary-100);
+  border-radius: 12px;
+}
+
+.dashboard .inner-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  flex: 0 0 auto;
+  margin-left: -4px;
+  margin-right: -4px;
+}
+
+.dashboard .iconly-bulk-category {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.dashboard .category {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  top: 2px;
+  left: 2px;
+}
+
+.dashboard .overlap-group-6 {
+  position: relative;
+  height: 20px;
+}
+
+.dashboard .fill {
+  position: absolute;
+  width: 8px;
+  height: 9px;
+  top: 0;
+  left: 12px;
+}
+
+.dashboard .combined-shape {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+}
+
+.dashboard .iconly-light-bag-wrapper {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  top: 218px;
+  left: 16px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dashboard .iconly-light-bag {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 16px;
+  left: 16px;
+}
+
+.dashboard .frame-4 {
+  display: flex;
+  width: 223px;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px 0px;
+  position: absolute;
+  top: 120px;
+  left: 602px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.dashboard .group-3 {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.dashboard .overlap-group-7 {
+  position: relative;
+  height: 60px;
+  border-radius: 38px;
+}
+
+.dashboard .rectangle-6 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  background-color: #73c8f0;
+  border-radius: 38px;
+  opacity: 0.1;
+}
+
+.dashboard .image {
+  width: 42px;
+  height: 42px;
+  top: 9px;
+  left: 9px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.dashboard .group-4 {
+  position: relative;
+  width: 129px;
+  height: 67px;
+}
+
+.dashboard .overlap-3 {
+  position: absolute;
+  width: 123px;
+  height: 51px;
+  top: 0;
+  left: 0;
+}
+
+.dashboard .text-wrapper-10 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 800;
+  color: var(--text);
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .text-wrapper-11 {
+  position: absolute;
+  top: 29px;
+  left: 0;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .element-on-this-week {
+  position: absolute;
+  top: 57px;
+  left: 0;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.dashboard .span {
+  font-weight: 600;
+  color: #22c480;
+}
+
+.dashboard .text-wrapper-12 {
+  color: #707b81;
+}
+
+.dashboard .text-wrapper-13 {
+  font-weight: 500;
+  color: #bebebe;
+}
+
+.dashboard .frame-5 {
+  display: flex;
+  width: 213px;
+  height: 115px;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px 0px;
+  position: absolute;
+  top: 120px;
+  left: 365px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.dashboard .rectangle-7 {
+  background-color: #fed402;
+  border-radius: 38px;
+  opacity: 0.2;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 0;
+}
+
+.dashboard .image-2 {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 14px;
+  left: 14px;
+  object-fit: cover;
+}
+
+.dashboard .overlap-wrapper {
+  width: 117px;
+  position: relative;
+  height: 51px;
+}
+
+.dashboard .overlap-4 {
+  position: relative;
+  width: 113px;
+  height: 51px;
+}
+
+.dashboard .frame-6 {
+  display: flex;
+  width: 223px;
+  height: 115px;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px 0px;
+  position: absolute;
+  top: 120px;
+  left: 118px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.dashboard .rectangle-8 {
+  background-color: #32ba7c;
+  border-radius: 38px;
+  opacity: 0.1;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 0;
+}
+
+.dashboard .group-5 {
+  width: 127px;
+  position: relative;
+  height: 51px;
+}
+
+.dashboard .overlap-5 {
+  position: relative;
+  width: 123px;
+  height: 51px;
+}
+
+.dashboard .group-wrapper {
+  position: absolute;
+  width: 231px;
+  height: 116px;
+  top: 120px;
+  left: 849px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.dashboard .group-6 {
+  position: relative;
+  width: 207px;
+  height: 67px;
+  top: 25px;
+  left: 12px;
+}
+
+.dashboard .group-7 {
+  position: absolute;
+  width: 129px;
+  height: 67px;
+  top: 0;
+  left: 84px;
+}
+
+.dashboard .overlap-group-8 {
+  position: absolute;
+  width: 117px;
+  height: 51px;
+  top: 0;
+  left: 0;
+}
+
+.dashboard .group-8 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 3px;
+  left: 0;
+}
+
+.dashboard .overlap-6 {
+  position: relative;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.dashboard .rectangle-9 {
+  background-color: #95d6a4;
+  border-radius: 10px;
+  opacity: 0.1;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: 0;
+}
+
+.dashboard .image-3 {
+  width: 38px;
+  height: 38px;
+  top: 10px;
+  left: 12px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.dashboard .group-9 {
+  position: absolute;
+  width: 836px;
+  height: 335px;
+  top: 693px;
+  left: 118px;
+}
+
+.dashboard .overlap-7 {
+  position: relative;
+  width: 838px;
+  height: 335px;
+}
+
+.dashboard .recent-orders {
+  position: absolute;
+  width: 838px;
+  height: 335px;
+  top: 0;
+  left: 0;
+}
+
+.dashboard .overlap-group-9 {
+  position: relative;
+  width: 836px;
+  height: 335px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.dashboard .frame-7 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 74px;
+  left: 46px;
+}
+
+.dashboard .text-wrapper-14 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Nunito", Helvetica;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .arrow-down {
+  position: relative;
+  width: 6px;
+  height: 5px;
+}
+
+.dashboard .frame-8 {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: absolute;
+  top: 74px;
+  left: 704px;
+}
+
+.dashboard .frame-9 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 74px;
+  left: 249px;
+}
+
+.dashboard .group-10 {
+  position: absolute;
+  width: 50px;
+  height: 19px;
+  top: 74px;
+  left: 470px;
+}
+
+.dashboard .arrow-down-2 {
+  left: 40px;
+  position: absolute;
+  width: 7px;
+  height: 5px;
+  top: 6px;
+}
+
+.dashboard .text-wrapper-15 {
+  position: absolute;
+  width: 37px;
+  top: 0;
+  left: 0;
+  font-family: "Nunito", Helvetica;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .group-11 {
+  position: absolute;
+  width: 60px;
+  height: 19px;
+  top: 74px;
+  left: 606px;
+}
+
+.dashboard .arrow-down-3 {
+  left: 51px;
+  position: absolute;
+  width: 7px;
+  height: 5px;
+  top: 6px;
+}
+
+.dashboard .text-wrapper-16 {
+  position: absolute;
+  width: 50px;
+  top: 0;
+  left: 0;
+  font-family: "Nunito", Helvetica;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .frame-10 {
+  display: inline-flex;
+  flex-direction: column;
+  height: 205px;
+  align-items: flex-start;
+  gap: 12px;
+  position: absolute;
+  top: 119px;
+  left: 30px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.dashboard .frame-11 {
+  position: relative;
+  width: 776px;
+  height: 30px;
+}
+
+.dashboard .text-wrapper-17 {
+  position: absolute;
+  width: 107px;
+  top: 6px;
+  left: 0;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .frame-12 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 0;
+  left: 178px;
+}
+
+.dashboard .rectangle-10 {
+  position: relative;
+  width: 30.98px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.dashboard .text-wrapper-18 {
+  position: relative;
+  width: 148px;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .text-wrapper-19 {
+  position: absolute;
+  width: 56px;
+  top: 6px;
+  left: 436px;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .frame-13 {
+  width: 85px;
+  left: 562px;
+  background-color: #05a6751a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 4px 12px;
+  position: absolute;
+  top: 3px;
+  border-radius: 8px;
+}
+
+.dashboard .text-wrapper-20 {
+  position: relative;
+  flex: 1;
+  margin-top: -1px;
+  font-family: "Nunito", Helvetica;
+  font-weight: 700;
+  color: #05a675;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .span-wrapper {
+  position: absolute;
+  width: 58px;
+  top: 6px;
+  left: 695px;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .text-wrapper-21 {
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: #030229;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.dashboard .frame-14 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 0;
+  left: 177px;
+}
+
+.dashboard .text-wrapper-22 {
+  position: absolute;
+  width: 56px;
+  top: 6px;
+  left: 435px;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .frame-15 {
+  width: 88px;
+  left: 560px;
+  background-color: #fef5ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 4px 12px;
+  position: absolute;
+  top: 3px;
+  border-radius: 8px;
+}
+
+.dashboard .text-wrapper-23 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Nunito", Helvetica;
+  font-weight: 700;
+  color: #f29339;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .frame-16 {
+  width: 88px;
+  left: 560px;
+  background-color: #d11a2a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 4px 12px;
+  position: absolute;
+  top: 3px;
+  border-radius: 8px;
+}
+
+.dashboard .text-wrapper-24 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Nunito", Helvetica;
+  font-weight: 700;
+  color: #d11a2a;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .frame-17 {
+  display: flex;
+  width: 88px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 4px 12px;
+  position: absolute;
+  top: 3px;
+  left: 560px;
+  background-color: #05a6751a;
+  border-radius: 8px;
+}
+
+.dashboard .text-wrapper-25 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-weight: 700;
+  color: #05a675;
+  font-size: 12px;
+  text-align: center;
+  font-family: "Nunito", Helvetica;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .line {
+  position: absolute;
+  width: 776px;
+  height: 1px;
+  top: 104px;
+  left: 30px;
+  object-fit: cover;
+}
+
+.dashboard .text-wrapper-26 {
+  position: absolute;
+  width: 143px;
+  top: 25px;
+  left: 25px;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 700;
+  color: var(--text);
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .scrollbar-frame {
+  position: absolute;
+  width: 13px;
+  height: 212px;
+  top: 105px;
+  left: 817px;
+  background-color: #f7f7f7;
+}
+
+.dashboard .scrollbar {
+  position: absolute;
+  width: 9px;
+  height: 92px;
+  top: 12px;
+  left: 1px;
+  background-color: #d9d9d9;
+  border-radius: 3.5px;
+  border: 1px solid;
+  border-color: #ffffff25;
+}
+
+.dashboard .polygon {
+  top: 2px;
+  position: absolute;
+  width: 6px;
+  height: 5px;
+  left: 2px;
+}
+
+.dashboard .polygon-2 {
+  top: 205px;
+  position: absolute;
+  width: 6px;
+  height: 5px;
+  left: 2px;
+}
+
+.dashboard .overlap-8 {
+  position: absolute;
+  width: 838px;
+  height: 408px;
+  top: 259px;
+  left: 118px;
+}
+
+.dashboard .group-12 {
+  position: absolute;
+  width: 838px;
+  height: 408px;
+  top: 0;
+  left: 0;
+}
+
+.dashboard .overlap-9 {
+  position: relative;
+  width: 836px;
+  height: 408px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.dashboard .overlap-10 {
+  position: absolute;
+  width: 774px;
+  height: 286px;
+  top: 90px;
+  left: 62px;
+}
+
+.dashboard .line-2 {
+  position: absolute;
+  width: 774px;
+  height: 255px;
+  top: 0;
+  left: 0;
+}
+
+.dashboard .line-3 {
+  position: absolute;
+  width: 774px;
+  height: 1px;
+  top: 254px;
+  left: 0;
+  object-fit: cover;
+}
+
+.dashboard .line-4 {
+  position: absolute;
+  width: 774px;
+  height: 1px;
+  top: 203px;
+  left: 0;
+  object-fit: cover;
+}
+
+.dashboard .line-5 {
+  position: absolute;
+  width: 774px;
+  height: 1px;
+  top: 152px;
+  left: 0;
+  object-fit: cover;
+}
+
+.dashboard .line-6 {
+  position: absolute;
+  width: 774px;
+  height: 1px;
+  top: 101px;
+  left: 0;
+  object-fit: cover;
+}
+
+.dashboard .line-7 {
+  position: absolute;
+  width: 774px;
+  height: 1px;
+  top: 50px;
+  left: 0;
+  object-fit: cover;
+}
+
+.dashboard .line-8 {
+  position: absolute;
+  width: 774px;
+  height: 1px;
+  top: -1px;
+  left: 0;
+  object-fit: cover;
+}
+
+.dashboard .frame-18 {
+  position: absolute;
+  width: 773px;
+  height: 217px;
+  top: 69px;
+  left: 1px;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.dashboard .group-13 {
+  position: relative;
+  width: 1175px;
+  height: 217px;
+  left: -5px;
+}
+
+.dashboard .group-14 {
+  position: absolute;
+  width: 1145px;
+  height: 16px;
+  top: 201px;
+  left: 12px;
+}
+
+.dashboard .text-wrapper-27 {
+  position: absolute;
+  width: 28px;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .text-wrapper-28 {
+  position: absolute;
+  width: 32px;
+  top: 0;
+  left: 179px;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .text-wrapper-29 {
+  position: absolute;
+  width: 37px;
+  top: 0;
+  left: 363px;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .text-wrapper-30 {
+  position: absolute;
+  width: 31px;
+  top: 0;
+  left: 551px;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .text-wrapper-31 {
+  position: absolute;
+  width: 40px;
+  top: 0;
+  left: 727px;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .text-wrapper-32 {
+  position: absolute;
+  width: 34px;
+  top: 0;
+  left: 924px;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .text-wrapper-33 {
+  position: absolute;
+  width: 22px;
+  top: 0;
+  left: 1109px;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .group-15 {
+  position: absolute;
+  width: 1175px;
+  height: 186px;
+  top: 0;
+  left: 0;
+}
+
+.dashboard .overlap-11 {
+  position: relative;
+  height: 186px;
+}
+
+.dashboard .group-16 {
+  height: 186px;
+}
+
+.dashboard .overlap-group-10 {
+  position: relative;
+  width: 1175px;
+  height: 186px;
+}
+
+.dashboard .group-17 {
+  position: absolute;
+  width: 1170px;
+  height: 186px;
+  top: 0;
+  left: 5px;
+}
+
+.dashboard .ellipse-wrapper {
+  display: flex;
+  width: 51px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 52px;
+  left: 181px;
+}
+
+.dashboard .ellipse {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  background-color: #ffffff;
+  border-radius: 7px;
+  border: 3px solid;
+  border-color: #ae8ff7;
+  box-shadow: 0px 4px 4px #605bff2b;
+}
+
+.dashboard .frame-19 {
+  display: flex;
+  width: 51px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 45px;
+  left: 0;
+}
+
+.dashboard .frame-20 {
+  display: flex;
+  width: 51px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 79px;
+  left: 367px;
+}
+
+.dashboard .frame-21 {
+  display: flex;
+  width: 51px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 45px;
+  left: 552px;
+}
+
+.dashboard .frame-22 {
+  display: flex;
+  width: 51px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 119px;
+  left: 733px;
+}
+
+.dashboard .frame-23 {
+  display: flex;
+  width: 51px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 45px;
+  left: 927px;
+}
+
+.dashboard .frame-24 {
+  display: flex;
+  width: 51px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 18px;
+  left: 1106px;
+}
+
+.dashboard .tool-tip {
+  position: absolute;
+  width: 93px;
+  height: 64px;
+  top: 54px;
+  left: 276px;
+}
+
+.dashboard .overlap-12 {
+  position: relative;
+  width: 103px;
+  height: 78px;
+  top: -3px;
+  left: -7px;
+  background-image: url(./img/union.svg);
+  background-size: 100% 100%;
+}
+
+.dashboard .text-wrapper-34 {
+  position: absolute;
+  top: 11px;
+  left: 23px;
+  opacity: 0.8;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .text-wrapper-35 {
+  position: absolute;
+  top: 29px;
+  left: 41px;
+  font-family: "Nunito", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .line-9 {
+  position: absolute;
+  width: 1px;
+  height: 117px;
+  top: 137px;
+  left: 319px;
+  object-fit: cover;
+}
+
+.dashboard .number {
+  position: absolute;
+  width: 34px;
+  height: 271px;
+  top: 82px;
+  left: 24px;
+  opacity: 0.7;
+}
+
+.dashboard .text-wrapper-36 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .text-wrapper-37 {
+  position: absolute;
+  top: 51px;
+  left: 7px;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .text-wrapper-38 {
+  position: absolute;
+  top: 102px;
+  left: 7px;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .text-wrapper-39 {
+  position: absolute;
+  top: 153px;
+  left: 7px;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .text-wrapper-40 {
+  position: absolute;
+  top: 204px;
+  left: 7px;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .text-wrapper-41 {
+  position: absolute;
+  top: 255px;
+  left: 14px;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 400;
+  color: var(--text);
+  font-size: 12px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .ending-date {
+  position: absolute;
+  width: 118px;
+  height: 40px;
+  top: 19px;
+  left: 694px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px #0000000d;
+}
+
+.dashboard .group-18 {
+  position: relative;
+  width: 86px;
+  height: 19px;
+  top: 11px;
+  left: 17px;
+}
+
+.dashboard .text-wrapper-42 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 14px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .vector {
+  position: absolute;
+  width: 9px;
+  height: 5px;
+  top: 6px;
+  left: 76px;
+  object-fit: cover;
+}
+
+.dashboard .group-19 {
+  position: absolute;
+  width: 430px;
+  height: 335px;
+  top: 693px;
+  left: 980px;
+}
+
+.dashboard .overlap-13 {
+  position: relative;
+  width: 432px;
+  height: 335px;
+}
+
+.dashboard .top-selling-products {
+  position: absolute;
+  width: 432px;
+  height: 335px;
+  top: 0;
+  left: 0;
+}
+
+.dashboard .overlap-group-11 {
+  position: relative;
+  width: 430px;
+  height: 335px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.dashboard .menu-3 {
+  position: absolute;
+  width: 14px;
+  height: 4px;
+  top: 36px;
+  left: 390px;
+}
+
+.dashboard .text-wrapper-43 {
+  position: absolute;
+  top: 25px;
+  left: 24px;
+  opacity: 0.7;
+  font-family: "Nunito", Helvetica;
+  font-weight: 700;
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard .frame-25 {
+  display: inline-flex;
+  flex-direction: column;
+  height: 236px;
+  align-items: flex-start;
+  gap: 22px;
+  position: absolute;
+  top: 75px;
+  left: 24px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.dashboard .frame-26 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.dashboard .frame-27 {
+  display: flex;
+  width: 387px;
+  align-items: center;
+  gap: 17px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.dashboard .element-2 {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  background-image: url(./img/mask-group.png);
+  background-size: 100% 100%;
+}
+
+.dashboard .group-20 {
+  position: relative;
+  width: 254px;
+  height: 88px;
+}
+
+.dashboard .text-wrapper-44 {
+  position: absolute;
+  height: 20px;
+  top: 0;
+  left: 0;
+  font-family: "Futura Std-Book", Helvetica;
+  font-weight: 400;
+  color: #0f0f0f;
+  font-size: 16px;
+  letter-spacing: 0.72px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.dashboard .text-wrapper-45 {
+  position: absolute;
+  height: 20px;
+  top: 68px;
+  left: 0;
+  font-family: "Futura Std-Heavy", Helvetica;
+  font-weight: 400;
+  color: #0f0f0f;
+  font-size: 14px;
+  letter-spacing: 0.63px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.dashboard .p {
+  position: absolute;
+  width: 248px;
+  height: 40px;
+  top: 24px;
+  left: 0;
+  font-family: "Futura Std-Book", Helvetica;
+  font-weight: 400;
+  color: #7d7d7d;
+  font-size: 14px;
+  letter-spacing: 0.63px;
+  line-height: 20px;
+}
+
+.dashboard .line-10 {
+  position: relative;
+  width: 379px;
+  height: 1px;
+  margin-bottom: -1px;
+  object-fit: cover;
+}
+
+.dashboard .scrollbar-frame-2 {
+  position: absolute;
+  width: 11px;
+  height: 236px;
+  top: 75px;
+  left: 415px;
+  background-color: #f7f7f7;
+}
+
+.dashboard .polygon-3 {
+  position: absolute;
+  width: 6px;
+  height: 5px;
+  top: 229px;
+  left: 2px;
+}
