@@ -12,6 +12,9 @@ html {
   --main-light: #b9b6ff;
   --main-light-hover: #9593e2;
   --main-lighter: #f1f0ff;
+  --bg-success-light: rgba(81, 156, 102, 0.10);
+  --bg-warning-light: #fed40245;
+  --bg-primary-light: #73c8f03f;
   --main-lighter-hover: #e0def4;
   --body-bg-light: #fafafb;
   --border-xs: .1px solid rgba(201, 190, 190, 0.655);
@@ -25,6 +28,18 @@ html {
 /* Reusable classes */
 .bg--main {
   background-color: var(--main-color) !important;
+}
+
+.bg-success-light{
+  background-color: var(--bg-success-light) !important;
+}
+
+.bg-warning-light{
+  background-color: var(--bg-warning-light) !important;
+}
+
+.bg-primary-light{
+  background-color: var(--bg-primary-light) !important;
 }
 
 .fw-bold .fw-normal,
@@ -70,6 +85,10 @@ html {
 .icon-shape i {
   margin: auto;
   font-size: 1.6rem;
+}
+
+.icon-shape img{
+  padding: .75rem;
 }
 
 .space-white-wrap {
@@ -484,8 +503,7 @@ body {
 .product-card,
 .table-card{
   max-height: 450px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: auto;
 }
 
 .product-image-medium {
@@ -509,4 +527,26 @@ body {
 img.bottom-line{
   position: relative;
   z-index: 1000;
+}
+
+li.paginate_button {
+  z-index: 10;
+  margin: 0.2rem;
+}
+
+li.paginate_button a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+}
+
+li.paginate_button a:hover,
+li.paginate_button a:active,
+li.paginate_button a:focus{
+  color: var(--main-color);
+}
+
+.above-img-tag{
+  top: -15px;
+  right: -157px;
 }
