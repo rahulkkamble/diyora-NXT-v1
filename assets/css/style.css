@@ -558,7 +558,7 @@ body {
 
 .product-card,
 .table-card {
-  max-height: 450px;
+  max-height: 502px;
   overflow: auto;
 }
 
@@ -614,7 +614,7 @@ div.dataTables_wrapper div.dataTables_info {
 /* Modal=======================Modal */
 /* Modal Styles */
 .modal {
-  /* display: none; */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -623,7 +623,7 @@ div.dataTables_wrapper div.dataTables_info {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   /* Adjust the blur radius as needed */
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
 }
@@ -638,7 +638,7 @@ div.dataTables_wrapper div.dataTables_info {
 }
 
 #addressFields {
-  margin-bottom: 2.75rem;
+  margin-bottom: 2rem;
 }
 
 input.form-control {

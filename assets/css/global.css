@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-nunito: Nunito;
+    --input-placeholder: Inter;
+  
+    /* font sizes */
+    --font-size-xl: 1.25rem;
+    --font-size-sm: 0.88rem;
+    --font-size-xs: 0.75rem;
+    --input-placeholder-size: 1rem;
+  
+    /* Colors */
+    --color-black: #000;
+    --color-white: #fff;
+    --primary-100: #5570f1;
+    --black-2: #abafb1;
+    --color-darkslategray: #2b2f32;
+    --input-defaultbackground: rgba(239, 241, 249, 0.6);
+    --black-30: #8b8d97;
+  
+    /* Gaps */
+    --gap-11xl: 1.88rem;
+    --gap-5xs: 0.5rem;
+    --gap-base: 1rem;
+  
+    /* Paddings */
+    --padding-mid: 1.06rem;
+    --padding-base: 1rem;
+    --padding-5xs: 0.5rem;
+  
+    /* Border radiuses */
+    --br-xs: 12px;
+    --br-5xs: 8px;
+  }
+  

@@ -1,0 +1,229 @@
+.group-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: var(--color-black);
+    width: 3.13rem;
+    height: 3.13rem;
+  }
+  .d-logo-04-icon {
+    position: absolute;
+    top: 0.19rem;
+    left: 0.63rem;
+    width: 2.19rem;
+    height: 2.56rem;
+    object-fit: cover;
+  }
+  .ellipse-parent {
+    position: relative;
+    width: 3.13rem;
+    height: 3.13rem;
+  }
+  .welcome-back {
+    position: relative;
+    font-weight: 500;
+  }
+  .login-to-your {
+    position: relative;
+    font-size: var(--font-size-sm);
+    color: var(--black-30);
+  }
+  .introcontent {
+    align-items: center;
+    gap: var(--gap-5xs);
+  }
+  .heading,
+  .input,
+  .introcontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .heading {
+    align-items: center;
+    gap: var(--gap-11xl);
+  }
+  .input {
+    border: 0;
+    font-family: var(--font-nunito);
+    font-size: var(--input-placeholder-size);
+    background-color: transparent;
+    width: 23.44rem;
+    align-items: flex-start;
+  }
+  .iconlylightlock {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .placehoder {
+    align-self: stretch;
+    position: relative;
+  }
+  .input-content1 {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .fieye-off-icon {
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .input-content,
+  .input1 {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .input-content {
+    align-self: stretch;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--gap-base);
+  }
+  .input1 {
+    border-radius: var(--br-5xs);
+    background-color: var(--input-defaultbackground);
+    width: 23.44rem;
+    height: 3.25rem;
+    flex-direction: column;
+    padding: var(--padding-5xs) var(--padding-base);
+    box-sizing: border-box;
+    align-items: flex-start;
+  }
+  .characters {
+    color: var(--color-darkslategray);
+  }
+  .password-must-be-container {
+    position: relative;
+    display: inline-block;
+    width: 23.44rem;
+    flex-shrink: 0;
+  }
+  .bottom,
+  .inputfields,
+  .password {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .bottom {
+    align-self: stretch;
+    display: none;
+    flex-direction: row;
+    font-size: var(--font-size-xs);
+    font-family: var(--input-placeholder);
+  }
+  .inputfields,
+  .password {
+    display: flex;
+    flex-direction: column;
+  }
+  .password {
+    width: 23.44rem;
+    gap: var(--gap-5xs);
+  }
+  .inputfields {
+    gap: var(--gap-11xl);
+  }
+  .recover-password {
+    position: relative;
+    font-size: var(--font-size-sm);
+    color: var(--primary-100);
+    text-align: center;
+  }
+  .forminputcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+  .label {
+    flex: 1;
+    position: relative;
+    font-weight: 600;
+  }
+  .buttons {
+    border-radius: var(--br-xs);
+    background-color: var(--primary-100);
+    width: 11.25rem;
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding-mid) var(--padding-base);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: var(--font-size-xl);
+    color: var(--color-white);
+  }
+  .formcontent {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    text-align: left;
+    font-size: var(--input-placeholder-size);
+    color: var(--black-2);
+  }
+  .container,
+  .formcontainer,
+  .formcontent {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .formcontainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 3.75rem;
+  }
+  .container {
+    position: absolute;
+    top: 17.13rem;
+    left: 54.5rem;
+    border-radius: var(--br-xs);
+    background-color: var(--color-white);
+    flex-direction: row;
+    padding: 2.75rem 2.13rem;
+    align-items: flex-start;
+  }
+  .diyoranxt {
+    position: absolute;
+    top: 1rem;
+    left: calc(50% - 63px);
+    font-weight: 600;
+  }
+  .diyoranxt-wrapper,
+  .login-page {
+    overflow: hidden;
+    text-align: center;
+    color: var(--color-black);
+    font-family: var(--font-nunito);
+  }
+  .diyoranxt-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(44px);
+    width: 90rem;
+    height: 4rem;
+    font-size: 1.5rem;
+  }
+  .login-page {
+    position: relative;
+    width: 100%;
+    height: 64rem;
+    background-image: url(./public/login-page@3x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    font-size: var(--font-size-xl);
+  }
+  
