@@ -27,6 +27,7 @@ html {
   --base-white: rgba(255, 255, 255, 1);
   --gray-300: rgba(208, 213, 221, 1);
   --black-3: rgba(131, 137, 140, 1);
+  --border-line-lighter: 0.1em solid #A6A6A60e;
 
   --bg-gradient-primary: linear-gradient(310deg, var(--main-light-hover), var(--main-lighter));
 
@@ -212,7 +213,7 @@ html {
 
 @media screen and (min-width: 767.5px) {
   .border-md-start{
-    border-left: 0.1em solid #A6A6A60e !important;
+    border-left: var(--border-line-lighter) !important;
   }
 }
 
@@ -715,8 +716,9 @@ select.form-control {
 }
 
 /* =========== search product modal ============= */
+/* uncomment display flex to see the search modal */
 .modal.searchProductModal {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   flex-shrink: 0;
 }
