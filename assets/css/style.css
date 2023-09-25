@@ -210,6 +210,12 @@ html {
   line-height: normal !important;
 }
 
+@media screen and (min-width: 767.5px) {
+  .border-md-start{
+    border-left: 0.1em solid #A6A6A60e !important;
+  }
+}
+
 @media screen and (max-width: 767.5px) {
   .h-100px {
     height: 50px !important;
@@ -739,6 +745,7 @@ select.form-control {
   align-items: center;
   background: #F4F5FA;
   border: 1px solid #E1E2E9;
+  margin-top: 6vw;
 }
 
 .empty-state .icon-container .icon {
@@ -771,7 +778,9 @@ select.form-control {
   width: 220px;
   height: 220px;
   flex-shrink: 0;
+  margin-top: 6vw;
 }
+
 .icon-bag img{
   height: 100%;
   width: 100%;
