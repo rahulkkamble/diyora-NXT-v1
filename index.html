@@ -485,7 +485,7 @@
           <p class="">Customer Information</p>
         </div>
         <div class="add-customer-form mb-3">
-          <form>
+          <form id="addCustomerForm">
             <div class="mb-3">
               <input type="text" class="form-control bg-input-default" id="customerName" name="customerName"
                 placeholder="Name" required>
@@ -560,6 +560,43 @@
             </div>
           </form>
         </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal section ============= add successfull modal ================ -->
+  <div id="successfullModal" class="modal successfull-modal">
+    <div class="modal-content rounded rounded-4 border-0">
+      <!-- Modal content goes here -->
+      <div class="container">
+        <div class="img-above-header mb-3">
+          <img src="./assets/images/img/successfull-crowd-celebrating.jpeg" alt="">
+        </div>
+
+        <div class="modal-heading mb-2 d-flex justify-content-between align-items-center">
+          
+          <h5 class="mb-0">
+            <span> 
+              <img src="./assets/images/img/emoji-left-celebrate.svg" alt="">
+            </span>
+            Pragnesh Navadiya
+            <span> 
+              <img src="./assets/images/img/emoji-right-celebrate.svg" alt="">
+            </span>
+          </h5>
+        </div>
+        <div class="modal-subheading mb-3">
+          <p class="text-center fs-7">You've successfully added a new customer to 
+            your dashboard for enhanced management 
+            and personalized service. Congratulations!</p>
+        </div>
+
+        <div class="d-flex justify-content-center w-100">
+          <button type="button" id="btnExit" class="btn me-2 p-3 btn-default w-100">Exit</button>
+          <button type="submit" id="btnPlaceOrder" class="btn ms-2 p-3 w-100 bg-success-theme text-white">Place Order</button>
+        </div>
+        
       </div>
 
     </div>

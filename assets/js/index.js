@@ -2,6 +2,10 @@
 const modal = document.getElementById("addCustomerModal");
 const addCustomerBtn = document.getElementById("addCustomerBtn");
 
+// successfull added customer modal
+const successfullModal = document.getElementById("successfullModal");
+const addCustomerForm = document.getElementById("addCustomerForm");
+
 // Function to open the modal
 function openModal() {
     modal.style.display = "flex";
@@ -31,3 +35,4 @@ document.getElementById("toggleAddress").addEventListener("change", function () 
         addressFields.style.display = "none";
     }
 });
+
