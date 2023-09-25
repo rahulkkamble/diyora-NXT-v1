@@ -18,6 +18,9 @@
   <!-- dataTable css -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap.min.css">
 
+  <!-- country code -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+
   <!-- style.css -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
@@ -130,7 +133,7 @@
     <section class="notice-cards">
       <div class="row">
         <div class="col-xl-2 col-md-4 col-sm-6">
-          <div class="card border-0 shadow-sm rounded rounded-4 mb-4 mb-xl-0">
+          <div class="card border-0 shadow-sm rounded rounded-4 mb-3 mb-xl-0">
             <div class="card-body d-flex p-3 pe-1">
               <div class="d-flex align-items-center">
                 <div class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-circle">
@@ -472,69 +475,77 @@
     <div class="modal-content rounded rounded-4 border-0">
       <!-- Modal content goes here -->
       <div class="container">
-        <div class="modal-heading mb-4 d-flex justify-content-between align-items-center">
+        <div class="modal-heading mb-3 d-flex justify-content-between align-items-center">
           <h5 class="mb-0">Add a New Customer</h5>
           <div class="close-modal bg-input-default rounded rounded-2 p-1">
             <img src="./assets/images/img/close_fi_x.svg" alt="close button">
           </div>
         </div>
-        <div class="modal-subheading mb-4">
+        <div class="modal-subheading mb-3">
           <p class="">Customer Information</p>
         </div>
-        <div class="add-customer-form mb-4">
+        <div class="add-customer-form mb-3">
           <form>
-            <div class="mb-4">
-              <input type="text" class="form-control cus-name bg-input-default" id="customerName" name="customerName"
+            <div class="mb-3">
+              <input type="text" class="form-control bg-input-default" id="customerName" name="customerName"
                 placeholder="Name" required>
             </div>
-            <div class="mb-4">
-              <input type="email" class="form-control cus-mail bg-input-default" id="customerEmail" name="customerEmail"
+            <div class="mb-3">
+              <input type="email" class="form-control  bg-input-default" id="customerEmail" name="customerEmail"
                 placeholder="E-mail" required>
             </div>
-            <div class="mb-4 d-flex">
-              <div class="input-group mb-3">
-                <span class="input-group-text">
-                  <i class="flag-icon flag-icon-us"></i> <!-- Use the appropriate flag class here -->
-                </span>
-                <input type="text" class="form-control" id="countryCode" name="countryCode" placeholder="Country Code"
-                  required>
-                <input type="tel" class="form-control" id="customerPhone" name="customerPhone"
+            <div class="mb-3 d-flex">
+              <div class="input-phoneNumber w-100 d-flex gap-3">
+                 <!-- country code added by script -->
+                <input type="tel" class="form-control bg-input-default w-100" id="customerPhone" name="customerPhone"
                   placeholder="Phone Number" required>
               </div>
             </div>
-            <div class="mb-4 form-check ps-0 d-flex">
+            <div class="mb-3 form-check ps-0 d-flex">
               <label class="form-check-label ms-0 ps-0" for="toggleAddress">Add Address</label>
               <input type="checkbox" class="form-check-input cus-address ms-3" id="toggleAddress">
             </div>
-            <div id="addressFields" style="display: none;">
+            <div id="addressFields" class="mb-3" style="display: none;">
               <div>
-                <div class="mb-4">
-                  <input type="text" class="form-control cus-name bg-input-default" id="customerName"
-                    name="customerName" placeholder="Building No., Street Address" required>
+                <div class="mb-3">
+                  <input type="text" class="form-control bg-input-default" id="streetAdress"
+                    name="streetAdress" placeholder="Building No., Street Address" required>
                 </div>
-                <div class="mb-4 d-flex gap-3">
+                <div class="mb-3 d-flex gap-3">
                   <div>
-                    <input type="text" class="form-control cus-name bg-input-default" id="customerName"
-                      name="customerName" placeholder="City" required>
+                    <input type="text" class="form-control bg-input-default" id="addressCity"
+                      name="addressCity" placeholder="City" required>
                   </div>
                   <div>
-                    <input type="email" class="form-control cus-mail bg-input-default" id="customerEmail"
-                      name="customerEmail" placeholder="Pin Code" required>
+                    <input type="number" class="form-control  bg-input-default" id="addressPin" name="addressPin"
+                      placeholder="Pin Code" required>
                   </div>
                 </div>
-                <div class="mb-4 d-flex gap-3">
-                  <div>
-                    <input type="text" class="form-control cus-name bg-input-default" id="customerName"
-                      name="customerName" placeholder="Country" required>
+                <div class="mb-3 d-flex gap-3">
+                  <div class="w-100">
+                    <!-- <input type="text" class="form-control bg-input-default" id="addressCountry"
+                      name="addressCountry" placeholder="Country" required> -->
+                      <select class="form-select text-color-placeholder bg-input-default form-control mb-0" id="groupCountry">
+                        <option selected>Country</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
                   </div>
-                  <div>
-                    <input type="email" class="form-control cus-mail bg-input-default" id="customerEmail"
-                      name="customerEmail" placeholder="State" required>
+                  <div class="w-100">
+                    <!-- <input type="email" class="form-control  bg-input-default" id="addressState"
+                      name="addressState" placeholder="State" required> -->
+                      <select class="form-select text-color-placeholder bg-input-default form-control mb-0" id="groupState">
+                        <option selected>State</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
                   </div>
                 </div>
                 <div class="mb-2 d-flex">
                   <div class="modal-subheading">
-                    <p class="fs-7">Billing Address</p>
+                    <p class="fs-7 mb-0">Billing Address</p>
                   </div>
                   <div class="form-check ps-3 d-flex">
                     <label class="form-check-label ms-0 fs-7 ps-0" for="toggleAddress">Same as Customer Address</label>
@@ -544,8 +555,8 @@
               </div>
             </div>
             <div class="d-flex justify-content-center">
-              <button type="button" class="btn me-2 p-3 btn-default w-100">Cancel</button>
-              <button type="submit" class="btn ms-2 p-3 w-100 bg--main">Submit</button>
+              <button type="button" id="btnCancel" class="btn me-2 p-3 btn-default w-100">Cancel</button>
+              <button type="submit" id="btnSubmit" class="btn ms-2 p-3 w-100 bg--main">Submit</button>
             </div>
           </form>
         </div>
@@ -564,12 +575,23 @@
   <script src="./assets/plugins/chartjs.min.js"></script>
   <!-- <script src="https://demos.creative-tim.com/soft-ui-dashboard/assets/js/plugins/Chart.extension.js"></script> -->
 
+  
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  
   <script src="./assets/js/chart.js"></script>
   <script src="./assets/plugins/dataTable-1.13.6.js"></script>
   <script src="./assets/plugins/dataTable-bootstrap-3.js"></script>
   <script src="./assets/js/recentOrders.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"></script>
+  <script>
+    // -----Country Code Selection
+    $("#customerPhone").intlTelInput({
+      initialCountry: "in",
+      separateDialCode: true,
+      // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+    });
+  </script>
 
 </body>
 

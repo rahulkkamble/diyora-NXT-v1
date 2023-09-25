@@ -28,6 +28,7 @@ html {
   --bg-gradient-primary: linear-gradient(310deg, var(--main-light-hover), var(--main-lighter));
 
   --input-default-bg: rgba(239, 241, 249, 0.60);
+  --input-placeholder-color: #565A5E;
   --base-white: rgba(255, 255, 255, 1);
   --gray-300: rgba(208, 213, 221, 1);
   --black-3:rgba(131, 137, 140, 1);
@@ -35,6 +36,9 @@ html {
 }
 
 /* Reusable classes */
+.text-color-placeholder{
+  color: var(--input-placeholder-color) !important;
+}
 .bg--main {
   background-color: var(--main-color) !important;
 }
@@ -638,10 +642,10 @@ div.dataTables_wrapper div.dataTables_info {
 }
 
 #addressFields {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-input.form-control {
+input.form-control, select.form-control {
   display: flex;
   height: 52px;
   padding: 8px 16px;
@@ -649,4 +653,22 @@ input.form-control {
   align-items: flex-start;
   gap: 10px;
   align-self: stretch;
+}
+
+.form-select.form-control{
+  line-height: 2rem;
+}
+
+.intl-tel-input,
+.iti{
+  width: 100%;
+}
+
+.iti__country-list{
+  max-width: 325px;
+}
+
+.iti--separate-dial-code .iti__selected-flag{
+  background-color: var(--input-default-bg);
+  border-right: 1px solid #0000000e;
 }
