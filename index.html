@@ -496,7 +496,7 @@
             </div>
             <div class="mb-3 d-flex">
               <div class="input-phoneNumber w-100 d-flex gap-3">
-                 <!-- country code added by script -->
+                <!-- country code added by script -->
                 <input type="tel" class="form-control bg-input-default w-100" id="customerPhone" name="customerPhone"
                   placeholder="Phone Number" required>
               </div>
@@ -508,13 +508,13 @@
             <div id="addressFields" class="mb-3" style="display: none;">
               <div>
                 <div class="mb-3">
-                  <input type="text" class="form-control bg-input-default" id="streetAdress"
-                    name="streetAdress" placeholder="Building No., Street Address" required>
+                  <input type="text" class="form-control bg-input-default" id="streetAdress" name="streetAdress"
+                    placeholder="Building No., Street Address" required>
                 </div>
                 <div class="mb-3 d-flex gap-3">
                   <div>
-                    <input type="text" class="form-control bg-input-default" id="addressCity"
-                      name="addressCity" placeholder="City" required>
+                    <input type="text" class="form-control bg-input-default" id="addressCity" name="addressCity"
+                      placeholder="City" required>
                   </div>
                   <div>
                     <input type="number" class="form-control  bg-input-default" id="addressPin" name="addressPin"
@@ -525,22 +525,24 @@
                   <div class="w-100">
                     <!-- <input type="text" class="form-control bg-input-default" id="addressCountry"
                       name="addressCountry" placeholder="Country" required> -->
-                      <select class="form-select text-color-placeholder bg-input-default form-control mb-0" id="groupCountry">
-                        <option selected>Country</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
+                    <select class="form-select text-color-placeholder bg-input-default form-control mb-0"
+                      id="groupCountry">
+                      <option selected>Country</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
                   </div>
                   <div class="w-100">
                     <!-- <input type="email" class="form-control  bg-input-default" id="addressState"
                       name="addressState" placeholder="State" required> -->
-                      <select class="form-select text-color-placeholder bg-input-default form-control mb-0" id="groupState">
-                        <option selected>State</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
+                    <select class="form-select text-color-placeholder bg-input-default form-control mb-0"
+                      id="groupState">
+                      <option selected>State</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
                   </div>
                 </div>
                 <div class="mb-2 d-flex">
@@ -575,32 +577,137 @@
         </div>
 
         <div class="modal-heading mb-2 d-flex justify-content-between align-items-center">
-          
+
           <h5 class="mb-0">
-            <span> 
+            <span>
               <img src="./assets/images/img/emoji-left-celebrate.svg" alt="">
             </span>
             Pragnesh Navadiya
-            <span> 
+            <span>
               <img src="./assets/images/img/emoji-right-celebrate.svg" alt="">
             </span>
           </h5>
         </div>
         <div class="modal-subheading mb-3">
-          <p class="text-center fs-7">You've successfully added a new customer to 
-            your dashboard for enhanced management 
+          <p class="text-center fs-7">You've successfully added a new customer to
+            your dashboard for enhanced management
             and personalized service. Congratulations!</p>
         </div>
 
         <div class="d-flex justify-content-center w-100">
           <button type="button" id="btnExit" class="btn me-2 p-3 btn-default w-100">Exit</button>
-          <button type="submit" id="btnPlaceOrder" class="btn ms-2 p-3 w-100 bg-success-theme text-white">Place Order</button>
+          <button type="submit" id="btnPlaceOrder" class="btn ms-2 p-3 w-100 bg-success-theme text-white">Place
+            Order</button>
         </div>
-        
+
       </div>
 
     </div>
   </div>
+
+  <!-- Modal section ============= after click on place order button // product modal ================ -->
+  <div id="searchProductModal" class="modal searchProductModal">
+    <div class="modal-content rounded rounded-4 border-0">
+      <!-- Modal content goes here -->
+      <div class="container">
+        <!-- outer div for left and right sections -->
+        <div class="row">
+          <!-- left side product list -->
+          <div class="d-flex flex-column col-12 col-md-7 px-4">
+            <div class="search-products-bar mb-4">
+              <div class="search-input-group d-flex gap-3 border border-2 rounded rounded-3 py-2 px-3">
+                <div class="search-icon fs-7 p-1">
+                  <svg class=" icon-with-sideheading" xmlns="http://www.w3.org/2000/svg" width="18" height="19"
+                    viewBox="0 0 18 19" fill="none">
+                    <circle cx="8.80589" cy="8.80553" r="7.49047" stroke="#130F26" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14.0156 14.4043L16.9523 17.3334" stroke="#130F26" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <div class="search-input w-100 d-flex flex-column justify-content-between align-items-start">
+                  <input type="text" class="border-0 p-1 w-100" placeholder="Search Product’s Name/Code">
+                </div>
+              </div>
+            </div>
+            <div class="product-subheading mb-3">
+              <h6 class="mb-0">Product</h6>
+            </div>
+            <!-- when no product added/search/ordered...  Empty// -->
+            <div class="product-list position-relative top-25">
+              <div class="d-flex flex-column justify-content-center align-items-center">
+                <div class="empty-state d-flex flex-column align-items-center justify-content-center text-center gap-3">
+                  <div class="icon-container">
+                    <div class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="46" height="50" viewBox="0 0 46 50" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M45.2832 35.7868L43.3609 20.3002C42.1899 14.7741 38.8757 12.5 35.7161 12.5H10.3293C7.12555 12.5 3.70086 14.6149 2.7066 20.3002L0.762262 35.7868C-0.828559 47.1574 5.02654 50 12.6713 50H33.3962C41.0189 50 46.6972 45.8839 45.2832 35.7868ZM15.7425 25.3714C14.5222 25.3714 13.533 24.3533 13.533 23.0973C13.533 21.8414 14.5222 20.8232 15.7425 20.8232C16.9627 20.8232 17.952 21.8414 17.952 23.0973C17.952 24.3533 16.9627 25.3714 15.7425 25.3714ZM28.0051 23.0973C28.0051 24.3533 28.9943 25.3714 30.2145 25.3714C31.4348 25.3714 32.424 24.3533 32.424 23.0973C32.424 21.8414 31.4348 20.8232 30.2145 20.8232C28.9943 20.8232 28.0051 21.8414 28.0051 23.0973Z"
+                          fill="#BEC0CA" />
+                        <path opacity="0.4"
+                          d="M35.4347 11.9358C35.4425 12.1297 35.4053 12.3228 35.3258 12.5H31.733C31.6634 12.3199 31.6266 12.1288 31.6242 11.9358C31.6242 7.14206 27.7247 3.25596 22.9144 3.25596C18.1041 3.25596 14.2046 7.14206 14.2046 11.9358C14.2376 12.1224 14.2376 12.3134 14.2046 12.5H10.5247C10.4918 12.3134 10.4918 12.1224 10.5247 11.9358C10.8043 5.26477 16.3125 0 23.0124 0C29.7122 0 35.2204 5.26477 35.5 11.9358H35.4347Z"
+                          fill="#BEC0CA" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="sub-heading">
+                    <h6>Search Products to make Order</h6>
+                    <p class="text-muted">Crafting tailor-made orders for your cherished clientele</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- left side end -->
+
+          <!-- right side cart and wishlist -->
+          <div class="d-flex flex-column col-12 col-md-5 px-4 border-start">
+            <div class="search-products-bar mb-4">
+              <div class="search-input-group d-flex gap-3 border border-2 rounded rounded-3 py-1 px-3">
+                <div class="profile-heading d-flex align-items-center gap-3">
+                  <img class="icon-with-sideheading" alt="user/boy" src="./assets/images/img/image-5.png" />
+                  <div class="text-muted fs-7">Pragnesh Navadiya | diyora.nxt@gmail.com</div>
+                </div>
+              </div>
+            </div>
+            <div class="product-subheading text-center mb-3">
+              <h6 class="mb-0">Your Cart / <span class="text-muted">Wishlist</span></h6>
+            </div>
+            <!-- when no product added/search/ordered...  Empty// -->
+            <div class="product-list position-relative top-25">
+              <div class="d-flex flex-column justify-content-between align-items-center">
+                
+                <div class="empty-state mb-5 d-flex flex-column align-items-center justify-content-center text-center gap-3">
+                  <div class="icon-bag">
+                    <img src="./assets/images/img/color-bags-cart-wishlist.png" alt="">
+                  </div>
+                </div>
+
+                <div class="horizontal-line">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="402" height="2" viewBox="0 0 402 2" fill="none">
+                    <path d="M0 1L402 1.00004" stroke="#F1F3F9"/>
+                  </svg>
+                </div>
+
+                <div class="cart-total-price-module mb-3 w-100 px-5 d-flex justify-content-between">
+                  <span class="text-muted fs-7">Total</span> <span class="cart-total-amount">₹0</span>
+                </div>
+
+                <div class="d-flex justify-content-center w-100">
+                  <button type="button" id="productBtnCancel" class="btn me-2 p-3 btn-default w-100">Cancel</button>
+                  <button type="submit" id="productBtnPlaceOrder" class="btn ms-2 p-3 w-100 bg-secondary-2 text-white">Place
+                    Order</button>
+                </div>
+              </div>
+            </div>
+          </div><!-- right side end -->
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 
 
   <!-- Bootstrap JS (Make sure to include Popper.js and Bootstrap JS before closing body tag) -->
@@ -612,10 +719,10 @@
   <script src="./assets/plugins/chartjs.min.js"></script>
   <!-- <script src="https://demos.creative-tim.com/soft-ui-dashboard/assets/js/plugins/Chart.extension.js"></script> -->
 
-  
+
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
   <script src="./assets/js/chart.js"></script>
   <script src="./assets/plugins/dataTable-1.13.6.js"></script>
   <script src="./assets/plugins/dataTable-bootstrap-3.js"></script>

@@ -10,6 +10,7 @@ html {
   --main-color: #5570F1;
   --bg-main: rgba(85, 112, 241, 1);
   --bg-secondary-light: rgba(85, 112, 241, 0.1);
+  --bg-secondary-2 : #A6A6A6;
   --main-dark: #2f2bae;
   --main-light: #b9b6ff;
   --main-light-hover: #9593e2;
@@ -21,19 +22,19 @@ html {
   --bg-primary-light: #73c8f03f;
   --main-lighter-hover: #e0def4;
   --body-bg-light: #fafafb;
-  --border-xs: .1px solid rgba(201, 190, 190, 0.655);
-  --shadow--sm: 1px 2px 10px -3px var(--main-color);
-  --shadow--sm: 1px 2px 10px -3px #00000085;
-  --shadow--sm-inset: 1px 2px 10px -3px var(--main-color) inset;
-  --shadow--sm-inset-black: -4px 2px 10px -8px #00000085 inset;
-  --bg-gradient-primary: linear-gradient(310deg, var(--main-light-hover), var(--main-lighter));
-
   --input-default-bg: rgba(239, 241, 249, 0.60);
   --input-placeholder-color: #565A5E;
   --base-white: rgba(255, 255, 255, 1);
   --gray-300: rgba(208, 213, 221, 1);
   --black-3: rgba(131, 137, 140, 1);
 
+  --bg-gradient-primary: linear-gradient(310deg, var(--main-light-hover), var(--main-lighter));
+
+  --border-xs: .1px solid rgba(201, 190, 190, 0.655);
+  --shadow--sm: 1px 2px 10px -3px var(--main-color);
+  --shadow--sm: 1px 2px 10px -3px #00000085;
+  --shadow--sm-inset: 1px 2px 10px -3px var(--main-color) inset;
+  --shadow--sm-inset-black: -4px 2px 10px -8px #00000085 inset;
 }
 
 /* Reusable classes */
@@ -41,7 +42,7 @@ html {
   color: var(--input-placeholder-color) !important;
 }
 
-.bg-success-theme{
+.bg-success-theme {
   background-color: var(--bg-success-theme) !important;
 }
 
@@ -55,6 +56,10 @@ html {
 
 .bg-input-default {
   background-color: var(--input-default-bg) !important;
+}
+
+.bg-secondary-2 {
+  background-color: var(--bg-secondary-2) !important;
 }
 
 .bg-secondary-light {
@@ -180,6 +185,10 @@ html {
 
 .fs-9 {
   font-size: .75rem !important;
+}
+
+.top-25 {
+  top: 25%;
 }
 
 /* ========= default theme settings ========== */
@@ -687,7 +696,7 @@ select.form-control {
   display: flex; 
 } */
 
-.modal.successfull-modal .container{
+.modal.successfull-modal .container {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -695,6 +704,75 @@ select.form-control {
   flex-shrink: 0;
 }
 
-.img-above-header img{
+.img-above-header img {
+  width: 100%;
+}
+
+/* =========== search product modal ============= */
+.modal.searchProductModal {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.modal.searchProductModal .modal-content {
+  max-width: 1230px;
+  min-height: 90vh;
+}
+
+.search-input input:focus,
+.search-input input:active {
+  outline: none;
+}
+
+.search-input-group {
+  height: 52px;
+}
+
+.empty-state .icon-container {
+  display: flex;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+  background: #F4F5FA;
+  border: 1px solid #E1E2E9;
+}
+
+.empty-state .icon-container .icon {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  padding: 5px 7.5px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.empty-state .icon-container .icon svg {
+  width: 45px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.profile-heading {
+  width: 400px;
+}
+
+.profile-heading .icon-with-sideheading {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+}
+
+.icon-bag {
+  width: 220px;
+  height: 220px;
+  flex-shrink: 0;
+}
+.icon-bag img{
+  height: 100%;
   width: 100%;
 }
