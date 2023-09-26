@@ -493,7 +493,7 @@ body {
   height: 100px;
 }
 
-/* 3rd row -- recent orders and top selling products */
+/* 3rd row -- recent orders and top selling products ====================== */
 .avatar {
   color: #fff;
   display: inline-flex;
@@ -601,6 +601,11 @@ body {
   align-items: center;
 }
 
+.product-image-medium.product-image-large{
+  width: 190px;
+  height: 190px;
+}
+
 .product-image-medium img {
   height: 100%;
   width: 100%;
@@ -637,7 +642,7 @@ div.dataTables_wrapper div.dataTables_info {
   white-space: inherit;
 }
 
-/* Modal=======================Modal */
+/* Modal======================= Modal ======================= for all modals ========================= */
 /* Modal Styles */
 .modal {
   display: none;
@@ -667,8 +672,8 @@ div.dataTables_wrapper div.dataTables_info {
   margin-bottom: 1.5rem;
 }
 
-input.form-control,
-select.form-control {
+.modal-content input.form-control,
+.modal-content select.form-control {
   display: flex;
   height: 52px;
   padding: 8px 16px;
@@ -678,7 +683,7 @@ select.form-control {
   align-self: stretch;
 }
 
-.form-select.form-control {
+.modal-content .form-select.form-control {
   line-height: 2rem;
 }
 
@@ -697,7 +702,8 @@ select.form-control {
 }
 
 /* successfull modal */
-/* toggle for working successfull modal */
+/* toggle for see working successfull modal - do not delete */
+/* uncomment below code */
 
 /* .modal.successfull-modal{
   display: flex; 
@@ -715,12 +721,12 @@ select.form-control {
   width: 100%;
 }
 
-/* =========== search product modal ============= */
-/* uncomment display flex to see the search modal */
+/* =========== search product and cart/wishlist modal ============= */
+/* empty state */
+/* uncomment display block to see the search product and cart/wishlist modal */
+
 .modal.searchProductModal {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
+  display: block;
 }
 
 .modal.searchProductModal .modal-content {
@@ -789,11 +795,10 @@ select.form-control {
   width: 100%;
 }
 
-@media screen and (max-width: 767.5px) {
-  .modal.searchProductModal .modal-content {
-    margin-top: 300px;
-  }
+/* non-empty state */
 
+
+@media screen and (max-width: 767.5px) {
   .modal-content .container-fluid .row{
     margin-top: 4.5rem;
   }
@@ -810,8 +815,8 @@ select.form-control {
   }
 }
 
-@media screen and (max-width: 571.5px) {
+/* @media screen and (max-width: 571.5px) {
   .search-products-bar.profile-bar{
     margin-top: 0;
   }
-}
+} */
