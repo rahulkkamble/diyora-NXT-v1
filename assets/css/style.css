@@ -10,7 +10,7 @@ html {
   --main-color: #5570F1;
   --bg-main: rgba(85, 112, 241, 1);
   --bg-secondary-light: rgba(85, 112, 241, 0.1);
-  --bg-secondary-2 : #A6A6A6;
+  --bg-secondary-2: #A6A6A6;
   --main-dark: #2f2bae;
   --main-light: #b9b6ff;
   --main-light-hover: #9593e2;
@@ -212,7 +212,7 @@ html {
 }
 
 @media screen and (min-width: 767.5px) {
-  .border-md-start{
+  .border-md-start {
     border-left: var(--border-line-lighter) !important;
   }
 }
@@ -718,7 +718,7 @@ select.form-control {
 /* =========== search product modal ============= */
 /* uncomment display flex to see the search modal */
 .modal.searchProductModal {
-  /* display: flex; */
+  display: flex;
   align-items: center;
   flex-shrink: 0;
 }
@@ -726,6 +726,7 @@ select.form-control {
 .modal.searchProductModal .modal-content {
   max-width: 1230px;
   min-height: 90vh;
+  width: 90%;
 }
 
 .search-input input:focus,
@@ -783,7 +784,34 @@ select.form-control {
   margin-top: 6vw;
 }
 
-.icon-bag img{
+.icon-bag img {
   height: 100%;
   width: 100%;
+}
+
+@media screen and (max-width: 767.5px) {
+  .modal.searchProductModal .modal-content {
+    margin-top: 300px;
+  }
+
+  .modal-content .container-fluid .row{
+    margin-top: 4.5rem;
+  }
+
+  .cart-wishlist-column{
+    position: relative;
+  }
+
+  .search-products-bar.profile-bar{
+    width: calc(100% - 48px);
+    position: absolute;
+    top: -100%;
+    margin-top: 24px;
+  }
+}
+
+@media screen and (max-width: 571.5px) {
+  .search-products-bar.profile-bar{
+    margin-top: 0;
+  }
 }
