@@ -783,6 +783,14 @@ div.dataTables_wrapper div.dataTables_info {
   height: 52px;
 }
 
+.cart-wishlist-tabs .nav-link{
+  color: var(--bg-secondary-2);
+}
+
+.cart-wishlist-tabs .nav-link.active{
+  font-weight: bold;
+}
+
 .empty-state .icon-container {
   display: flex;
   width: 140px;
@@ -826,7 +834,8 @@ div.dataTables_wrapper div.dataTables_info {
   width: 220px;
   height: 220px;
   flex-shrink: 0;
-  margin-top: 7rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
 }
 
 .icon-bag img {
