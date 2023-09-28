@@ -19,6 +19,9 @@ html {
   --bg-success-light: rgba(81, 156, 102, 0.10);
   --bg-warning-light: #fed40245;
   --bg-pink-light: #FFC7D4;
+  --bg-faded-rose-gold: #FFE5E5;
+  --bg-faded-sky-blue: #E5F6FF;
+  --bg-faded-purple: #EBE5FF;
   --bg-primary-light: #73c8f03f;
   --main-lighter-hover: #e0def4;
   --body-bg-light: #fafafb;
@@ -1069,3 +1072,38 @@ h1 {
     margin-top: 0;
   }
 } */
+
+/* ============ cart and wishlist ============= */
+.quantity-measure{
+  max-width: 100%;
+  width: 100px;
+}
+
+.quantity-measure span{
+  border-radius: 4px;
+  background-color: var(--img-bg-gray);
+}
+
+.quantity-measure span i{
+  width: 100%;
+  height: 100%;
+}
+
+.quantity-measure span i::before{
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.selected-tags div{
+  width: 120px;
+}
+
+.selected-tags .metal-color{
+  background-color: var(--bg-faded-rose-gold);
+}
+.selected-tags .diamond{
+  background-color: var(--bg-faded-sky-blue);
+}
+.selected-tags .size{
+  background-color: var(--bg-faded-purple);
+}

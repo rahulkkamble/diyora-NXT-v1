@@ -656,7 +656,7 @@
                 </div>
               </div>
             </div>
-            <!-- when product adding to cart/wishlist //non-empty state -->
+            <!-- when product adding to listed, searched //non-empty state -->
             <div class="product-list d-none">
               <!-- replicate card for multiple products -->
               <div class="card border rounded rounded-4">
@@ -818,7 +818,7 @@
               <!-- product customization -->
               <div class="product-customization mt-3">
                 <div class="row">
-                  <div class="col-12 col-md-4">
+                  <div class="col-4">
                     <p class="fs-6 text-muted mb-2 text-capitalize text-center">Metal Color</p>
                     <select class="form-select text-color-placeholder form-control mb-0" id="groupCountry">
                       <option selected>18kt Rose Gold</option>
@@ -827,7 +827,7 @@
                       <option value="3">24kt Rose Gold</option>
                     </select>
                   </div>
-                  <div class="col-12 col-md-4">
+                  <div class="col-4">
                     <p class="fs-6 text-muted mb-2 text-capitalize text-center">Diamond</p>
                     <select class="form-select text-color-placeholder form-control mb-0" id="groupCountry">
                       <option selected>VVS EF</option>
@@ -836,7 +836,7 @@
                       <option value="3">VWT EF</option>
                     </select>
                   </div>
-                  <div class="col-12 col-md-4">
+                  <div class="col-4">
                     <p class="fs-6 text-muted mb-2 text-capitalize text-center">Size</p>
                     <select class="form-select text-color-placeholder form-control mb-0" id="groupCountry">
                       <option selected>Select</option>
@@ -851,7 +851,7 @@
           </div>
           <!-- left side end -->
 
-          <!-- right side cart and wishlist -->
+          <!-- ======================== right side cart and wishlist ========================= -->
           <div class="d-flex flex-column cart-wishlist-column col-12 col-md-5 px-4 border-md-start">
             <div class="search-products-bar profile-bar mb-4">
               <div class="search-input-group d-flex gap-1 gap-lg-3 border border-2 rounded rounded-3 py-1 px-1 px-lg-3">
@@ -881,20 +881,20 @@
             <!-- tab heading ends here -->
             <!-- ========== both tab content cart and wishlist start ======== -->
             <div class="tab-content" id="cart-wishlist-content">
-              <div class="tab-pane cart-tab-pane fade show active" id="cartTabPane" role="tabpanel" aria-labelledby="cart-tab"
-                tabindex="0">
+              <!-- =========== cart tab content ========== -->
+              <div class="tab-pane cart-tab-pane fade show active" id="cartTabPane" role="tabpanel"
+                aria-labelledby="cart-tab" tabindex="0">
                 <!-- cart tab content -->
                 <!-- when no product added/search/ordered...  Empty// -->
-                <div class="product-list">
+                <!-- for empty state -->
+                <div class="product-list d-none">
                   <div class="d-flex flex-column h-100 justify-content-between align-items-center">
-
                     <div
                       class="empty-state my-5 d-flex flex-column align-items-center justify-content-center text-center gap-3">
                       <div class="icon-bag">
                         <img src="./assets/images/img/color-bags-cart-wishlist.png" alt="">
                       </div>
                     </div>
-
                     <div class="horizontal-line mt-3 w-100">
                       <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2" viewBox="0 0 402 2" fill="none">
                         <path d="M0 1L402 1.00004" stroke="#F1F3F9" />
@@ -911,11 +911,93 @@
                         class="btn ms-2 p-3 w-100 bg-secondary-2 text-white">Place
                         Order</button>
                     </div>
+
+                  </div>
+                </div>
+                <!-- for empty state end -->
+                <!-- for non-empty state -->
+                <div class="product-list">
+                  <div class="d-flex flex-column h-100 justify-content-between align-items-center">
+                    <!-- replicate card for multiple products -->
+                    <div class="cards-and-subtotal">
+                      <div class="card w-100 border-0 rounded rounded-4">
+                        <div class="card-body w-100 p-0">
+                          <div class="d-flex w-100 align-items-center">
+                            <div class="product-image-medium">
+                              <img src="./assets/images/img/mask-group.png" alt="">
+                            </div>
+                            <div class="numbers w-100">
+                              <!-- product title and description -->
+                              <div
+                                class="d-flex w-100 flex-column flex-sm-row flex-md-column flex-xl-row justify-content-between">
+                                <div class="product-info">
+                                  <h6 class="text-nowrap fs-6 fw-normal">
+                                    3-Hook Prong Solitaire
+                                  </h6>
+                                  <p class="fs-7 text-muted mb-1 text-capitalize">Studsin Sterling Silver | Diamond 7.5mm
+                                  </p>
+                                </div>
+                                <div class="action-side">
+                                  <a href="#" class="remove-link text-decoration-none">
+                                    <p class="fs-7 text-danger">remove</p>
+                                  </a>
+                                </div>
+                              </div>
+                              <!-- price and quantity tracker -->
+                              <div class="d-flex flex-wrap justify-content-between">
+                                <p class="fs-7 mt-3 pb-0 mb-0 text-muted text-capitalize fw-bold">₹53,423/-</p>
+                                <div class="quantity-measure mt-3 d-flex flex-nowrap">
+                                  <span class=""><i class="fi fi-rr-plus-small"></i></span>
+                                  <p class="fs-7 pb-0 mb-0 px-3 text-muted">1</p>
+                                  <span class=""><i class="fi fi-rr-minus-small"></i></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- customized tags -->
+                          <div class="selected-tags my-3 d-flex w-100 justify-content-between">
+                            <div class="metal-color rounded rounded-1">
+                              <p class="mb-0 pb-0 fs-8 text-center">18kt Rose Gold</p>
+                            </div>
+                            <div class="diamond rounded rounded-1">
+                              <p class="mb-0 pb-0 fs-8 text-center">VVS EF</p>
+                            </div>
+                            <div class="size rounded rounded-1">
+                              <p class="mb-0 pb-0 fs-8 text-center">Size12</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- sub total amount -->
+                      <div class="cart-total-price-module mb-4 w-100 px-5 d-flex justify-content-between">
+                        <span class="text-muted fs-7">Sub Total</span> <span class="cart-total-amount fw-bold">₹0</span>
+                      </div>
+                    </div>
+
+                    <div class="horizontal-line mt-3 w-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2" viewBox="0 0 402 2" fill="none">
+                        <path d="M0 1L402 1.00004" stroke="#F1F3F9" />
+                      </svg>
+                    </div>
+
+                    <div class="cart-total-price-module mb-4 w-100 px-5 d-flex justify-content-between">
+                      <span class="text-muted fs-7">Total</span> <span class="cart-total-amount fw-bold">₹0</span>
+                    </div>
+
+                    <div class="d-flex justify-content-center w-100">
+                      <button type="button" id="productBtnCancel" class="btn me-2 p-3 btn-default w-100">Cancel</button>
+                      <button type="submit" id="productBtnPlaceOrder"
+                        class="btn ms-2 p-3 w-100 bg-secondary-2 text-white">Place
+                        Order</button>
+                    </div>
+                    <!-- for empty state end -->
+                    <!-- for non-empty state -->
                   </div>
                 </div>
               </div>
-              <div class="tab-pane wishlist-tab-pane fade" id="wishlistTabPane" role="tabpanel" aria-labelledby="wishlist-tab"
-                tabindex="0">
+              <!-- =========== wishlist tab content ========== -->
+              <div class="tab-pane wishlist-tab-pane fade" id="wishlistTabPane" role="tabpanel"
+                aria-labelledby="wishlist-tab" tabindex="0">
                 <!-- wishlist tab content -->
                 <!-- when no product added/search/ordered...  Empty-state-wishlist// -->
                 <div class="product-list">
@@ -930,8 +1012,7 @@
                 </div>
               </div>
             </div>
-
-
+            <!-- ========== cart and wishlist content end here =========== -->
           </div>
           <!-- right side end -->
         </div>
