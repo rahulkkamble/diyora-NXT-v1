@@ -1113,10 +1113,19 @@ h1 {
   overflow: hidden;
   overflow-y: auto;
   padding-bottom: 5rem;
-  max-height: 60vh;
+  max-height: 67vh;
 }
 
 .total-and-buttons{
   bottom: 0rem;
   background-color: var(--base-white);
+}
+
+.shipping-delivery-buttons{
+  width: 370px;
+}
+
+.icon-btn{
+  height: 2.25rem;
+  width: 2.25rem;
 }

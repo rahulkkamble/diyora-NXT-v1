@@ -466,8 +466,6 @@
         </div>
       </div>
     </section>
-
-
   </div>
 
   <!-- Modal section ============= add customer modal ================ -->
@@ -509,7 +507,7 @@
             <div id="addressFields" class="mb-3" style="display: none;">
               <div>
                 <div class="mb-3">
-                  <input type="text" class="form-control bg-input-default" id="streetAdress" name="streetAdress"
+                  <input type="text" class="form-control bg-input-default" id="streetAddress" name="streetAddress"
                     placeholder="Building No., Street Address" required>
                 </div>
                 <div class="mb-3 d-flex gap-3">
@@ -630,11 +628,13 @@
           </h5>
         </div>
         <div class="modal-subheading mb-3">
-          <p class="text-center fs-7">We're here to ensure a smooth experience throughout, from selection to delivery. Thank you for choosing us for your customer's jewelry needs."</p>
+          <p class="text-center fs-7">We're here to ensure a smooth experience throughout, from selection to delivery.
+            Thank you for choosing us for your customer's jewelry needs."</p>
         </div>
 
         <div class="d-flex justify-content-center w-100">
-          <button type="submit" id="btnPlaceOrder" class="btn ms-2 p-3 w-100 bg-success-theme text-white">Let's Go</button>
+          <button type="submit" id="btnPlaceOrder" class="btn ms-2 p-3 w-100 bg-success-theme text-white">Let's
+            Go</button>
         </div>
 
       </div>
@@ -803,18 +803,18 @@
             </div>
             <!-- == back btn ========= when product selected then /back-button/ introduced ========= -->
             <!-- == back btn ========= when product selected then /back-button/ introduced ========= -->
-            <div class="product-subheading d-flex align-items-center d-one mb-3">
-              <img class="back-vector-btn" src="./assets/images/img/back-vector.svg" alt="">
-              <h6 class="ms-2 mb-0">Product</h6>
-            </div>
-            <!-- == back btn for shipping address =========== -->
             <div class="product-subheading d-flex align-items-center d-none mb-3">
               <img class="back-vector-btn" src="./assets/images/img/back-vector.svg" alt="">
-              <h6 class="ms-2 mb-0">Shipping Adress</h6>
+              <h6 class="ms-3 mb-0">Product</h6>
+            </div>
+            <!-- == back btn for shipping address =========== -->
+            <div class="product-subheading d-flex align-items-center d-one mb-3">
+              <img class="back-vector-btn" src="./assets/images/img/back-vector.svg" alt="">
+              <h6 class="ms-3 mb-0">Shipping Address</h6>
             </div>
             <!-- ============= when one of product selected and ready to customize // customize product -->
             <!-- ============= when one of product selected and ready to customize // customize product -->
-            <div class="product-list customize-product d-one">
+            <div class="product-list customize-product d-none">
               <!-- pasting flickity html code below -->
               <div class="container-none position-relative">
                 <!-- Flickity HTML init -->
@@ -895,6 +895,92 @@
                     </select>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <!-- ============== shipping address for placing order ================ -->
+            <!-- ============== shipping address for placing order ================ -->
+            <div class="product-list customize-product d-one">
+              <!-- shipping address form -->
+              <div class="add-shipping-form mb-3">
+                <form id="addshippingForm">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="mb-2">
+                        <label for="shippingName" class="mb-2">Name</label>
+                        <input type="text" class="form-control bg-input-default" id="shippingName" name="shippingName"
+                          placeholder="Name" required>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="mb-2">
+                        <label for="shippingEmail" class="mb-2">Email</label>
+                        <input type="email" class="form-control  bg-input-default" id="shippingEmail"
+                          name="shippingEmail" placeholder="Email" required>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="mb-2">
+                        <label for="shippingAddress" class="mb-2">Address</label>
+                        <input type="text" class="form-control bg-input-default" id="shippingAddress" name="shippingAddress"
+                          placeholder="Address" required>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <label for="shippingPhone2" class="mb-2">Phone No</label>
+                      <div class="mb-2 d-flex">
+                        <div class="input-phoneNumber w-100 d-flex gap-3">
+                          <!-- country code added by script -->
+                        <input type="tel" class="form-control bg-input-default w-100" id="shippingPhone2"
+                            name="shippingPhone2" placeholder="Phone Number" required>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <label for="groupShippingCountry" class="mb-2">Country</label>
+                      <div class="mb-2 d-flex gap-3">
+                        <select class="form-select text-color-placeholder bg-input-default form-control mb-0"
+                          id="groupShippingCountry">
+                          <option selected>Country</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <label for="groupShippingState" class="mb-2">State</label>
+                      <div class="mb-2 d-flex gap-3">
+                        <select class="form-select text-color-placeholder bg-input-default form-control mb-0"
+                          id="groupShippingState">
+                          <option selected>State</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <label for="shippingPin" class="mb-2">Pin Code</label>
+                      <div class="mb-2">
+                        <input type="text" class="form-control  bg-input-default" id="shippingPin" name="shippingPin"
+                          placeholder="Pin Code" required>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-center mt-3 w-100">
+                    <div class="shipping-delivery-buttons d-flex">
+                      <button type="button" id="shippingBtnCancel" class="btn bg--main d-flex align-items-center justify-content-center me-2 p-2 w-100"><span
+                        class="m-0 p-0 icon-btn fs-6"><img class="w-100 h-100 pe-1 fs-6" src="./assets/images/img/home-delivery-icon.png"
+                          alt=""></span>
+                      <p class="p-1 mb-0">Home Delivery</p></button>
+                      <button type="submit" id="shippingBtnSubmit" class="btn btn-default d-flex align-items-center justify-content-center ms-2 p-2 w-100 "><span
+                        class="m-0 p-0 icon-btn fs-6"><img class="pe-1 h-100 w-100 fs-6" src="./assets/images/img/store-delivery-icon.png"
+                          alt=""></span>
+                      <p class="p-1 mb-0">Store Delivery</p></button>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -1179,9 +1265,17 @@
                         <!-- share and view products -->
                         <div class="d-flex my-3 justify-content-center w-100">
                           <button type="button" id="shareProductFromWishlist"
-                            class="btn d-flex justify-content-center align-items-center me-2 p-2 btn-default w-100"><span class="m-0 p-0 fs-6"><img class="pe-1 fs-6" src="./assets/images/img/share-vector.svg" alt=""></span><p class="pb-0 mb-0">Share</p></button>
+                            class="btn d-flex justify-content-center align-items-center me-2 p-2 btn-default w-100"><span
+                              class="m-0 p-0 fs-6"><img class="pe-1 fs-6" src="./assets/images/img/share-vector.svg"
+                                alt=""></span>
+                            <p class="pb-0 mb-0">Share</p>
+                          </button>
                           <button type="submit" id="viewProductFromWishlist"
-                            class="btn d-flex justify-content-center align-items-center ms-2 p-2 w-100 bg-primary text-white"><span class="m-0 p-0 fs-6"><img class="pe-1 fs-6" src="./assets/images/img/view-eye-vector.svg" alt=""></span><p class="pb-0 mb-0">View Product</p></button>
+                            class="btn d-flex justify-content-center align-items-center ms-2 p-2 w-100 bg-primary text-white"><span
+                              class="m-0 p-0 fs-6"><img class="pe-1 fs-6" src="./assets/images/img/view-eye-vector.svg"
+                                alt=""></span>
+                            <p class="pb-0 mb-0">View Product</p>
+                          </button>
                         </div>
                         <div class="horizontal-line mt-2 mb-3 w-100">
                           <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2" viewBox="0 0 402 2"
@@ -1226,9 +1320,17 @@
                         <!-- share and view products -->
                         <div class="d-flex my-3 justify-content-center w-100">
                           <button type="button" id="shareProductFromWishlist"
-                            class="btn d-flex justify-content-center align-items-center me-2 p-2 btn-default w-100"><span class="m-0 p-0 fs-6"><img class="pe-1 fs-6" src="./assets/images/img/share-vector.svg" alt=""></span><p class="pb-0 mb-0">Share</p></button>
+                            class="btn d-flex justify-content-center align-items-center me-2 p-2 btn-default w-100"><span
+                              class="m-0 p-0 fs-6"><img class="pe-1 fs-6" src="./assets/images/img/share-vector.svg"
+                                alt=""></span>
+                            <p class="pb-0 mb-0">Share</p>
+                          </button>
                           <button type="submit" id="viewProductFromWishlist"
-                            class="btn d-flex justify-content-center align-items-center ms-2 p-2 w-100 bg-primary text-white"><span class="m-0 p-0 fs-6"><img class="pe-1 fs-6" src="./assets/images/img/view-eye-vector.svg" alt=""></span><p class="pb-0 mb-0">View Product</p></button>
+                            class="btn d-flex justify-content-center align-items-center ms-2 p-2 w-100 bg-primary text-white"><span
+                              class="m-0 p-0 fs-6"><img class="pe-1 fs-6" src="./assets/images/img/view-eye-vector.svg"
+                                alt=""></span>
+                            <p class="pb-0 mb-0">View Product</p>
+                          </button>
                         </div>
                         <div class="horizontal-line mt-2 mb-3 w-100">
                           <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2" viewBox="0 0 402 2"
@@ -1273,9 +1375,17 @@
                         <!-- share and view products -->
                         <div class="d-flex my-3 justify-content-center w-100">
                           <button type="button" id="shareProductFromWishlist"
-                            class="btn d-flex justify-content-center align-items-center me-2 p-2 btn-default w-100"><span class="m-0 p-0 fs-6"><img class="pe-1 fs-6" src="./assets/images/img/share-vector.svg" alt=""></span><p class="pb-0 mb-0">Share</p></button>
+                            class="btn d-flex justify-content-center align-items-center me-2 p-2 btn-default w-100"><span
+                              class="m-0 p-0 fs-6"><img class="pe-1 fs-6" src="./assets/images/img/share-vector.svg"
+                                alt=""></span>
+                            <p class="pb-0 mb-0">Share</p>
+                          </button>
                           <button type="submit" id="viewProductFromWishlist"
-                            class="btn d-flex justify-content-center align-items-center ms-2 p-2 w-100 bg-primary text-white"><span class="m-0 p-0 fs-6"><img class="pe-1 fs-6" src="./assets/images/img/view-eye-vector.svg" alt=""></span><p class="pb-0 mb-0">View Product</p></button>
+                            class="btn d-flex justify-content-center align-items-center ms-2 p-2 w-100 bg-primary text-white"><span
+                              class="m-0 p-0 fs-6"><img class="pe-1 fs-6" src="./assets/images/img/view-eye-vector.svg"
+                                alt=""></span>
+                            <p class="pb-0 mb-0">View Product</p>
+                          </button>
                         </div>
                         <div class="horizontal-line mt-2 mb-3 w-100">
                           <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2" viewBox="0 0 402 2"
@@ -1326,6 +1436,12 @@
   <script>
     // -----Country Code Selection
     $("#customerPhone").intlTelInput({
+      initialCountry: "in",
+      separateDialCode: true,
+      // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+    });
+    // -----Country Code Selection
+    $("#customerPhone2").intlTelInput({
       initialCountry: "in",
       separateDialCode: true,
       // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
