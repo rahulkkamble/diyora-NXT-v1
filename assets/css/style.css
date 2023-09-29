@@ -46,8 +46,8 @@ html {
 /* custom scrollbar */
 /* width */
 ::-webkit-scrollbar {
-  width: 1px;
-  height: 1px;
+  width: 0px;
+  height: 0px;
 }
 
 /* Track */
@@ -851,6 +851,7 @@ div.dataTables_wrapper div.dataTables_info {
   /* max-height: 540px; */
   overflow-y: auto;
   overflow-x: hidden;
+  background-color: var(--base-white);
 }
 
 .product-list>div{
@@ -1081,7 +1082,7 @@ h1 {
 
 .quantity-measure span{
   border-radius: 4px;
-  background-color: var(--img-bg-gray);
+  background-color: var(--img-bg-gray-hover);
 }
 
 .quantity-measure span i{
@@ -1090,7 +1091,7 @@ h1 {
 }
 
 .quantity-measure span i::before{
-  padding: 5px;
+  padding: 6px;
   font-size: 1rem;
 }
 
@@ -1106,4 +1107,16 @@ h1 {
 }
 .selected-tags .size{
   background-color: var(--bg-faded-purple);
+}
+
+.product-list.cart-list .cards-and-subtotal{
+  overflow: hidden;
+  overflow-y: auto;
+  padding-bottom: 5rem;
+  max-height: 60vh;
+}
+
+.total-and-buttons{
+  bottom: 0rem;
+  background-color: var(--base-white);
 }

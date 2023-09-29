@@ -868,7 +868,7 @@
                 <li class="nav-item border-0 mb-0 p-0" role="presentation">
                   <button class="nav-link active mb-0 border-0 p-0" id="cart-tab" data-bs-toggle="tab"
                     data-bs-target="#cartTabPane" type="button" role="tab" aria-controls="cartTabPane"
-                    aria-selected="true">Your Cart</button>
+                    aria-selected="true">Your Cart <span class="dnone">(2)</span></button>
                 </li>
                 <li><span class="mx-2">/</span></li>
                 <li class="nav-item border-0 mb-0 p-0" role="presentation">
@@ -880,9 +880,9 @@
             </div>
             <!-- tab heading ends here -->
             <!-- ========== both tab content cart and wishlist start ======== -->
-            <div class="tab-content" id="cart-wishlist-content">
+            <div class="tab-content flex-grow-1" id="cart-wishlist-content">
               <!-- =========== cart tab content ========== -->
-              <div class="tab-pane cart-tab-pane fade show active" id="cartTabPane" role="tabpanel"
+              <div class="tab-pane h-100 cart-tab-pane fade show active" id="cartTabPane" role="tabpanel"
                 aria-labelledby="cart-tab" tabindex="0">
                 <!-- cart tab content -->
                 <!-- when no product added/search/ordered...  Empty// -->
@@ -916,79 +916,148 @@
                 </div>
                 <!-- for empty state end -->
                 <!-- for non-empty state -->
-                <div class="product-list">
-                  <div class="d-flex flex-column h-100 justify-content-between align-items-center">
-                    <!-- replicate card for multiple products -->
+                <div class="product-list cart-list position-relative h-100">
+                  <div class="d-flex flex-column h-100 justify-content-start align-items-center">
+                    <!-- replicate card-wrapper for multiple products -->
                     <div class="cards-and-subtotal">
-                      <div class="card w-100 border-0 rounded rounded-4">
-                        <div class="card-body w-100 p-0">
-                          <div class="d-flex w-100 align-items-center">
-                            <div class="product-image-medium">
-                              <img src="./assets/images/img/mask-group.png" alt="">
-                            </div>
-                            <div class="numbers w-100">
-                              <!-- product title and description -->
-                              <div
-                                class="d-flex w-100 flex-column flex-sm-row flex-md-column flex-xl-row justify-content-between">
-                                <div class="product-info">
-                                  <h6 class="text-nowrap fs-6 fw-normal">
-                                    3-Hook Prong Solitaire
-                                  </h6>
-                                  <p class="fs-7 text-muted mb-1 text-capitalize">Studsin Sterling Silver | Diamond 7.5mm
-                                  </p>
+                      <div class="card-wrapper">
+                        <div class="card w-100 border-0 rounded rounded-4">
+                          <div class="card-body w-100 p-0">
+                            <div class="d-flex w-100 align-items-center">
+                              <div class="product-image-medium">
+                                <img src="./assets/images/img/mask-group.png" alt="">
+                              </div>
+                              <div class="numbers w-100">
+                                <!-- product title and description -->
+                                <div
+                                  class="d-flex w-100 flex-column flex-sm-row flex-md-column flex-xl-row justify-content-between">
+                                  <div class="product-info">
+                                    <h6 class="text-nowrap fs-6 fw-normal">
+                                      3-Hook Prong Solitaire
+                                    </h6>
+                                    <p class="fs-7 text-muted mb-1 text-capitalize">Studsin Sterling Silver | Diamond 7.5mm
+                                    </p>
+                                  </div>
+                                  <div class="action-side">
+                                    <a href="#" class="remove-link text-decoration-none">
+                                      <p class="fs-7 text-danger">remove</p>
+                                    </a>
+                                  </div>
                                 </div>
-                                <div class="action-side">
-                                  <a href="#" class="remove-link text-decoration-none">
-                                    <p class="fs-7 text-danger">remove</p>
-                                  </a>
+                                <!-- price and quantity tracker -->
+                                <div class="d-flex flex-wrap justify-content-between">
+                                  <p class="fs-7 mt-3 pb-0 mb-0 text-muted text-capitalize fw-bold">₹53,423/-</p>
+                                  <div class="quantity-measure mt-3 d-flex flex-nowrap">
+                                    <span class=""><i class="fi fi-rr-plus-small"></i></span>
+                                    <p class="fs-7 pb-0 mb-0 px-3 text-muted">1</p>
+                                    <span class=""><i class="fi fi-rr-minus-small"></i></span>
+                                  </div>
                                 </div>
                               </div>
-                              <!-- price and quantity tracker -->
-                              <div class="d-flex flex-wrap justify-content-between">
-                                <p class="fs-7 mt-3 pb-0 mb-0 text-muted text-capitalize fw-bold">₹53,423/-</p>
-                                <div class="quantity-measure mt-3 d-flex flex-nowrap">
-                                  <span class=""><i class="fi fi-rr-plus-small"></i></span>
-                                  <p class="fs-7 pb-0 mb-0 px-3 text-muted">1</p>
-                                  <span class=""><i class="fi fi-rr-minus-small"></i></span>
-                                </div>
+                            </div>
+                            <!-- customized tags -->
+                            <div class="selected-tags my-3 d-flex w-100 justify-content-between">
+                              <div class="metal-color rounded rounded-1">
+                                <p class="mb-0 pb-0 fs-8 text-center">18kt Rose Gold</p>
                               </div>
-                            </div>
-                          </div>
-                          <!-- customized tags -->
-                          <div class="selected-tags my-3 d-flex w-100 justify-content-between">
-                            <div class="metal-color rounded rounded-1">
-                              <p class="mb-0 pb-0 fs-8 text-center">18kt Rose Gold</p>
-                            </div>
-                            <div class="diamond rounded rounded-1">
-                              <p class="mb-0 pb-0 fs-8 text-center">VVS EF</p>
-                            </div>
-                            <div class="size rounded rounded-1">
-                              <p class="mb-0 pb-0 fs-8 text-center">Size12</p>
+                              <div class="diamond rounded rounded-1">
+                                <p class="mb-0 pb-0 fs-8 text-center">VVS EF</p>
+                              </div>
+                              <div class="size rounded rounded-1">
+                                <p class="mb-0 pb-0 fs-8 text-center">Size12</p>
+                              </div>
                             </div>
                           </div>
                         </div>
+                        <!-- sub total amount -->
+                        <div class="cart-total-price-module w-100 d-flex justify-content-between">
+                          <span class="text-muted fs-7">Sub Total</span> <span class="cart-total-amount fw-bold">₹53,423/-</span>
+                        </div>
+                        <div class="horizontal-line mt-2 mb-3 w-100">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2" viewBox="0 0 402 2" fill="none">
+                            <path d="M0 1L402 1.00004" stroke="#F1F3F9" />
+                          </svg>
+                        </div>
                       </div>
-                      <!-- sub total amount -->
+                      <div class="card-wrapper">
+                        <div class="card w-100 border-0 rounded rounded-4">
+                          <div class="card-body w-100 p-0">
+                            <div class="d-flex w-100 align-items-center">
+                              <div class="product-image-medium">
+                                <img src="./assets/images/img/mask-group.png" alt="">
+                              </div>
+                              <div class="numbers w-100">
+                                <!-- product title and description -->
+                                <div
+                                  class="d-flex w-100 flex-column flex-sm-row flex-md-column flex-xl-row justify-content-between">
+                                  <div class="product-info">
+                                    <h6 class="text-nowrap fs-6 fw-normal">
+                                      3-Hook Prong Solitaire
+                                    </h6>
+                                    <p class="fs-7 text-muted mb-1 text-capitalize">Studsin Sterling Silver | Diamond 7.5mm
+                                    </p>
+                                  </div>
+                                  <div class="action-side">
+                                    <a href="#" class="remove-link text-decoration-none">
+                                      <p class="fs-7 text-danger">Remove</p>
+                                    </a>
+                                  </div>
+                                </div>
+                                <!-- price and quantity tracker -->
+                                <div class="d-flex flex-wrap justify-content-between">
+                                  <p class="fs-7 mt-3 pb-0 mb-0 text-muted text-capitalize fw-bold">₹53,423/-</p>
+                                  <div class="quantity-measure mt-3 d-flex flex-nowrap">
+                                    <span class=""><i class="fi fi-rr-plus-small"></i></span>
+                                    <p class="fs-7 pb-0 mb-0 px-3 text-muted">1</p>
+                                    <span class=""><i class="fi fi-rr-minus-small"></i></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- customized tags -->
+                            <div class="selected-tags my-3 d-flex w-100 justify-content-between">
+                              <div class="metal-color rounded rounded-1">
+                                <p class="mb-0 pb-0 fs-8 text-center">18kt Rose Gold</p>
+                              </div>
+                              <div class="diamond rounded rounded-1">
+                                <p class="mb-0 pb-0 fs-8 text-center">VVS EF</p>
+                              </div>
+                              <div class="size rounded rounded-1">
+                                <p class="mb-0 pb-0 fs-8 text-center">Size12</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- sub total amount -->
+                        <div class="cart-total-price-module w-100 d-flex justify-content-between">
+                          <span class="text-muted fs-7">Sub Total</span> <span class="cart-total-amount fw-bold">₹53,423/-</span>
+                        </div>
+                        <div class="horizontal-line mt-2 mb-3 w-100">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2" viewBox="0 0 402 2" fill="none">
+                            <path d="M0 1L402 1.00004" stroke="#F1F3F9" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="total-and-buttons px-4 mt-auto position-absolute">
+                      <!-- horizontal line + total amount + cancel / place order btn -->
+                      <div class="horizontal-line w-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2" viewBox="0 0 402 2" fill="none">
+                          <path d="M0 1L402 1.00004" stroke="#F1F3F9" />
+                        </svg>
+                      </div>
+  
                       <div class="cart-total-price-module mb-4 w-100 px-5 d-flex justify-content-between">
-                        <span class="text-muted fs-7">Sub Total</span> <span class="cart-total-amount fw-bold">₹0</span>
+                        <span class="text-muted fs-7">Total</span> <span class="cart-total-amount fw-bold">₹106,846/-</span>
                       </div>
-                    </div>
-
-                    <div class="horizontal-line mt-3 w-100">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2" viewBox="0 0 402 2" fill="none">
-                        <path d="M0 1L402 1.00004" stroke="#F1F3F9" />
-                      </svg>
-                    </div>
-
-                    <div class="cart-total-price-module mb-4 w-100 px-5 d-flex justify-content-between">
-                      <span class="text-muted fs-7">Total</span> <span class="cart-total-amount fw-bold">₹0</span>
-                    </div>
-
-                    <div class="d-flex justify-content-center w-100">
-                      <button type="button" id="productBtnCancel" class="btn me-2 p-3 btn-default w-100">Cancel</button>
-                      <button type="submit" id="productBtnPlaceOrder"
-                        class="btn ms-2 p-3 w-100 bg-secondary-2 text-white">Place
-                        Order</button>
+  
+                      <div class="d-flex justify-content-center w-100">
+                        <button type="button" id="productBtnCancel" class="btn me-2 p-3 btn-default w-100">Cancel</button>
+                        <button type="submit" id="productBtnPlaceOrder"
+                          class="btn ms-2 p-3 w-100 bg-secondary-2 text-white">Place
+                          Order</button>
+                      </div>
                     </div>
                     <!-- for empty state end -->
                     <!-- for non-empty state -->
