@@ -746,9 +746,9 @@ div.dataTables_wrapper div.dataTables_info {
 /* toggle for see working successfull modal - do not delete */
 /* uncomment below code */
 
-/* .modal.successfull-modal{
+.modal.successfull-modal{
   display: flex; 
-} */
+}
 
 .modal.successfull-modal .container {
   display: flex;
