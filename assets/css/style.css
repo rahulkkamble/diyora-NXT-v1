@@ -1156,3 +1156,15 @@ h1 {
   height: 2.25rem;
   width: 2.25rem;
 }
+
+/* ==============================  dashboard for orders ============================= */
+/* ==============================  dashboard for orders ============================= */
+/* ==============================  dashboard for orders ============================= */
+/* ==============================  dashboard for orders ============================= */
+/* ==============================  dashboard for orders ============================= */
+
+.notice-cards-order-dashboard .card .home-address,
+.notice-cards-order-dashboard .card .billing-address{
+  max-width: 250px;
+  min-width: 50px;
+}
