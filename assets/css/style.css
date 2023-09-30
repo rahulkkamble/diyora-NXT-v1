@@ -1168,3 +1168,7 @@ h1 {
   max-width: 250px;
   min-width: 50px;
 }
+
+.notice-cards-order-dashboard .card .info-bottom{
+  min-height: 85px;
+}
