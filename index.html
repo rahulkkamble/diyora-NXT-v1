@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Sidebar</title>
+  <title>Diyora NXT</title>
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -43,7 +43,7 @@
           <!-- <a href="#" class="active"> -->
           <!-- <span class="px-3"><i class="fi fi-rr-apps"></i></span> -->
           <div class="sidebar-icon-outside rounded rounded-4">
-            <img class="p-3" src="./assets/images/img/Category.svg" alt="">
+            <img class="p-3 icon" src="./assets/images/img/Category.svg" alt="">
           </div>
           <!-- <span>Dashboard</span> -->
           <!-- </a> -->
@@ -53,7 +53,7 @@
           <!-- <span class="px-3"><i class="fi fi-rr-stats"></i></span>
             <span>Analytics</span> -->
           <div class="sidebar-icon-outside rounded rounded-4">
-            <img class="p-3" src="./assets/images/img/Bag.svg" alt="">
+            <img class="p-3 icon" src="./assets/images/img/Bag.svg" alt="">
           </div>
           <!-- </a> -->
         </li>
@@ -74,8 +74,8 @@
         <li class="list-icon p-1 rounded rounded-4 overflow-hidden">
           <!-- <a href="#" class="active"> -->
           <!-- <span class="px-3"><i class="fi fi-rr-apps"></i></span> -->
-          <div class="sidebar-icon-outside rounded bg-pink-light rounded-4">
-            <img class="h-100 w-100 rounded rounded-4" src="./assets/images/img/rectangle-115.png" alt="">
+          <div class="sidebar-icon-outside p-1 h-100 rounded rounded-4">
+            <img class="h-100 w-100 rounded bg-pink-light rounded-4" src="./assets/images/img/rectangle-115.png" alt="">
           </div>
           <!-- <span>Dashboard</span> -->
           <!-- </a> -->
@@ -84,7 +84,7 @@
           <!-- <a href="#" class="active"> -->
           <!-- <span class="px-3"><i class="fi fi-rr-apps"></i></span> -->
           <div class="sidebar-icon-outside rounded rounded-4">
-            <img class="p-3" src="./assets/images/img/logout.svg" alt="">
+            <img class="p-3 icon" src="./assets/images/img/logout.svg" alt="">
           </div>
           <!-- <span>Dashboard</span> -->
           <!-- </a> -->
@@ -135,7 +135,7 @@
         <div class="col-xl-2 col-md-4 col-sm-6">
           <div class="card border-0 shadow-sm rounded rounded-4 mb-3 mb-xl-0">
             <div class="card-body d-flex p-3 pe-1">
-              <div class="d-flex align-items-center">
+              <div class="d-flex align-items-center flex-wrap">
                 <div class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-circle">
                   <!-- <i class="fi fi-rr-coins"></i> -->
                   <img src="./assets/images/img/image-1.png" alt="green tick">
@@ -153,7 +153,7 @@
         <div class="col-xl-2 col-md-4 col-sm-6">
           <div class="card border-0 shadow-sm rounded rounded-4 mb-4 mb-xl-0">
             <div class="card-body d-flex p-3 pe-1">
-              <div class="d-flex align-items-center">
+              <div class="d-flex align-items-center flex-wrap">
                 <div class="me-4 me-sm-3 icon icon-shape bg-warning-light shadow-sm text-center rounded rounded-circle">
                   <!-- <i class="fi fi-rr-coins"></i> -->
                   <img src="./assets/images/img/image-2.png" alt="loading">
@@ -171,7 +171,7 @@
         <div class="col-xl-2 col-md-4 col-sm-6">
           <div class="card border-0 shadow-sm rounded rounded-4 mb-4 mb-xl-0">
             <div class="card-body d-flex p-3 pe-1">
-              <div class="d-flex align-items-center">
+              <div class="d-flex align-items-center flex-wrap">
                 <div class="me-4 me-sm-3 icon icon-shape bg-primary-light shadow-sm text-center rounded rounded-circle">
                   <!-- <i class="fi fi-rr-coins"></i> -->
                   <img class="p-2" src="./assets/images/img/image-5.png" alt="user portrait">
@@ -191,7 +191,7 @@
         <div class="col-xl-2 col-md-4 col-sm-6">
           <div class="card border-0 shadow-sm rounded rounded-4 mb-4 mb-xl-0">
             <div class="card-body d-flex p-3 pe-1">
-              <div class="d-flex align-items-center">
+              <div class="d-flex align-items-center flex-wrap">
                 <div class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
                   <!-- <i class="fi fi-rr-coins"></i> -->
                   <img class="p-2" src="./assets/images/img/image-3.png" alt="">
@@ -389,7 +389,7 @@
         <!-- top selling products -->
         <div class="col-lg-5">
           <div class="card rounded shadow-sm rounded-4 product-card border-0 mb-4">
-            <div class="card-header rounded rounded-4 border-0 bg-white p-3">
+            <div class="card-header sticky-top rounded rounded-4 border-0 bg-white p-3">
               <h6 class="mb-0">Top Selling Products</h6>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
@@ -644,7 +644,7 @@
 
   <!-- Modal section ============= modal after click on place order button // product modal ================ -->
   <!-- Modal section ============= modal after click on place order button // product modal ================ -->
-  <div id="searchProductModal" class="modal searchProductModal d-ne">
+  <div id="searchProductModal" class="modal searchProductModal d-none">
     <div class="modal-content rounded rounded-4 border-0">
       <!-- Modal content goes here -->
       <div class="container-fluid container-lg">
@@ -1019,6 +1019,7 @@
             <!-- ========== both tab content cart and wishlist start ======== -->
             <div class="tab-content flex-grow-1" id="cart-wishlist-content">
               <!-- =========== cart tab content ========== -->
+              <!-- =========== cart tab content ========== -->
               <div class="tab-pane h-100 cart-tab-pane fade show active" id="cartTabPane" role="tabpanel"
                 aria-labelledby="cart-tab" tabindex="0">
                 <!-- cart tab content -->
@@ -1078,7 +1079,7 @@
                                   </div>
                                   <div class="action-side">
                                     <a href="#" class="remove-link text-decoration-none">
-                                      <p class="fs-7 text-danger">remove</p>
+                                      <p class="fs-7 text-danger">Remove</p>
                                     </a>
                                   </div>
                                 </div>
@@ -1210,10 +1211,12 @@
                 </div>
               </div>
               <!-- =========== wishlist tab content ========== -->
+              <!-- =========== wishlist tab content ========== -->
               <div class="tab-pane wishlist-tab-pane fade" id="wishlistTabPane" role="tabpanel"
                 aria-labelledby="wishlist-tab" tabindex="0">
                 <!-- wishlist tab content -->
-                <!-- when no product added/search/ordered...  Empty-state-wishlist// -->
+                <!-- ========= when no product added/search/ordered...  Empty-state-wishlist// ===== -->
+                <!-- ========= when no product added/search/ordered...  Empty-state-wishlist// ===== -->
                 <div class="product-list d-none">
                   <div class="d-flex flex-column h-100 justify-content-between align-items-center">
                     <div
@@ -1224,7 +1227,8 @@
                     </div>
                   </div>
                 </div>
-                <!-- when one or more products added to wishlist -->
+                <!-- ============ when one or more products added to wishlist non-empty state ========== -->
+                <!-- ============ when one or more products added to wishlist non-empty state ========== -->
                 <div class="product-list wishlist-list h-100">
                   <div class="d-flex flex-column h-100 justify-content-start align-items-center">
                     <div class="cards-and-subtotal">
