@@ -927,12 +927,12 @@
                       </div>
                     </div>
                     <div class="col-6">
-                      <label for="shippingPhone2" class="mb-2">Phone No</label>
+                      <label for="shippingPhone" class="mb-2">Phone No</label>
                       <div class="mb-2 d-flex">
                         <div class="input-phoneNumber w-100 d-flex gap-3">
                           <!-- country code added by script -->
-                        <input type="tel" class="form-control bg-input-default w-100" id="shippingPhone2"
-                            name="shippingPhone2" placeholder="Phone Number" required>
+                        <input type="tel" class="form-control bg-input-default w-100" id="shippingPhone"
+                            name="shippingPhone" placeholder="Phone Number" required>
                         </div>
                       </div>
                     </div>
@@ -1445,7 +1445,7 @@
       // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
     });
     // -----Country Code Selection
-    $("#customerPhone2").intlTelInput({
+    $("#shippingPhone").intlTelInput({
       initialCountry: "in",
       separateDialCode: true,
       // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
