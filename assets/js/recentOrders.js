@@ -30,7 +30,7 @@ function createTableRow(data) {
     return row;
 }
 
-// Populate the table with dynamic data
+// Populate the table with dynamic data by json file orders.json
 var tableBody = document.querySelector('#recent-order-table tbody');
 
 async function getData() {
