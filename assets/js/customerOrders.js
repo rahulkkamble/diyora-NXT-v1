@@ -15,7 +15,7 @@ function createTableRow(data) {
         </td>
 
         <td class="align-middle">
-            <p class="text-xs fw-bold mb-0">${data.trackId} <span class="copy-me"><img src="../assets/images/img/u_copy-alt.svg"> </span></p>
+            <p class="text-xs fw-bold mb-0">${data.trackId} <span class="copy-me"><img src="./assets/images/img/u_copy-alt.svg"> </span></p>
         </td>
         
         <td class="align-middle">
