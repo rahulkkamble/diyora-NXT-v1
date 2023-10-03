@@ -218,7 +218,7 @@
     {
         "customer": "Pragnesh Navadiya",
         "productName": "inina bridal solitaire Ring",
-        "productImage": "../assets/images/img/product-image-c1.png",
+        "productImage": "./assets/images/img/product-image-c1.png",
         "date": "09-09-23",
         "time": "10:00",
         "status": "Pending",
@@ -242,7 +242,7 @@
     {
         "customer": "Pragnesh Navadiya",
         "productName": "inina bridal solitaire Ring",
-        "productImage": "../assets/images/img/product-image-c1.png",
+        "productImage": "./assets/images/img/product-image-c1.png",
         "date": "09-09-23",
         "time": "10:00",
         "status": "Pending",
@@ -266,7 +266,7 @@
     {
         "customer": "Pragnesh Navadiya",
         "productName": "inina bridal solitaire Ring",
-        "productImage": "../assets/images/img/product-image-c1.png",
+        "productImage": "./assets/images/img/product-image-c1.png",
         "date": "09-09-23",
         "time": "10:00",
         "status": "Pending",

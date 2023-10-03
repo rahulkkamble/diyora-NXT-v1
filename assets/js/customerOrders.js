@@ -77,7 +77,6 @@ async function processData() {
 
         // Find the DataTables search input element
         var searchInput = document.querySelector('.dataTables_filter input');
-        console.log(searchInput)
 
         // Create a new <span> element
         var additionalDiv = document.createElement('div');
