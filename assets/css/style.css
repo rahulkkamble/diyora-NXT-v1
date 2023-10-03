@@ -1172,3 +1172,15 @@ h1 {
 .notice-cards-order-dashboard .card .info-bottom{
   min-height: 85px;
 }
+
+.line-height-4{
+  line-height: 4;
+}
+
+.copy-me{
+  cursor: pointer;
+}
+
+div.dataTables_wrapper div.dataTables_filter input{
+  padding: .6rem;
+}
