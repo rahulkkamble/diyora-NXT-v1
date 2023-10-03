@@ -1183,4 +1183,9 @@ h1 {
 
 div.dataTables_wrapper div.dataTables_filter input{
   padding: .6rem;
+  /* margin-bottom: 1rem; in smaller size */
+}
+
+div.dataTables_wrapper div.dataTables_filter{
+  /* display: flex; */
 }
