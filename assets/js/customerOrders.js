@@ -1,4 +1,3 @@
-
 // Function to create a table row for each data item
 function createTableRow(data) {
     var row = document.createElement('tr');
