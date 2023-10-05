@@ -1076,23 +1076,6 @@ h1 {
   justify-content: center;
 }
 
-@media screen and (max-width: 767.5px) {
-  .modal-content .container-fluid .row.row-margin-for-small {
-    margin-top: 4.5rem;
-  }
-
-  .cart-wishlist-column {
-    position: relative;
-  }
-
-  .search-products-bar.profile-bar {
-    width: calc(100% - 48px);
-    position: absolute;
-    top: -100%;
-    margin-top: 24px;
-  }
-}
-
 /* @media screen and (max-width: 571.5px) {
   .search-products-bar.profile-bar{
     margin-top: 0;
@@ -1141,6 +1124,7 @@ h1 {
   overflow-y: auto;
   padding-bottom: 5rem;
   max-height: 67vh;
+  width: 100%;
 }
 
 .total-and-buttons {
@@ -1188,4 +1172,31 @@ div.dataTables_wrapper div.dataTables_filter input{
 
 div.dataTables_wrapper div.dataTables_filter{
   /* display: flex; */
+}
+
+/* ======================= Media Query =========================== */
+/* ======================= Media Query =========================== */
+/* ======================= Media Query =========================== */
+/* ======================= Media Query =========================== */
+
+@media screen and (max-width: 991.5px) {
+  *,
+  html,
+  body{
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 767.5px) {
+  *,
+  html,
+  body{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 567.5px) {
+  *,
+  html,
+  body{
+    font-size: 12px;
+  }
 }
