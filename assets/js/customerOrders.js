@@ -80,8 +80,9 @@ async function processData() {
         searchInput.classList.add = 'ms-auto';
 
         // Create a new <span> element
+        // containg filter, filter, share and Create Order button
         var additionalDiv = document.createElement('div');
-        additionalDiv.className = "d-flex gap-3"
+        additionalDiv.className = "d-flex mt-3 mt-md-0 justify-md-content-center gap-3"
         additionalDiv.innerHTML = 
         `<div class = "border rounded rounded-2 px-2 py-1 d-flex align-items-center gap-2">
             <img src="./assets/images/img/filter-dataTable.svg">
@@ -109,7 +110,7 @@ async function processData() {
 
         const customerOrderTableLeftColumn = document.querySelector('#customer-order-table_wrapper .row div.col-sm-6');
         customerOrderTableLeftColumn.classList.remove('col-sm-6')
-        customerOrderTableLeftColumn.className = 'col-12 col-xl-5 text-center mb-3 mb-xl-0';
+        customerOrderTableLeftColumn.className = 'col-12 col-xl-5 mb-3 mb-xl-0 d-flex align-items-center justify-md-content-center';
         console.log(customerOrderTableLeftColumn)
         
         const customerOrderTableRightColumn = document.querySelector('#customer-order-table_wrapper .row div.col-sm-6');
