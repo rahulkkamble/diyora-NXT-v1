@@ -5,8 +5,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
 
@@ -22,7 +20,7 @@
                 <div class="heading">
                     <div class="ellipse-parent">
                         <div class="group-child"></div>
-                        <img class="d-logo-04-icon" alt="" src="./public/d-logo04@2x.png" />
+                        <img class="d-logo-04-icon" alt="" src="./assets/images/login/d-logo04@2x.png" />
                     </div>
                     <div class="introcontent">
                         <div class="welcome-back">Welcome back!</div>
@@ -32,17 +30,27 @@
                 <div class="formcontent">
                     <div class="forminputcontent">
                         <div class="inputfields">
-                            <input class="input" placeholder="Your ID" type="text" />
+                            <div class="input1">
+                                <div class="input-content">
+                                    <img class="iconlylightlock" alt=""
+                                        src="./assets/images/login/iconlylightmessage.svg" />
+
+                                    <div class="input-content1">
+                                        <input type="text" class="input" placeholder="Your ID">
+                                    </div>
+                                </div>
+                            </div>
 
                             <div class="password">
                                 <div class="input1">
                                     <div class="input-content">
-                                        <img class="iconlylightlock" alt="" src="./public/iconlylightlock.svg" />
+                                        <img class="iconlylightlock" alt=""
+                                            src="./assets/images/login/iconlylightlock.svg" />
 
                                         <div class="input-content1">
-                                            <div class="placehoder">Password</div>
+                                            <input type="password" class="input" placeholder="Password">
                                         </div>
-                                        <img class="fieye-off-icon" alt="" src="./public/fieyeoff.svg" />
+                                        <img class="fieye-off-icon" alt="" src="./assets/images/login/fieyeoff.svg" />
                                     </div>
                                 </div>
                                 <div class="bottom">
@@ -60,11 +68,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="recover-password">Recover Password</div>
+                        <a href="javascript:void(0)" class="recover-password">Recover Password</a>
                     </div>
-                    <div class="buttons">
-                        <div class="label">Login</div>
-                    </div>
+                    <button class="label buttons">Login</button>
                 </div>
             </div>
         </div>
