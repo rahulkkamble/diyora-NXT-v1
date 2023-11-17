@@ -1174,6 +1174,14 @@ div.dataTables_wrapper div.dataTables_filter{
   /* display: flex; */
 }
 
+/* css replacements */
+.form-control:focus, .form-select:focus {
+  border-color: #86b7fe66;
+  outline: 0;
+  box-shadow: 0 0 0 0.1rem rgb(13 110 253 / 15%);
+}
+/* css replacements ends here */
+
 /* ======================= Media Query =========================== */
 /* ======================= Media Query =========================== */
 /* ======================= Media Query =========================== */
@@ -1195,11 +1203,28 @@ div.dataTables_wrapper div.dataTables_filter{
   body{
     font-size: 14px;
   }
+
+  .notice-cards .card .card-body .align-items-center.justify-content-between{
+    flex-wrap: wrap;
+  }
 }
 @media screen and (max-width: 567.5px) {
   *,
   html,
   body{
     font-size: 12px;
+  }
+  .navbar.header-nav{
+    z-index: 1000;
+    background-color: #fff;
+  }
+  .navbar.header-nav .container-fluid{
+    background-color: #fff;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .live-gold-icon img{
+    width: 50vw;
   }
 }
