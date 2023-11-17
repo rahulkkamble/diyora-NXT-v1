@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diyora NXT</title>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Flaticons -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+
+    <!-- dataTable css -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap.min.css">
+
+    <!-- country code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ======================== SIDEBAR ================== -->
+    <div class="sidebar d-flex bg-white flex-column shadow-md" id="sidebar">
+        <div class="sidebar-icon d-md-flex align-items-center p-1 p-md-3 align-self-center">
+            <a href="./login.html" class="ellipse">
+                <img src="./assets/images/img/d-logo-04.png" alt="">
+            </a>
+        </div>
+        <!-- <span class="h-100px w-100 justify-self-center d-flex d-md-none p-2 pb-0 sidebar-toggler-icon"><i
+        class="fi fi-rr-menu-burger"></i></span> -->
+        <div class="d-flex h-100 flex-column justify-content-between">
+            <ul class="list-unstyled mt-4 pt-3">
+                <li class="list-icon active">
+                    <!-- <a href="#" class="active"> -->
+                    <!-- <span class="px-3"><i class="fi fi-rr-apps"></i></span> -->
+                    <a href="./index.html" class="sidebar-icon-outside rounded rounded-4">
+                        <img class="p-3 icon" src="./assets/images/img/Category.svg" alt="">
+                    </a>
+                    <!-- <span>Dashboard</span> -->
+                    <!-- </a> -->
+                </li>
+                <li class="list-icon">
+                    <!-- <a href="#"> -->
+                    <!-- <span class="px-3"><i class="fi fi-rr-stats"></i></span>
+            <span>Analytics</span> -->
+                    <a href="./orderDashboard.html" class="sidebar-icon-outside rounded rounded-4">
+                        <img class="p-3 icon" src="./assets/images/img/Bag.svg" alt="">
+                    </a>
+                    <!-- </a> -->
+                </li>
+                <!-- <li class="list-icon">
+          <a href="#">
+            <span class="px-3"><i class="fi fi-rr-tags"></i></span>
+            <span>Rate & Markup</span>
+          </a>
+        </li>
+        <li class="list-icon">
+          <a href="#">
+            <span class="px-3"><i class="fi fi-rr-boxes"></i></span>
+            <span>All Products</span>
+          </a>
+        </li> -->
+            </ul>
+            <ul class="list-unstyled mt-auto">
+                <li class="list-icon p-1 rounded rounded-4 overflow-hidden">
+                    <!-- <a href="#" class="active"> -->
+                    <!-- <span class="px-3"><i class="fi fi-rr-apps"></i></span> -->
+                    <a href="javascript:void(0)" class="sidebar-icon-outside p-1 h-100 rounded rounded-4">
+                        <img class="h-100 w-100 rounded bg-pink-light rounded-4"
+                            src="./assets/images/img/rectangle-115.png" alt="">
+                    </a>
+                    <!-- <span>Dashboard</span> -->
+                    <!-- </a> -->
+                </li>
+                <li class="list-icon">
+                    <!-- <a href="#" class="active"> -->
+                    <!-- <span class="px-3"><i class="fi fi-rr-apps"></i></span> -->
+                    <a href="javascript:void(0)" class="sidebar-icon-outside rounded rounded-4">
+                        <img class="p-3 icon" src="./assets/images/img/logout.svg" alt="">
+                    </a>
+                    <!-- <span>Dashboard</span> -->
+                    <!-- </a> -->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- ======================= HEADER ===================== -->
+    <nav class="navbar header-nav bg-white p-0 p-xl-1 navbar-expand-sm navbar-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Dashboard</a>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse ms-auto" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link search-link me-md-1" href="javascript:void(0)"><span class="nav-icon-bg"><i
+                                    class="fi-rr-search"></i></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-md-1" href="#"><span class="nav-icon-bg"><i
+                                    class="fi-rr-bell"></i></span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link me-md-1" href="#"><span class="nav-icon-bg"><i
+                                    class="fi-rr-comment-alt"></i></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-md-1" href="#"><span class="nav-icon-bg"><i
+                                    class="fi-rr-settings"></i></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span id="addCustomerBtn"
+                                class="btn bg--main line--2 p-1 px-2 text-nowrap rounded rounded-4">
+                                + Add Customer
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ==================== MAIN CONTAINER ================== -->
+    <div class="main-container">
+
+        <!-- Main content goes here -->
+        <!-- =========================== Card Section 2 ======================= -->
+        <section class="notice-cards">
+            <div class="row">
+                <div class="col-xl-2 col-md-4 col-sm-6">
+                    <div class="card border-0 rounded rounded-4 mb-3 mb-xl-0">
+                        <div class="card-body d-flex p-3 pe-1">
+                            <div class="d-flex align-items-center flex-wrap">
+                                <div
+                                    class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-circle">
+                                    <!-- <i class="fi fi-rr-coins"></i> -->
+                                    <img src="./assets/images/img/image-1.png" alt="green tick">
+                                </div>
+                                <div class="numbers">
+                                    <h5 class="fw-bolder text-nowrap mb-0">
+                                        37
+                                    </h5>
+                                    <p class="fs-7 text-secondary mb-0 text-capitalize fw-bold">Delivered Orders</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-4 col-sm-6">
+                    <div class="card border-0 rounded rounded-4 mb-4 mb-xl-0">
+                        <div class="card-body d-flex p-3 pe-1">
+                            <div class="d-flex align-items-center flex-wrap">
+                                <div
+                                    class="me-4 me-sm-3 icon icon-shape bg-warning-light shadow-sm text-center rounded rounded-circle">
+                                    <!-- <i class="fi fi-rr-coins"></i> -->
+                                    <img src="./assets/images/img/image-2.png" alt="loading">
+                                </div>
+                                <div class="numbers">
+                                    <h5 class="fw-bolder text-nowrap mb-0">
+                                        31
+                                    </h5>
+                                    <p class="fs-7 text-secondary mb-0 text-capitalize fw-bold">Pending Orders</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-4 col-sm-6">
+                    <div class="card border-0 rounded rounded-4 mb-4 mb-xl-0">
+                        <div class="card-body d-flex p-3 pe-1">
+                            <div class="d-flex align-items-center flex-wrap">
+                                <div
+                                    class="me-4 me-sm-3 icon icon-shape bg-primary-light shadow-sm text-center rounded rounded-circle">
+                                    <!-- <i class="fi fi-rr-coins"></i> -->
+                                    <img class="p-2" src="./assets/images/img/image-5.png" alt="user portrait">
+                                </div>
+                                <div class="numbers">
+                                    <h5 class="fw-bolder text-nowrap mb-0">
+                                        1,564
+                                    </h5>
+                                    <p class="fs-7 text-secondary mb-0 text-capitalize fw-bold">Registered Users</p>
+                                    <p class="fs-9 text-secondary mb-0 text-capitalize"><span
+                                            class="text-success fs-8 fw-bold">+12%</span> on this week</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-4 col-sm-6">
+                    <div class="card border-0 rounded rounded-4 mb-4 mb-xl-0">
+                        <div class="card-body d-flex p-3 pe-1">
+                            <div class="d-flex align-items-center flex-wrap">
+                                <div
+                                    class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+                                    <!-- <i class="fi fi-rr-coins"></i> -->
+                                    <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                </div>
+                                <div class="numbers">
+                                    <h5 class="fw-bolder text-nowrap mb-0">
+                                        ₹17,785,00
+                                    </h5>
+                                    <p class="fs-7 text-secondary mb-0 text-capitalize fw-bold">Total Revenue</p>
+                                    <p class="fs-9 text-secondary mb-0 text-capitalize"><span
+                                            class="text-success fs-8 fw-bold">+12%</span> on this week</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-8 col-sm-12">
+                    <div class="card border-0 rounded rounded-4 mb-4 mb-xl-0">
+                        <div class="card-body d-flex p-3 pe-1">
+                            <div class="d-flex w-50 align-items-center justify-content-between">
+
+                                <div class="numbers">
+                                    <h5 class="fw-bolder text-nowrap mb-0">
+                                        ₹60,090.00
+                                    </h5>
+                                    <p class="fs-7 text-secondary mb-0 text-capitalize fw-bold">Live Gold Price</p>
+                                </div>
+
+                                <div class="icon-shape text-center position-relative">
+                                    <div
+                                        class="d-flex justify-content-center bg-success-light align-items-center g-1 position-absolute above-img-tag rounded rounded-1">
+                                        +15.80%</div>
+                                    <!-- <i class="fi fi-rr-coins"></i> -->
+                                    <img class="p-0" src="./assets/images/img/Graph-3.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================== graph ================================ -->
+        <section class="graph-and-doughnut-chart-section pt-xl-4">
+            <div class="row pt-0 removable">
+                <!-- line graph -->
+                <div class="col-lg-7">
+                    <div class="card rounded rounded-4 border-0 mb-4">
+                        <div class="card-header bg-white ps-3 pt-3 border-0 rounded rounded-4 pb-0">
+                            <h6>Kiosk Interaction</h6>
+                        </div>
+                        <div class="card-body p-3">
+                            <canvas id="chart-line" class="chart-canvas chartjs-render-monitor" height="375" width="610"
+                                style="display: block; height: 300px; width: 488px; box-sizing: border-box;">
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- doughnut chart -->
+                <div class="col-lg-5">
+                    <div class="card rounded rounded-4 border-0 mb-4">
+                        <div class="card-header bg-white ps-3 pt-3 border-0 rounded rounded-4 pb-0">
+                            <h6>Manage Kiosk</h6>
+                        </div>
+                        <div class="card-body p-3">
+                            <canvas id="doughnut-chart" class="chart-canvas chartjs-render-monitor" height="375"
+                                width="410">
+                            </canvas>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================== recent order and top selling products ========================= -->
+        <section class="recent-orders-and-top-selling-products-section pt-0">
+            <div class="row mb-4 pt-0 removable">
+                <!-- recent orders -->
+                <div class="col-lg-7 d-none pt-0 ">
+                    <div class="card rounded rounded-4 border-0 mb-4">
+                        <div class="card-header rounded rounded-4 border-0 bg-white p-3">
+                            <h6 class="mb-0">Recent Orders</h6>
+                        </div>
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <table class="table recent-order-table align-items-center border-none mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="ps-3 text-secondary fs-6 fw-bold opacity-7">Customer</th>
+                                            <th class="ps-3 text-secondary fs-6 fw-bold opacity-7">Product Name</th>
+                                            <th class="text-secondary fs-6 fw-bold opacity-7 ps-2">Date</th>
+                                            <th class="text-center text-secondary fs-6 fw-bold opacity-7">Status</th>
+                                            <th class="text-center text-secondary fs-6 fw-bold opacity-7">Total amount
+                                            </th>
+                                            <!-- <th class="text-secondary opacity-7"></th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="align-middle">
+                                                <p class="text-xs ps-2 fw-bold mb-0">Deepak Kapri</p>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex ps-2 py-1">
+                                                    <div>
+                                                        <img src="https://demos.creative-tim.com/soft-ui-dashboard/assets/img/team-2.jpg"
+                                                            class="avatar avatar-sm me-3">
+                                                    </div>
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <h6 class="mb-0 text-sm">inina bridal solitaire Ring</h6>
+                                                        <!-- <p class="text-xs text-secondary mb-0">john@creative-tim.com</p> -->
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <p class="text-xs fw-bold mb-0">04-09-23</p>
+                                            </td>
+                                            <td class="align-middle text-center text-sm">
+                                                <span class="badge badge-sm bg-success">Delivered</span>
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-xs fw-bold">₹1,46,660</span>
+                                            </td>
+                                            <!-- <td class="align-middle">
+                        <a href="javascript:;" class="text-secondary fw-bold text-xs" data-original-title="Edit user">
+                          Edit
+                        </a>
+                      </td> -->
+                                        </tr>
+                                        <tr>
+                                            <td class="align-middle">
+                                                <p class="text-xs ps-2 fw-bold mb-0">Deepak Kapri</p>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex ps-2 py-1">
+                                                    <div>
+                                                        <img src="https://demos.creative-tim.com/soft-ui-dashboard/assets/img/team-2.jpg"
+                                                            class="avatar avatar-sm me-3">
+                                                    </div>
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <h6 class="mb-0 text-sm">inina bridal solitaire Ring</h6>
+                                                        <!-- <p class="text-xs text-secondary mb-0">john@creative-tim.com</p> -->
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="align-middle">
+                                                <p class="text-xs fw-bold mb-0">04-09-23</p>
+                                            </td>
+                                            <td class="align-middle text-center text-sm">
+                                                <span class="badge badge-sm bg-warning">Pending</span>
+                                            </td>
+                                            <td class="align-middle text-center">
+                                                <span class="text-secondary text-xs fw-bold">₹1,46,660</span>
+                                            </td>
+                                            <!-- <td class="align-middle">
+                        <a href="javascript:;" class="text-secondary fw-bold text-xs" data-original-title="Edit user">
+                          Edit
+                        </a>
+                      </td> -->
+                                        </tr>
+                                        <!-- Repeat the table rows as needed -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- dynamic datatable -->
+                <div class="col-lg-7 pt-0">
+                    <div class="card table-card rounded rounded-4 border-0 mb-4">
+                        <div class="card-header rounded rounded-4 border-0 bg-white p-3 pb-0">
+                            <h6 class="mb-0">Recent Orders</h6>
+                        </div>
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="table-responsive px-3 mt-2">
+                                <table id="recent-order-table"
+                                    class="table recent-order-table align-items-center border-none mb-0">
+                                    <thead class="sticky-top">
+                                        <tr>
+                                            <th class="ps-3 text-secondary fs-6 fw-bold opacity-7">Customer</th>
+                                            <th class="ps-3 text-secondary fs-6 fw-bold opacity-7">Product Name</th>
+                                            <th class="text-secondary fs-6 fw-bold opacity-7 ps-2">Date</th>
+                                            <th class="text-center text-secondary fs-6 fw-bold opacity-7">Status</th>
+                                            <th class="text-center text-secondary fs-6 fw-bold opacity-7">Total amount
+                                            </th>
+                                            <!-- <th class="text-secondary opacity-7"></th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-nowrap">
+                                        <!-- this is dynamically generating -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- top selling products -->
+                <div class="col-lg-5">
+                    <div class="card rounded rounded-4 product-card border-0 mb-4">
+                        <div class="card-header sticky-top rounded rounded-4 border-0 bg-white p-3">
+                            <h6 class="mb-0">Top Selling Products</h6>
+                        </div>
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="card border-0 rounded rounded-4">
+                                <div class="card-body d-flex">
+                                    <div class="d-flex align-items-center">
+                                        <div class="product-image-medium">
+                                            <img src="./assets/images/img/mask-group.png" alt="">
+                                        </div>
+                                        <div class="me-4 me-sm-3 me-md-4 numbers">
+                                            <h6 class="text-nowrap fw-normal">
+                                                3-Hook Prong Solitaire
+                                            </h6>
+                                            <p class="fs-6 text-muted mb-1 text-capitalize">Studsin Sterling Silver |
+                                                Diamond 7.5mm</p>
+                                            <p class="fs-7 text-muted text-capitalize fw-bold">₹53,423/-</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img class="bottom-line" src="./assets/images/img/line-48.svg" alt="">
+                            </div>
+                            <div class="card border-0 rounded rounded-4">
+                                <div class="card-body d-flex">
+                                    <div class="d-flex align-items-center">
+                                        <div class="product-image-medium">
+                                            <img src="./assets/images/img/mask-group.png" alt="">
+                                        </div>
+                                        <div class="me-4 me-sm-3 me-md-4 numbers">
+                                            <h6 class="text-nowrap fw-normal">
+                                                3-Hook Prong Solitaire
+                                            </h6>
+                                            <p class="fs-6 text-muted mb-1 text-capitalize">Studsin Sterling Silver |
+                                                Diamond 7.5mm</p>
+                                            <p class="fs-7 text-muted text-capitalize fw-bold">₹53,423/-</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img class="bottom-line" src="./assets/images/img/line-48.svg" alt="">
+                            </div>
+                            <div class="card border-0 rounded rounded-4">
+                                <div class="card-body d-flex">
+                                    <div class="d-flex align-items-center">
+                                        <div class="product-image-medium">
+                                            <img src="./assets/images/img/mask-group.png" alt="">
+                                        </div>
+                                        <div class="me-4 me-sm-3 me-md-4 numbers">
+                                            <h6 class="text-nowrap fw-normal">
+                                                3-Hook Prong Solitaire
+                                            </h6>
+                                            <p class="fs-6 text-muted mb-1 text-capitalize">Studsin Sterling Silver |
+                                                Diamond 7.5mm</p>
+                                            <p class="fs-7 text-muted text-capitalize fw-bold">₹53,423/-</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img class="bottom-line" src="./assets/images/img/line-48.svg" alt="">
+                            </div>
+                            <div class="card border-0 rounded rounded-4">
+                                <div class="card-body d-flex">
+                                    <div class="d-flex align-items-center">
+                                        <div class="product-image-medium">
+                                            <img src="./assets/images/img/mask-group.png" alt="">
+                                        </div>
+                                        <div class="me-4 me-sm-3 me-md-4 numbers">
+                                            <h6 class="text-nowrap fw-normal">
+                                                3-Hook Prong Solitaire
+                                            </h6>
+                                            <p class="fs-6 text-muted mb-1 text-capitalize">Studsin Sterling Silver |
+                                                Diamond 7.5mm</p>
+                                            <p class="fs-7 text-muted text-capitalize fw-bold">₹53,423/-</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img class="bottom-line" src="./assets/images/img/line-48.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal section ============= add customer modal ================ -->
+    <!-- Modal section ============= add customer modal ================ -->
+    <div id="addCustomerModal" class="modal">
+        <div class="modal-content rounded rounded-4 border-0">
+            <!-- Modal content goes here -->
+            <div class="container">
+                <div class="modal-heading mb-3 d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Add a New Customer</h5>
+                    <div class="close-modal bg-input-default rounded rounded-2 p-1">
+                        <img src="./assets/images/img/close_fi_x.svg" alt="close button">
+                    </div>
+                </div>
+                <div class="modal-subheading mb-3">
+                    <p class="">Customer Information</p>
+                </div>
+                <div class="add-customer-form mb-3">
+                    <form id="addCustomerForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control bg-input-default" id="customerName"
+                                name="customerName" placeholder="Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control  bg-input-default" id="customerEmail"
+                                name="customerEmail" placeholder="E-mail" required>
+                        </div>
+                        <div class="mb-3 d-flex">
+                            <div class="input-phoneNumber w-100 d-flex gap-3">
+                                <!-- country code added by script -->
+                                <input type="tel" class="form-control bg-input-default w-100" id="customerPhone"
+                                    name="customerPhone" placeholder="Phone Number" required>
+                            </div>
+                        </div>
+                        <div class="mb-3 form-check ps-0 d-flex">
+                            <label class="form-check-label ms-0 ps-0" for="toggleAddress">Add Address</label>
+                            <input type="checkbox" class="form-check-input cus-address ms-3" id="toggleAddress">
+                        </div>
+                        <div id="addressFields" class="mb-3" style="display: none;">
+                            <div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control bg-input-default" id="streetAddress"
+                                        name="streetAddress" placeholder="Building No., Street Address" required>
+                                </div>
+                                <div class="mb-3 d-flex gap-3">
+                                    <div>
+                                        <input type="text" class="form-control bg-input-default" id="addressCity"
+                                            name="addressCity" placeholder="City" required>
+                                    </div>
+                                    <div>
+                                        <input type="number" class="form-control  bg-input-default" id="addressPin"
+                                            name="addressPin" placeholder="Pin Code" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-flex gap-3">
+                                    <div class="w-100">
+                                        <!-- <input type="text" class="form-control bg-input-default" id="addressCountry"
+                      name="addressCountry" placeholder="Country" required> -->
+                                        <select
+                                            class="form-select text-color-placeholder bg-input-default form-control mb-0"
+                                            id="groupCountry">
+                                            <option selected>Country</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="w-100">
+                                        <!-- <input type="email" class="form-control  bg-input-default" id="addressState"
+                      name="addressState" placeholder="State" required> -->
+                                        <select
+                                            class="form-select text-color-placeholder bg-input-default form-control mb-0"
+                                            id="groupState">
+                                            <option selected>State</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-2 d-flex">
+                                    <div class="modal-subheading">
+                                        <p class="fs-7 mb-0">Billing Address</p>
+                                    </div>
+                                    <div class="form-check ps-3 d-flex">
+                                        <label class="form-check-label ms-0 fs-7 ps-0" for="toggleAddress">Same as
+                                            Customer Address</label>
+                                        <input type="checkbox" class="form-check-input cus-address ms-1"
+                                            id="toggleSameAsCustomer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" id="btnCancel" class="btn me-2 p-3 btn-default w-100">Cancel</button>
+                            <button type="submit" id="btnSubmit" class="btn ms-2 p-3 w-100 bg--main">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal section ============= customer added successfull modal ================ -->
+    <!-- Modal section ============= customer added successfull modal ================ -->
+    <div id="successfullModal" class="modal successfull-modal customer-added-successfull-modal d-one">
+        <div class="modal-content rounded rounded-4 border-0">
+            <!-- Modal content goes here -->
+            <div class="container">
+                <div class="img-above-header mb-3">
+                    <img src="./assets/images/img/successfull-crowd-celebrating.jpeg" alt="">
+                </div>
+
+                <div class="modal-heading mb-2 d-flex justify-content-between align-items-center">
+
+                    <h5 class="mb-0">
+                        <span>
+                            <img src="./assets/images/img/emoji-left-celebrate.svg" alt="">
+                        </span>
+                        Pragnesh Navadiya
+                        <span>
+                            <img src="./assets/images/img/emoji-right-celebrate.svg" alt="">
+                        </span>
+                    </h5>
+                </div>
+                <div class="modal-subheading mb-3">
+                    <p class="text-center fs-7">You've successfully added a new customer to
+                        your dashboard for enhanced management
+                        and personalized service. Congratulations!</p>
+                </div>
+
+                <div class="d-flex justify-content-center w-100">
+                    <button type="button" id="btnExit" class="btn me-2 p-3 btn-default w-100">Exit</button>
+                    <button type="submit" id="btnPlaceOrder"
+                        class="btn ms-2 p-3 w-100 bg-success-theme text-white">Place
+                        Order</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal section ========4.0===== successfull modal for placing an order after the cart and wishlist ================ -->
+    <!-- Modal section ========4.0===== successfull modal for placing an order after the cart and wishlist ================ -->
+    <div id="successfullModal" class="modal successfull-modal order-placed d-none">
+        <div class="modal-content rounded rounded-4 border-0">
+            <!-- Modal content goes here -->
+            <div class="container">
+                <div class="img-above-header mb-3">
+                    <img src="./assets/images/img/successfull-crowd-celebrating.jpeg" alt="">
+                </div>
+
+                <div class="modal-heading mb-2 d-flex justify-content-between align-items-center">
+
+                    <h5 class="mb-0">
+                        <span>
+                            <img src="./assets/images/img/to-right-celebration-emoji-with-cap.svg" alt="">
+                        </span>
+                        Congratulations
+                        <span>
+                            <img src="./assets/images/img/to-left-celebration-emoji-with-cap.svg" alt="">
+                        </span>
+                    </h5>
+                </div>
+                <div class="modal-subheading mb-3">
+                    <p class="text-center fs-7">We're here to ensure a smooth experience throughout, from selection to
+                        delivery.
+                        Thank you for choosing us for your customer's jewelry needs."</p>
+                </div>
+
+                <div class="d-flex justify-content-center w-100">
+                    <a href="./orderDashboard.html" type="submit" id="btnPlaceOrder"
+                        class="btn ms-2 p-3 w-100 bg-success-theme text-white">Let's
+                        Go</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal section ============= modal after click on place order button // product modal ================ -->
+    <!-- Modal section ============= modal after click on place order button // product modal ================ -->
+    <div id="searchProductModal" class="modal searchProductModal d-one">
+        <div class="modal-content rounded rounded-4 border-0">
+            <!-- Modal content goes here -->
+            <div class="container-fluid container-lg">
+                <!-- outer div for left and right sections -->
+                <div class="row">
+                    <div class="col-12 col-md-7 order-2 order-md-1">
+                        <!-- search bar -->
+                        <div class="search-products-bar mb-4">
+                            <div
+                                class="search-input-group d-flex align-items-center gap-3 border border-2 rounded rounded-3 py-2 px-3">
+                                <div class="search-icon fs-7 p-1">
+                                    <svg class=" icon-with-sideheading" xmlns="http://www.w3.org/2000/svg" width="18"
+                                        height="19" viewBox="0 0 18 19" fill="none">
+                                        <circle cx="8.80589" cy="8.80553" r="7.49047" stroke="#130F26"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M14.0156 14.4043L16.9523 17.3334" stroke="#130F26" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div
+                                    class="search-input w-100 d-flex flex-column justify-content-between align-items-start">
+                                    <input type="text" class="border-0 p-1 w-100"
+                                        placeholder="Search Product’s Name/Code">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 order-1 order-md-2">
+                        <!-- profile bar -->
+                        <div class="search-products-bar profile-bar mb-4">
+                            <div
+                                class="search-input-group d-flex align-items-center gap-1 gap-lg-3 border border-2 rounded rounded-3 py-1 px-1 px-lg-3">
+                                <div class="profile-heading d-flex align-items-center gap-3">
+                                    <img class="icon-with-sideheading" alt="user/boy"
+                                        src="./assets/images/img/image-5.png" />
+                                    <div class="text-muted fs-7">Pragnesh Navadiya | diyora.nxt@gmail.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- ================ left side product list ============-->
+                    <!-- ================ left side product list ============-->
+                    <div class="d-flex flex-column col-12 col-md-7 px-md-4">
+                        <!-- == back btn ===3.3====== when product selected then /back-button/ introduced ========= -->
+                        <!-- == back btn ===3.3====== when product selected then /back-button/ introduced ========= -->
+                        <div class="product-subheading d-flex align-items-center d-one mb-3">
+                            <!-- ==3.3=== d-none for back arrow -->
+                            <img class="back-vector-btn me-3 d-one" src="./assets/images/img/back-vector.svg" alt="">
+                            <!-- ====3.0=== products heading =========== -->
+                            <h6 class="mb-0 d-none">Product</h6>
+                            <!-- ====3.7=== back btn for shipping address =========== -->
+                            <h6 class="mb-0 d-one">Shipping Address</h6>
+                        </div>
+
+                        <!-- ==========3.1=== when no product added/search/ordered...  Empty// -->
+                        <!-- ==========3.1=== when no product added/search/ordered...  Empty// -->
+                        <div class="product-list d-none">
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <div
+                                    class="empty-state d-flex flex-column align-items-center justify-content-center text-center gap-3">
+                                    <div class="icon-container">
+                                        <div class="icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="50"
+                                                viewBox="0 0 46 50" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M45.2832 35.7868L43.3609 20.3002C42.1899 14.7741 38.8757 12.5 35.7161 12.5H10.3293C7.12555 12.5 3.70086 14.6149 2.7066 20.3002L0.762262 35.7868C-0.828559 47.1574 5.02654 50 12.6713 50H33.3962C41.0189 50 46.6972 45.8839 45.2832 35.7868ZM15.7425 25.3714C14.5222 25.3714 13.533 24.3533 13.533 23.0973C13.533 21.8414 14.5222 20.8232 15.7425 20.8232C16.9627 20.8232 17.952 21.8414 17.952 23.0973C17.952 24.3533 16.9627 25.3714 15.7425 25.3714ZM28.0051 23.0973C28.0051 24.3533 28.9943 25.3714 30.2145 25.3714C31.4348 25.3714 32.424 24.3533 32.424 23.0973C32.424 21.8414 31.4348 20.8232 30.2145 20.8232C28.9943 20.8232 28.0051 21.8414 28.0051 23.0973Z"
+                                                    fill="#BEC0CA" />
+                                                <path opacity="0.4"
+                                                    d="M35.4347 11.9358C35.4425 12.1297 35.4053 12.3228 35.3258 12.5H31.733C31.6634 12.3199 31.6266 12.1288 31.6242 11.9358C31.6242 7.14206 27.7247 3.25596 22.9144 3.25596C18.1041 3.25596 14.2046 7.14206 14.2046 11.9358C14.2376 12.1224 14.2376 12.3134 14.2046 12.5H10.5247C10.4918 12.3134 10.4918 12.1224 10.5247 11.9358C10.8043 5.26477 16.3125 0 23.0124 0C29.7122 0 35.2204 5.26477 35.5 11.9358H35.4347Z"
+                                                    fill="#BEC0CA" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="sub-heading">
+                                        <h6>Search Products to make Order</h6>
+                                        <p class="text-muted">Crafting tailor-made orders for your cherished clientele
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ===========3.2== when product adding to listed, searched //non-empty state -->
+                        <!-- ===========3.2== when product adding to listed, searched //non-empty state -->
+                        <div class="product-list d-none">
+                            <!-- replicate card for multiple products -->
+                            <div class="card border rounded rounded-4">
+                                <div class="card-body d-flex">
+                                    <div class="row ps-2 w-100">
+                                        <div
+                                            class="ps-1 product-image-medium product-image-large m-auto m-xl-0 col-12 col-sm-3 col-md-5 m-0">
+                                            <div class="">
+                                                <img src="./assets/images/img/rectangle-3.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-12 col-sm-7 col-md-7 m-0 d-flex flex-column justify-content-between align-items-between flex-grow-1">
+                                            <div class="upper my-3">
+                                                <h5 class="text-wrap fw-normal">
+                                                    3-Hook Prong Solitaire
+                                                </h5>
+                                                <p class="fs-6 text-muted mb-1 text-capitalize">Studsin Sterling Silver
+                                                    | Diamond 7.5mm</p>
+                                            </div>
+                                            <div class="bottom d-flex justify-content-between align-items-center">
+                                                <p class="fs-7 mb-0 text-muted text-capitalize fw-bold">₹53,423/-</p>
+                                                <button class="btn btn-primary">View Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img class="bottom-line" src="./assets/images/img/line-48.svg" alt="">
+                                <div class="heart-shape-like position-absolute top-0 end-0 m-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" viewBox="0 0 24 21"
+                                        fill="none">
+                                        <path
+                                            d="M17.1724 0C15.0941 0 13.2497 0.83263 12 2.26375C10.7503 0.83263 8.90586 0 6.82759 0C5.01747 0.0022229 3.28212 0.733042 2.00217 2.03216C0.722226 3.33127 0.0021901 5.09261 0 6.92983C0 14.5254 10.9459 20.5942 11.4114 20.8494C11.5923 20.9482 11.7945 21 12 21C12.2055 21 12.4077 20.9482 12.5886 20.8494C13.0541 20.5942 24 14.5254 24 6.92983C23.9978 5.09261 23.2778 3.33127 21.9978 2.03216C20.7179 0.733042 18.9825 0.0022229 17.1724 0ZM16.6045 14.9474C15.1637 16.1883 13.6236 17.3052 12 18.2864C10.3764 17.3052 8.83627 16.1883 7.39552 14.9474C5.15379 12.9955 2.48276 10.0189 2.48276 6.92983C2.48276 5.76026 2.94052 4.63858 3.75533 3.81157C4.57014 2.98455 5.67527 2.51994 6.82759 2.51994C8.66897 2.51994 10.2103 3.50692 10.8507 5.09658C10.9439 5.32832 11.103 5.52663 11.3077 5.66622C11.5124 5.80581 11.7534 5.88036 12 5.88036C12.2466 5.88036 12.4876 5.80581 12.6923 5.66622C12.897 5.52663 13.0561 5.32832 13.1493 5.09658C13.7897 3.50692 15.331 2.51994 17.1724 2.51994C18.3247 2.51994 19.4299 2.98455 20.2447 3.81157C21.0595 4.63858 21.5172 5.76026 21.5172 6.92983C21.5172 10.0189 18.8462 12.9955 16.6045 14.9474Z"
+                                            fill="#7D7D7D" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="card border rounded rounded-4">
+                                <div class="card-body d-flex">
+                                    <div class="row ps-2 w-100">
+                                        <div
+                                            class="ps-1 product-image-medium product-image-large m-auto m-xl-0 col-12 col-sm-3 col-md-5 m-0">
+                                            <div class="">
+                                                <img src="./assets/images/img/rectangle-3.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-12 col-sm-7 col-md-7 m-0 d-flex flex-column justify-content-between align-items-between flex-grow-1">
+                                            <div class="upper my-3">
+                                                <h5 class="text-wrap fw-normal">
+                                                    3-Hook Prong Solitaire
+                                                </h5>
+                                                <p class="fs-6 text-muted mb-1 text-capitalize">Studsin Sterling Silver
+                                                    | Diamond 7.5mm</p>
+                                            </div>
+                                            <div class="bottom d-flex justify-content-between align-items-center">
+                                                <p class="fs-7 mb-0 text-muted text-capitalize fw-bold">₹53,423/-</p>
+                                                <button class="btn btn-primary">View Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img class="bottom-line" src="./assets/images/img/line-48.svg" alt="">
+                                <div class="heart-shape-like position-absolute top-0 end-0 m-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" viewBox="0 0 24 21"
+                                        fill="none">
+                                        <path
+                                            d="M17.1724 0C15.0941 0 13.2497 0.83263 12 2.26375C10.7503 0.83263 8.90586 0 6.82759 0C5.01747 0.0022229 3.28212 0.733042 2.00217 2.03216C0.722226 3.33127 0.0021901 5.09261 0 6.92983C0 14.5254 10.9459 20.5942 11.4114 20.8494C11.5923 20.9482 11.7945 21 12 21C12.2055 21 12.4077 20.9482 12.5886 20.8494C13.0541 20.5942 24 14.5254 24 6.92983C23.9978 5.09261 23.2778 3.33127 21.9978 2.03216C20.7179 0.733042 18.9825 0.0022229 17.1724 0ZM16.6045 14.9474C15.1637 16.1883 13.6236 17.3052 12 18.2864C10.3764 17.3052 8.83627 16.1883 7.39552 14.9474C5.15379 12.9955 2.48276 10.0189 2.48276 6.92983C2.48276 5.76026 2.94052 4.63858 3.75533 3.81157C4.57014 2.98455 5.67527 2.51994 6.82759 2.51994C8.66897 2.51994 10.2103 3.50692 10.8507 5.09658C10.9439 5.32832 11.103 5.52663 11.3077 5.66622C11.5124 5.80581 11.7534 5.88036 12 5.88036C12.2466 5.88036 12.4876 5.80581 12.6923 5.66622C12.897 5.52663 13.0561 5.32832 13.1493 5.09658C13.7897 3.50692 15.331 2.51994 17.1724 2.51994C18.3247 2.51994 19.4299 2.98455 20.2447 3.81157C21.0595 4.63858 21.5172 5.76026 21.5172 6.92983C21.5172 10.0189 18.8462 12.9955 16.6045 14.9474Z"
+                                            fill="#7D7D7D" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="card border rounded rounded-4">
+                                <div class="card-body d-flex">
+                                    <div class="row ps-2 w-100">
+                                        <div
+                                            class="ps-1 product-image-medium product-image-large m-auto m-xl-0 col-12 col-sm-3 col-md-5 m-0">
+                                            <div class="">
+                                                <img src="./assets/images/img/rectangle-3.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="col-12 col-sm-7 col-md-7 m-0 d-flex flex-column justify-content-between align-items-between flex-grow-1">
+                                            <div class="upper my-3">
+                                                <h5 class="text-wrap fw-normal">
+                                                    3-Hook Prong Solitaire
+                                                </h5>
+                                                <p class="fs-6 text-muted mb-1 text-capitalize">Studsin Sterling Silver
+                                                    | Diamond 7.5mm</p>
+                                            </div>
+                                            <div class="bottom d-flex justify-content-between align-items-center">
+                                                <p class="fs-7 mb-0 text-muted text-capitalize fw-bold">₹53,423/-</p>
+                                                <button class="btn btn-primary">View Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img class="bottom-line" src="./assets/images/img/line-48.svg" alt="">
+                                <div class="heart-shape-like position-absolute top-0 end-0 m-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" viewBox="0 0 24 21"
+                                        fill="none">
+                                        <path
+                                            d="M17.1724 0C15.0941 0 13.2497 0.83263 12 2.26375C10.7503 0.83263 8.90586 0 6.82759 0C5.01747 0.0022229 3.28212 0.733042 2.00217 2.03216C0.722226 3.33127 0.0021901 5.09261 0 6.92983C0 14.5254 10.9459 20.5942 11.4114 20.8494C11.5923 20.9482 11.7945 21 12 21C12.2055 21 12.4077 20.9482 12.5886 20.8494C13.0541 20.5942 24 14.5254 24 6.92983C23.9978 5.09261 23.2778 3.33127 21.9978 2.03216C20.7179 0.733042 18.9825 0.0022229 17.1724 0ZM16.6045 14.9474C15.1637 16.1883 13.6236 17.3052 12 18.2864C10.3764 17.3052 8.83627 16.1883 7.39552 14.9474C5.15379 12.9955 2.48276 10.0189 2.48276 6.92983C2.48276 5.76026 2.94052 4.63858 3.75533 3.81157C4.57014 2.98455 5.67527 2.51994 6.82759 2.51994C8.66897 2.51994 10.2103 3.50692 10.8507 5.09658C10.9439 5.32832 11.103 5.52663 11.3077 5.66622C11.5124 5.80581 11.7534 5.88036 12 5.88036C12.2466 5.88036 12.4876 5.80581 12.6923 5.66622C12.897 5.52663 13.0561 5.32832 13.1493 5.09658C13.7897 3.50692 15.331 2.51994 17.1724 2.51994C18.3247 2.51994 19.4299 2.98455 20.2447 3.81157C21.0595 4.63858 21.5172 5.76026 21.5172 6.92983C21.5172 10.0189 18.8462 12.9955 16.6045 14.9474Z"
+                                            fill="#7D7D7D" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- =========3.3==== when one of product selected and ready to customize // customize product -->
+                        <!-- =========3.3==== when one of product selected and ready to customize // customize product -->
+                        <div class="product-list customize-product d-none">
+                            <!-- pasting flickity html code below -->
+                            <div class="container-none position-relative">
+                                <!-- Flickity HTML init -->
+                                <div class="carousel carousel-main"
+                                    data-flickity='{"pageDots": false,"wrapAround": true }'>
+                                    <div class="carousel-cell d-flex justify-content-center">
+                                        <video autoplay loop muted>
+                                            <source src="./assets/videos/ring-1.mp4" type="video/mp4" />
+                                        </video>
+                                    </div>
+                                    <div class="carousel-cell"><img src="./assets/images/img/products/ring-1.png" />
+                                    </div>
+                                    <div class="carousel-cell"><img src="./assets/images/img/products/ring-1.png" />
+                                    </div>
+                                    <div class="carousel-cell"><img src="./assets/images/img/products/ring-1.png" />
+                                    </div>
+                                    <div class="carousel-cell"><img src="./assets/images/img/products/ring-1.png" />
+                                    </div>
+                                    <div class="carousel-cell"><img src="./assets/images/img/products/ring-1.png" />
+                                    </div>
+                                </div>
+                                <div class="carousel carousel-nav"
+                                    data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false, "wrapAround": true }'>
+                                    <div class="carousel-cell"><video autoplay loop muted>
+                                            <source src="./assets/videos/ring-1.mp4" type="video/mp4" />
+                                        </video></div>
+                                    <div class="carousel-cell"><img src="./assets/images/img/products/ring-1.png" />
+                                    </div>
+                                    <div class="carousel-cell"><img src="./assets/images/img/products/ring-1.png" />
+                                    </div>
+                                    <div class="carousel-cell"><img src="./assets/images/img/products/ring-1.png" />
+                                    </div>
+                                    <div class="carousel-cell"><img src="./assets/images/img/products/ring-1.png" />
+                                    </div>
+                                    <div class="carousel-cell"><img src="./assets/images/img/products/ring-1.png" />
+                                    </div>
+                                </div>
+                                <!-- like button for wishlist -->
+                                <div class="heart-shape-like position-absolute top-0 end-0 m-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" viewBox="0 0 24 21"
+                                        fill="none">
+                                        <path
+                                            d="M17.1724 0C15.0941 0 13.2497 0.83263 12 2.26375C10.7503 0.83263 8.90586 0 6.82759 0C5.01747 0.0022229 3.28212 0.733042 2.00217 2.03216C0.722226 3.33127 0.0021901 5.09261 0 6.92983C0 14.5254 10.9459 20.5942 11.4114 20.8494C11.5923 20.9482 11.7945 21 12 21C12.2055 21 12.4077 20.9482 12.5886 20.8494C13.0541 20.5942 24 14.5254 24 6.92983C23.9978 5.09261 23.2778 3.33127 21.9978 2.03216C20.7179 0.733042 18.9825 0.0022229 17.1724 0ZM16.6045 14.9474C15.1637 16.1883 13.6236 17.3052 12 18.2864C10.3764 17.3052 8.83627 16.1883 7.39552 14.9474C5.15379 12.9955 2.48276 10.0189 2.48276 6.92983C2.48276 5.76026 2.94052 4.63858 3.75533 3.81157C4.57014 2.98455 5.67527 2.51994 6.82759 2.51994C8.66897 2.51994 10.2103 3.50692 10.8507 5.09658C10.9439 5.32832 11.103 5.52663 11.3077 5.66622C11.5124 5.80581 11.7534 5.88036 12 5.88036C12.2466 5.88036 12.4876 5.80581 12.6923 5.66622C12.897 5.52663 13.0561 5.32832 13.1493 5.09658C13.7897 3.50692 15.331 2.51994 17.1724 2.51994C18.3247 2.51994 19.4299 2.98455 20.2447 3.81157C21.0595 4.63858 21.5172 5.76026 21.5172 6.92983C21.5172 10.0189 18.8462 12.9955 16.6045 14.9474Z"
+                                            fill="#7D7D7D" />
+                                    </svg>
+                                </div>
+                            </div><!-- /.container-none -->
+                            <!-- pasting flickity html code ends here -->
+                            <!-- product information -->
+                            <div class="product-info mt-4 mb-3 d-flex justify-content-between">
+                                <div class="left">
+                                    <h5 class="text-wrap fw-normal">
+                                        3-Hook Prong Solitaire
+                                    </h5>
+                                    <p class="fs-6 text-muted mb-1 text-capitalize">Studsin Sterling Silver | Diamond
+                                        7.5mm</p>
+                                </div>
+                                <div class="right">
+                                    <p class="fs-7 mb-0 text-muted text-capitalize fw-bold">₹53,423/-</p>
+                                    <!-- <button class="btn btn-primary">View Details</button> -->
+                                </div>
+                            </div>
+                            <!-- product customization -->
+                            <div class="product-customization mt-3">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <p class="fs-6 text-muted mb-2 text-capitalize text-center">Metal Color</p>
+                                        <select class="form-select text-color-placeholder form-control mb-0"
+                                            id="groupCountry">
+                                            <option selected>18kt Rose Gold</option>
+                                            <option value="1">20kt Rose Gold</option>
+                                            <option value="2">22kt Rose Gold</option>
+                                            <option value="3">24kt Rose Gold</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <p class="fs-6 text-muted mb-2 text-capitalize text-center">Diamond</p>
+                                        <select class="form-select text-color-placeholder form-control mb-0"
+                                            id="groupCountry">
+                                            <option selected>VVS EF</option>
+                                            <option value="1">VVS EE</option>
+                                            <option value="2">VVS FF</option>
+                                            <option value="3">VWT EF</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <p class="fs-6 text-muted mb-2 text-capitalize text-center">Size</p>
+                                        <select class="form-select text-color-placeholder form-control mb-0"
+                                            id="groupCountry">
+                                            <option selected>Select</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ===========3.7=== shipping address for placing order ================ -->
+                        <!-- ===========3.7=== shipping address for placing order ================ -->
+                        <div class="product-list customize-product d-one">
+                            <!-- shipping address form -->
+                            <div class="add-shipping-form mb-3">
+                                <form id="addshippingForm">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="mb-2">
+                                                <label for="shippingName" class="mb-2">Name</label>
+                                                <input type="text" class="form-control bg-input-default"
+                                                    id="shippingName" name="shippingName" placeholder="Name" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="mb-2">
+                                                <label for="shippingEmail" class="mb-2">Email</label>
+                                                <input type="email" class="form-control  bg-input-default"
+                                                    id="shippingEmail" name="shippingEmail" placeholder="Email"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="mb-2">
+                                                <label for="shippingAddress" class="mb-2">Address</label>
+                                                <input type="text" class="form-control bg-input-default"
+                                                    id="shippingAddress" name="shippingAddress" placeholder="Address"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="shippingPhone" class="mb-2">Phone No</label>
+                                            <div class="mb-2 d-flex">
+                                                <div class="input-phoneNumber w-100 d-flex gap-3">
+                                                    <!-- country code added by script -->
+                                                    <input type="tel" class="form-control bg-input-default w-100"
+                                                        id="shippingPhone" name="shippingPhone"
+                                                        placeholder="Phone Number" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="groupShippingCountry" class="mb-2">Country</label>
+                                            <div class="mb-2 d-flex gap-3">
+                                                <select
+                                                    class="form-select text-color-placeholder bg-input-default form-control mb-0"
+                                                    id="groupShippingCountry">
+                                                    <option selected>Country</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="groupShippingState" class="mb-2">State</label>
+                                            <div class="mb-2 d-flex gap-3">
+                                                <select
+                                                    class="form-select text-color-placeholder bg-input-default form-control mb-0"
+                                                    id="groupShippingState">
+                                                    <option selected>State</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="shippingPin" class="mb-2">Pin Code</label>
+                                            <div class="mb-2">
+                                                <input type="text" class="form-control  bg-input-default"
+                                                    id="shippingPin" name="shippingPin" placeholder="Pin Code" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-center mt-3 w-100">
+                                        <div class="shipping-delivery-buttons d-flex">
+                                            <button type="button" id="shippingBtnCancel"
+                                                class="btn bg--main d-flex align-items-center justify-content-center me-2 p-2 w-100"><span
+                                                    class="m-0 p-0 icon-btn fs-6"><img class="w-100 h-100 pe-1 fs-6"
+                                                        src="./assets/images/img/home-delivery-icon.png" alt=""></span>
+                                                <p class="p-1 mb-0">Home Delivery</p>
+                                            </button>
+                                            <button type="submit" id="shippingBtnSubmit"
+                                                class="btn btn-default d-flex align-items-center justify-content-center ms-2 p-2 w-100 "><span
+                                                    class="m-0 p-0 icon-btn fs-6"><img class="pe-1 h-100 w-100 fs-6"
+                                                        src="./assets/images/img/store-delivery-icon.png" alt=""></span>
+                                                <p class="p-1 mb-0">Store Delivery</p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- =================== left side end ===================== -->
+                    <!-- =================== left side end ===================== -->
+                    <!-- ================ right side cart and wishlist ========================= -->
+                    <!-- ================ right side cart and wishlist ========================= -->
+                    <div
+                        class="d-flex flex-column cart-wishlist-column mt-4 mt-md-0 col-12 col-md-5 px-4 border-md-start">
+                        <!-- cart and wishlist tabs-->
+                        <div
+                            class="product-subheading d-flex justify-content-center align-items-center text-center mb-3">
+                            <!-- <h6 class="mb-0">Your Cart / <span class="text-muted">Wishlist</span></h6> -->
+                            <ul class="nav nav-tabs cart-wishlist-tabs p-0 border-0" id="cart-wishlist" role="tablist">
+                                <li class="nav-item border-0 mb-0 p-0" role="presentation">
+                                    <button class="nav-link active mb-0 border-0 p-0" id="cart-tab" data-bs-toggle="tab"
+                                        data-bs-target="#cartTabPane" type="button" role="tab"
+                                        aria-controls="cartTabPane" aria-selected="true">Your Cart <span
+                                            class="dnone">(2)</span></button>
+                                </li>
+                                <li><span class="mx-2">/</span></li>
+                                <li class="nav-item border-0 mb-0 p-0" role="presentation">
+                                    <button class="nav-link mb-0 border-0 p-0" id="wishlist-tab" data-bs-toggle="tab"
+                                        data-bs-target="#wishlistTabPane" type="button" role="tab"
+                                        aria-controls="wishlistTabPane" aria-selected="false">Wishlist <span
+                                            class="d-one">(3)</span></button>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- tab heading ends here -->
+                        <!-- ========== both tab content cart and wishlist start ======== -->
+                        <div class="tab-content flex-grow-1" id="cart-wishlist-content">
+                            <!-- =========== cart tab content ========== -->
+                            <!-- =========== cart tab content ========== -->
+                            <div class="tab-pane h-100 cart-tab-pane fade show active" id="cartTabPane" role="tabpanel"
+                                aria-labelledby="cart-tab" tabindex="0">
+                                <!-- cart tab content -->
+                                <!-- when no product added/search/ordered...  Empty// -->
+                                <!-- =====3.1==== for empty state -->
+                                <div class="product-list d-none">
+                                    <div class="d-flex flex-column h-100 justify-content-between align-items-center">
+                                        <div
+                                            class="empty-state my-5 d-flex flex-column align-items-center justify-content-center text-center gap-3">
+                                            <div class="icon-bag">
+                                                <img src="./assets/images/img/color-bags-cart-wishlist.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="horizontal-line mt-3 w-100">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2"
+                                                viewBox="0 0 402 2" fill="none">
+                                                <path d="M0 1L402 1.00004" stroke="#F1F3F9" />
+                                            </svg>
+                                        </div>
+
+                                        <div
+                                            class="cart-total-price-module mb-4 w-100 px-5 d-flex justify-content-between">
+                                            <span class="text-muted fs-7">Total</span> <span
+                                                class="cart-total-amount">₹0</span>
+                                        </div>
+
+                                        <div class="d-flex justify-content-center w-100">
+                                            <button type="button" id="productBtnCancel"
+                                                class="btn me-2 p-3 btn-default w-100">Cancel</button>
+                                            <button type="submit" id="productBtnPlaceOrder"
+                                                class="btn ms-2 p-3 w-100 bg-secondary-2 text-white">Place
+                                                Order</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- for empty state end -->
+                                <!-- =====3.4=== for non-empty state -->
+                                <div class="product-list d-one cart-list position-relative h-100">
+                                    <div class="d-flex flex-column h-100 justify-content-start align-items-center">
+                                        <!-- replicate card-wrapper for multiple products -->
+                                        <div class="cards-and-subtotal">
+                                            <div class="card-wrapper">
+                                                <div class="card w-100 border-0 rounded rounded-4">
+                                                    <div class="card-body w-100 p-0">
+                                                        <div class="d-flex w-100 align-items-center">
+                                                            <div class="product-image-medium">
+                                                                <img src="./assets/images/img/mask-group.png" alt="">
+                                                            </div>
+                                                            <div class="numbers w-100">
+                                                                <!-- product title and description -->
+                                                                <div
+                                                                    class="d-flex w-100 flex-column flex-sm-row flex-md-column flex-xl-row justify-content-between">
+                                                                    <div class="product-info">
+                                                                        <h6 class="text-nowrap fs-6 fw-normal">
+                                                                            3-Hook Prong Solitaire
+                                                                        </h6>
+                                                                        <p class="fs-7 text-muted mb-1 text-capitalize">
+                                                                            Studsin Sterling Silver | Diamond
+                                                                            7.5mm
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="action-side">
+                                                                        <a href="#"
+                                                                            class="remove-link text-decoration-none">
+                                                                            <p class="fs-7 text-danger">Remove</p>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- price and quantity tracker -->
+                                                                <div class="d-flex flex-wrap justify-content-between">
+                                                                    <p
+                                                                        class="fs-7 mt-2 pb-0 mb-0 text-muted text-capitalize fw-bold">
+                                                                        ₹53,423/-</p>
+                                                                    <div
+                                                                        class="quantity-measure mt-3 d-flex flex-nowrap">
+                                                                        <span class=""><i
+                                                                                class="fi fi-rr-plus-small"></i></span>
+                                                                        <p class="fs-7 pb-0 mb-0 px-3 text-muted">1</p>
+                                                                        <span class=""><i
+                                                                                class="fi fi-rr-minus-small"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- customized tags -->
+                                                        <div
+                                                            class="selected-tags my-3 d-flex w-100 justify-content-between">
+                                                            <div class="metal-color rounded rounded-1">
+                                                                <p class="mb-0 pb-0 fs-8 text-center">18kt Rose Gold</p>
+                                                            </div>
+                                                            <div class="diamond rounded rounded-1">
+                                                                <p class="mb-0 pb-0 fs-8 text-center">VVS EF</p>
+                                                            </div>
+                                                            <div class="size rounded rounded-1">
+                                                                <p class="mb-0 pb-0 fs-8 text-center">Size12</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- sub total amount -->
+                                                <div
+                                                    class="cart-total-price-module w-100 d-flex justify-content-between">
+                                                    <span class="text-muted fs-7">Sub Total</span> <span
+                                                        class="cart-total-amount fw-bold">₹53,423/-</span>
+                                                </div>
+                                                <div class="horizontal-line mt-2 mb-3 w-100">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2"
+                                                        viewBox="0 0 402 2" fill="none">
+                                                        <path d="M0 1L402 1.00004" stroke="#F1F3F9" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="card-wrapper">
+                                                <div class="card w-100 border-0 rounded rounded-4">
+                                                    <div class="card-body w-100 p-0">
+                                                        <div class="d-flex w-100 align-items-center">
+                                                            <div class="product-image-medium">
+                                                                <img src="./assets/images/img/mask-group.png" alt="">
+                                                            </div>
+                                                            <div class="numbers w-100">
+                                                                <!-- product title and description -->
+                                                                <div
+                                                                    class="d-flex w-100 flex-column flex-sm-row flex-md-column flex-xl-row justify-content-between">
+                                                                    <div class="product-info">
+                                                                        <h6 class="text-nowrap fs-6 fw-normal">
+                                                                            3-Hook Prong Solitaire
+                                                                        </h6>
+                                                                        <p class="fs-7 text-muted mb-1 text-capitalize">
+                                                                            Studsin Sterling Silver | Diamond
+                                                                            7.5mm
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="action-side">
+                                                                        <a href="#"
+                                                                            class="remove-link text-decoration-none">
+                                                                            <p class="fs-7 text-danger">Remove</p>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- price and quantity tracker -->
+                                                                <div class="d-flex flex-wrap justify-content-between">
+                                                                    <p
+                                                                        class="fs-7 mt-2 pb-0 mb-0 text-muted text-capitalize fw-bold">
+                                                                        ₹53,423/-</p>
+                                                                    <div
+                                                                        class="quantity-measure mt-3 d-flex flex-nowrap">
+                                                                        <span class=""><i
+                                                                                class="fi fi-rr-plus-small"></i></span>
+                                                                        <p class="fs-7 pb-0 mb-0 px-3 text-muted">1</p>
+                                                                        <span class=""><i
+                                                                                class="fi fi-rr-minus-small"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- customized tags -->
+                                                        <div
+                                                            class="selected-tags my-3 d-flex w-100 justify-content-between">
+                                                            <div class="metal-color rounded rounded-1">
+                                                                <p class="mb-0 pb-0 fs-8 text-center">18kt Rose Gold</p>
+                                                            </div>
+                                                            <div class="diamond rounded rounded-1">
+                                                                <p class="mb-0 pb-0 fs-8 text-center">VVS EF</p>
+                                                            </div>
+                                                            <div class="size rounded rounded-1">
+                                                                <p class="mb-0 pb-0 fs-8 text-center">Size12</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- sub total amount -->
+                                                <div
+                                                    class="cart-total-price-module w-100 d-flex justify-content-between">
+                                                    <span class="text-muted fs-7">Sub Total</span> <span
+                                                        class="cart-total-amount fw-bold">₹53,423/-</span>
+                                                </div>
+                                                <div class="horizontal-line mt-2 mb-3 w-100">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2"
+                                                        viewBox="0 0 402 2" fill="none">
+                                                        <path d="M0 1L402 1.00004" stroke="#F1F3F9" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- horizontal line + total amount + cancel / place order btn -->
+                                        <div class="total-and-buttons px-4 mt-auto position-absolute">
+                                            <!-- line -->
+                                            <div class="horizontal-line w-100">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2"
+                                                    viewBox="0 0 402 2" fill="none">
+                                                    <path d="M0 1L402 1.00004" stroke="#F1F3F9" />
+                                                </svg>
+                                            </div>
+                                            <!-- total -->
+                                            <div
+                                                class="cart-total-price-module mb-4 w-100 px-5 d-flex justify-content-between">
+                                                <span class="text-muted fs-7">Total</span> <span
+                                                    class="cart-total-amount fw-bold">₹106,846/-</span>
+                                            </div>
+                                            <!-- cancel or place order -->
+                                            <div class="d-flex justify-content-center w-100">
+                                                <button type="button" id="productBtnCancel"
+                                                    class="btn me-2 p-3 btn-default w-100">Cancel</button>
+                                                <button type="submit" id="productBtnPlaceOrder-link"
+                                                    class="btn ms-2 p-3 w-100 bg-secondary-2 text-white">Place
+                                                    Order</button>
+                                            </div>
+
+                                        </div>
+                                        <!-- for non-empty state ending-->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- =========== wishlist tab content ========== -->
+                            <!-- =========== wishlist tab content ========== -->
+                            <div class="tab-pane wishlist-tab-pane fade" id="wishlistTabPane" role="tabpanel"
+                                aria-labelledby="wishlist-tab" tabindex="0">
+                                <!-- wishlist tab content -->
+                                <!-- =====3.4==== when no product added/search/ordered...  Empty-state-wishlist// ===== -->
+                                <!-- =====3.4==== when no product added/search/ordered...  Empty-state-wishlist// ===== -->
+                                <div class="product-list d-none">
+                                    <div class="d-flex flex-column h-100 justify-content-between align-items-center">
+                                        <div
+                                            class="empty-state my-4 d-flex flex-column align-items-center justify-content-center text-center gap-3">
+                                            <div class="icon-bag">
+                                                <img class="wishlist-link" src="./assets/images/img/empty-wishlist.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ========3.5==== when one or more products added to wishlist non-empty state ========== -->
+                                <!-- ========3.5==== when one or more products added to wishlist non-empty state ========== -->
+                                <div class="product-list d-one wishlist-list h-100">
+                                    <div class="d-flex flex-column h-100 justify-content-start align-items-center">
+                                        <div class="cards-and-subtotal">
+                                            <!-- each card wrapper contains wishlist product card -->
+                                            <div class="card-wrapper">
+                                                <div class="card w-100 border-0 rounded rounded-4">
+                                                    <div class="card-body w-100 p-0">
+                                                        <div class="d-flex w-100 align-items-center">
+                                                            <div class="product-image-medium">
+                                                                <img src="./assets/images/img/mask-group.png" alt="">
+                                                            </div>
+                                                            <div class="numbers w-100">
+                                                                <!-- product title and description -->
+                                                                <div
+                                                                    class="d-flex w-100 flex-column flex-sm-row flex-md-column flex-xl-row justify-content-between">
+                                                                    <div class="product-info">
+                                                                        <h6 class="text-nowrap fs-6 fw-normal">
+                                                                            3-Hook Prong Solitaire
+                                                                        </h6>
+                                                                        <p class="fs-7 text-muted mb-1 text-capitalize">
+                                                                            Studsin Sterling Silver | Diamond
+                                                                            7.5mm
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="action-side">
+                                                                        <a href="#"
+                                                                            class="remove-link text-decoration-none">
+                                                                            <p class="fs-7 text-danger">Remove</p>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- price -->
+                                                                <div class="d-flex flex-wrap justify-content-between">
+                                                                    <p
+                                                                        class="fs-7 mt-2 pb-0 mb-0 text-muted text-capitalize fw-bold">
+                                                                        ₹53,423/-</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- share and view products -->
+                                                <div class="d-flex my-3 justify-content-center w-100">
+                                                    <button type="button" id="shareProductFromWishlist"
+                                                        class="btn d-flex justify-content-center align-items-center me-2 p-2 btn-default w-100"><span
+                                                            class="m-0 p-0 fs-6"><img class="pe-1 fs-6"
+                                                                src="./assets/images/img/share-vector.svg"
+                                                                alt=""></span>
+                                                        <p class="pb-0 mb-0">Share</p>
+                                                    </button>
+                                                    <button type="submit" id="viewProductFromWishlist"
+                                                        class="btn d-flex justify-content-center align-items-center ms-2 p-2 w-100 bg-primary text-white"><span
+                                                            class="m-0 p-0 fs-6"><img class="pe-1 fs-6"
+                                                                src="./assets/images/img/view-eye-vector.svg"
+                                                                alt=""></span>
+                                                        <p class="pb-0 mb-0">View Product</p>
+                                                    </button>
+                                                </div>
+                                                <div class="horizontal-line mt-2 mb-3 w-100">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2"
+                                                        viewBox="0 0 402 2" fill="none">
+                                                        <path d="M0 1L402 1.00004" stroke="#F1F3F9" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="card-wrapper">
+                                                <div class="card w-100 border-0 rounded rounded-4">
+                                                    <div class="card-body w-100 p-0">
+                                                        <div class="d-flex w-100 align-items-center">
+                                                            <div class="product-image-medium">
+                                                                <img src="./assets/images/img/mask-group.png" alt="">
+                                                            </div>
+                                                            <div class="numbers w-100">
+                                                                <!-- product title and description -->
+                                                                <div
+                                                                    class="d-flex w-100 flex-column flex-sm-row flex-md-column flex-xl-row justify-content-between">
+                                                                    <div class="product-info">
+                                                                        <h6 class="text-nowrap fs-6 fw-normal">
+                                                                            3-Hook Prong Solitaire
+                                                                        </h6>
+                                                                        <p class="fs-7 text-muted mb-1 text-capitalize">
+                                                                            Studsin Sterling Silver | Diamond
+                                                                            7.5mm
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="action-side">
+                                                                        <a href="#"
+                                                                            class="remove-link text-decoration-none">
+                                                                            <p class="fs-7 text-danger">Remove</p>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- price -->
+                                                                <div class="d-flex flex-wrap justify-content-between">
+                                                                    <p
+                                                                        class="fs-7 mt-2 pb-0 mb-0 text-muted text-capitalize fw-bold">
+                                                                        ₹53,423/-</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- share and view products -->
+                                                <div class="d-flex my-3 justify-content-center w-100">
+                                                    <button type="button" id="shareProductFromWishlist"
+                                                        class="btn d-flex justify-content-center align-items-center me-2 p-2 btn-default w-100"><span
+                                                            class="m-0 p-0 fs-6"><img class="pe-1 fs-6"
+                                                                src="./assets/images/img/share-vector.svg"
+                                                                alt=""></span>
+                                                        <p class="pb-0 mb-0">Share</p>
+                                                    </button>
+                                                    <button type="submit" id="viewProductFromWishlist"
+                                                        class="btn d-flex justify-content-center align-items-center ms-2 p-2 w-100 bg-primary text-white"><span
+                                                            class="m-0 p-0 fs-6"><img class="pe-1 fs-6"
+                                                                src="./assets/images/img/view-eye-vector.svg"
+                                                                alt=""></span>
+                                                        <p class="pb-0 mb-0">View Product</p>
+                                                    </button>
+                                                </div>
+                                                <div class="horizontal-line mt-2 mb-3 w-100">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2"
+                                                        viewBox="0 0 402 2" fill="none">
+                                                        <path d="M0 1L402 1.00004" stroke="#F1F3F9" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="card-wrapper">
+                                                <div class="card w-100 border-0 rounded rounded-4">
+                                                    <div class="card-body w-100 p-0">
+                                                        <div class="d-flex w-100 align-items-center">
+                                                            <div class="product-image-medium">
+                                                                <img src="./assets/images/img/mask-group.png" alt="">
+                                                            </div>
+                                                            <div class="numbers w-100">
+                                                                <!-- product title and description -->
+                                                                <div
+                                                                    class="d-flex w-100 flex-column flex-sm-row flex-md-column flex-xl-row justify-content-between">
+                                                                    <div class="product-info">
+                                                                        <h6 class="text-nowrap fs-6 fw-normal">
+                                                                            3-Hook Prong Solitaire
+                                                                        </h6>
+                                                                        <p class="fs-7 text-muted mb-1 text-capitalize">
+                                                                            Studsin Sterling Silver | Diamond
+                                                                            7.5mm
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="action-side">
+                                                                        <a href="#"
+                                                                            class="remove-link text-decoration-none">
+                                                                            <p class="fs-7 text-danger">Remove</p>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- price -->
+                                                                <div class="d-flex flex-wrap justify-content-between">
+                                                                    <p
+                                                                        class="fs-7 mt-2 pb-0 mb-0 text-muted text-capitalize fw-bold">
+                                                                        ₹53,423/-</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- share and view products -->
+                                                <div class="d-flex my-3 justify-content-center w-100">
+                                                    <button type="button" id="shareProductFromWishlist"
+                                                        class="btn d-flex justify-content-center align-items-center me-2 p-2 btn-default w-100"><span
+                                                            class="m-0 p-0 fs-6"><img class="pe-1 fs-6"
+                                                                src="./assets/images/img/share-vector.svg"
+                                                                alt=""></span>
+                                                        <p class="pb-0 mb-0">Share</p>
+                                                    </button>
+                                                    <button type="submit" id="viewProductFromWishlist"
+                                                        class="btn d-flex justify-content-center align-items-center ms-2 p-2 w-100 bg-primary text-white"><span
+                                                            class="m-0 p-0 fs-6"><img class="pe-1 fs-6"
+                                                                src="./assets/images/img/view-eye-vector.svg"
+                                                                alt=""></span>
+                                                        <p class="pb-0 mb-0">View Product</p>
+                                                    </button>
+                                                </div>
+                                                <div class="horizontal-line mt-2 mb-3 w-100">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2"
+                                                        viewBox="0 0 402 2" fill="none">
+                                                        <path d="M0 1L402 1.00004" stroke="#F1F3F9" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <a href="./orderDashboard.html" class="redirect">redirect to order
+                                                dashboard</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ========== cart and wishlist content end here =========== -->
+                    </div>
+                    <!-- ================ right side end ================= -->
+                </div>
+            </div>
+        </div>
+        <!-- searchProductModal ends here below is ending div tag -->
+    </div>
+
+
+
+
+
+    <!-- Bootstrap JS (Make sure to include Popper.js and Bootstrap JS before closing body tag) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script.js -->
+    <script src="./assets/js/index.js"></script>
+    <!-- <script src="./assets/js/sidebar.js"></script> -->
+    <!-- <script src="https://demos.creative-tim.com/soft-ui-dashboard/assets/js/plugins/chartjs.min.js"></script> -->
+    <script src="./assets/plugins/chartjs.min.js"></script>
+    <!-- <script src="https://demos.creative-tim.com/soft-ui-dashboard/assets/js/plugins/Chart.extension.js"></script> -->
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="./assets/js/chart.js"></script>
+    <script src="./assets/plugins/dataTable-1.13.6.js"></script>
+    <script src="./assets/plugins/dataTable-bootstrap-3.js"></script>
+    <script src="./assets/js/recentOrders.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <script>
+        // -----Country Code Selection
+        $("#customerPhone").intlTelInput({
+            initialCountry: "in",
+            separateDialCode: true,
+            // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+        });
+        // -----Country Code Selection
+        $("#shippingPhone").intlTelInput({
+            initialCountry: "in",
+            separateDialCode: true,
+            // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Click event for the 'Submit' button
+            $("#productBtnPlaceOrder-link").click(function () {
+                // Specify the URL of the new HTML page you want to open
+                var newPageUrl = "8.html";
+
+                // Redirect to the new page
+                window.location.href = newPageUrl;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
