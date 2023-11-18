@@ -1175,11 +1175,20 @@ div.dataTables_wrapper div.dataTables_filter{
 }
 
 /* css replacements */
-.form-control:focus, .form-select:focus {
+.form-control:focus, .form-select:focus, .form-check-input:focus {
   border-color: #86b7fe66;
   outline: 0;
   box-shadow: 0 0 0 0.1rem rgb(13 110 253 / 15%);
 }
+
+#addCustomerForm .form-check-input[type=checkbox] {
+  border-radius: 1.5em;
+  width: 40px;
+  height: 20px;
+  /* background: #5570F11F; */
+  /* border: none; */
+}
+/* #5BC4FF, #FF5BEF linear grading of global data */
 /* css replacements ends here */
 
 /* ======================= Media Query =========================== */
