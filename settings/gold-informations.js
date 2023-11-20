@@ -28,7 +28,7 @@ function createTableRow(data) {
 var backupTableBody = document.querySelector('#backup-table tbody');
 
 async function getData() {
-    const response = await fetch('./assets/js/backups.json');
+    const response = await fetch('gold-informations.json');
     const data = await response.json();
     return data;
 }
@@ -61,6 +61,7 @@ async function processData2() {
     } catch (error) {
         console.error('Error fetching data:', error);
     }
+
 }
 
 // Call processData to initiate the data retrieval and processing
