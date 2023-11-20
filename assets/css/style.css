@@ -37,10 +37,12 @@ html {
   --bg-gradient-primary: linear-gradient(310deg, var(--main-light-hover), var(--main-lighter));
 
   --border-xs: .1px solid rgba(201, 190, 190, 0.655);
-  --shadow--sm: 1px 2px 10px -3px var(--main-color);
+  /* --shadow--sm: 1px 2px 10px -3px var(--main-color); */
   --shadow--sm: 1px 2px 10px -3px #00000085;
+  --shadow--extra-sm: 1px 1px 5px -2px #00000085;
   --shadow--sm-inset: 1px 2px 10px -3px var(--main-color) inset;
   --shadow--sm-inset-black: -4px 2px 10px -8px #00000085 inset;
+  --shadow--extra-sm-inset-black: -4px 2px 5px -3px #00000085 inset;
 }
 
 /* custom scrollbar */
@@ -473,7 +475,9 @@ body {
   padding: .9rem;
 }
 
-.nav-link .nav-icon-bg:hover {
+.nav-link .nav-icon-bg:hover,
+.nav-link .nav-icon-bg.active,
+.nav-link.active .nav-icon-bg {
   background-color: var(--main-lighter-hover);
   box-shadow: var(--shadow--sm);
 }
@@ -1190,6 +1194,51 @@ div.dataTables_wrapper div.dataTables_filter{
 }
 /* #5BC4FF, #FF5BEF linear grading of global data */
 /* css replacements ends here */
+
+/* new changes */
+.product-image-small{
+  height: 20px;
+  width: 20px;
+}
+
+.settings-cards .card-gold-link,
+.settings-cards .card-diamond-link,
+.settings-cards .card-extra-link
+{
+  transition: all .3s ease;
+}
+.settings-cards .card-gold-link:hover,
+.settings-cards .card-gold-link:focus,
+.settings-cards .nav-link.active .card-gold-link,
+.settings-cards .card-diamond-link:hover,
+.settings-cards .card-diamond-link:focus,
+.settings-cards .nav-link.active .card-diamond-link,
+.settings-cards .card-extra-link:hover,
+.settings-cards .card-extra-link:focus,
+.settings-cards .nav-link.active .card-extra-link{
+  background-color: var(--input-default-bg);
+  box-shadow: var(--shadow--extra-sm);
+  cursor: pointer;
+  z-index: 100;
+}
+
+/* .tab-pane-subcards .card:hover{
+  background-color: var(--input-default-bg);
+  box-shadow: var(--shadow--extra-sm-inset-black);
+  cursor: grab;
+} */
+
+/* .settings-cards .tab-content .tab-pane.show.active{
+  background-color: var(--input-default-bg);
+  box-shadow: var(--shadow--extra-sm);
+  cursor: pointer;
+  border-radius: 1rem;
+} */
+
+.product-image-small img{
+  height: 100%;
+  width: 100%;
+}
 
 /* ======================= Media Query =========================== */
 /* ======================= Media Query =========================== */

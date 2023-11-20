@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diyora NXT</title>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Flaticons -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+
+    <!-- dataTable css -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap.min.css">
+
+    <!-- country code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ======================== SIDEBAR ================== -->
+    <div class="sidebar d-flex bg-white flex-column shadow-md" id="sidebar">
+        <div class="sidebar-icon d-md-flex align-items-center p-1 p-md-3 align-self-center">
+            <a href="./login.html" class="ellipse">
+                <img src="./assets/images/img/d-logo-04.png" alt="">
+            </a>
+        </div>
+        <!-- <span class="h-100px w-100 justify-self-center d-flex d-md-none p-2 pb-0 sidebar-toggler-icon"><i
+        class="fi fi-rr-menu-burger"></i></span> -->
+        <div class="d-flex h-100 flex-column justify-content-between">
+            <ul class="list-unstyled mt-4 pt-3">
+                <li class="list-icon active">
+                    <!-- <a href="#" class="active"> -->
+                    <!-- <span class="px-3"><i class="fi fi-rr-apps"></i></span> -->
+                    <a href="./index.html" class="sidebar-icon-outside rounded rounded-4">
+                        <img class="p-3 icon" src="./assets/images/img/Category.svg" alt="">
+                    </a>
+                    <!-- <span>Dashboard</span> -->
+                    <!-- </a> -->
+                </li>
+                <li class="list-icon">
+                    <!-- <a href="#"> -->
+                    <!-- <span class="px-3"><i class="fi fi-rr-stats"></i></span>
+            <span>Analytics</span> -->
+                    <a href="./orderDashboard.html" class="sidebar-icon-outside rounded rounded-4">
+                        <img class="p-3 icon" src="./assets/images/img/Bag.svg" alt="">
+                    </a>
+                    <!-- </a> -->
+                </li>
+                <!-- <li class="list-icon">
+          <a href="#">
+            <span class="px-3"><i class="fi fi-rr-tags"></i></span>
+            <span>Rate & Markup</span>
+          </a>
+        </li>
+        <li class="list-icon">
+          <a href="#">
+            <span class="px-3"><i class="fi fi-rr-boxes"></i></span>
+            <span>All Products</span>
+          </a>
+        </li> -->
+            </ul>
+            <ul class="list-unstyled mt-auto">
+                <li class="list-icon p-1 rounded rounded-4 overflow-hidden">
+                    <!-- <a href="#" class="active"> -->
+                    <!-- <span class="px-3"><i class="fi fi-rr-apps"></i></span> -->
+                    <a href="javascript:void(0)" class="sidebar-icon-outside p-1 h-100 rounded rounded-4">
+                        <img class="h-100 w-100 rounded bg-pink-light rounded-4"
+                            src="./assets/images/img/rectangle-115.png" alt="">
+                    </a>
+                    <!-- <span>Dashboard</span> -->
+                    <!-- </a> -->
+                </li>
+                <li class="list-icon">
+                    <!-- <a href="#" class="active"> -->
+                    <!-- <span class="px-3"><i class="fi fi-rr-apps"></i></span> -->
+                    <a href="javascript:void(0)" class="sidebar-icon-outside rounded rounded-4">
+                        <img class="p-3 icon" src="./assets/images/img/logout.svg" alt="">
+                    </a>
+                    <!-- <span>Dashboard</span> -->
+                    <!-- </a> -->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- ======================= HEADER ===================== -->
+    <nav class="navbar header-nav bg-white p-0 p-xl-1 navbar-expand-sm navbar-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="admin-dashboard.html">Admin Dashboard </a><a href="#" class="navbar-brand">> settings</a>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse ms-auto" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link search-link me-md-1" href="javascript:void(0)"><span class="nav-icon-bg"><i
+                                    class="fi-rr-search"></i></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-md-1" href="#"><span class="nav-icon-bg"><i
+                                    class="fi-rr-bell"></i></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-md-1" href="#"><span class="nav-icon-bg"><i
+                                    class="fi-rr-comment-alt"></i></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active me-md-1" href="#"><span class="nav-icon-bg"><i
+                                    class="fi-rr-settings"></i></span></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span id="addCustomerBtn"
+                                class="btn bg--main line--2 p-1 px-2 text-nowrap rounded rounded-4">
+                                + Add Customer
+                            </span>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ==================== MAIN CONTAINER ================== -->
+    <div class="main-container">
+
+        <!-- Main content goes here -->
+        <!-- =========================== Card Section 2 ======================= -->
+        <section class="notice-cards d-none mb-3">
+            <div class="row">
+                <div class="col-xl-4 col-xxl-2 col-md-4 col-sm-6">
+                    <div class="card border-0 rounded rounded-4 mb-3 mb-xxl-0">
+                        <div class="card-body d-flex p-3 pe-1">
+                            <div class="d-flex align-items-center">
+                                <div
+                                    class="me-4 me-sm-3 icon icon-shape bg-warning-light shadow-sm text-center rounded rounded-circle">
+                                    <!-- <i class="fi fi-rr-coins"></i> -->
+                                    <img src="./assets/images/img/image-2.png" alt="loading">
+                                </div>
+                                <div class="numbers">
+                                    <h5 class="fw-bolder text-nowrap mb-0">
+                                        10
+                                    </h5>
+                                    <p class="fs-7 text-secondary mb-0 text-capitalize fw-bold">New Orders</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-xxl-2 col-md-4 col-sm-6">
+                    <div class="card border-0 rounded rounded-4 mb-4 mb-xxl-0">
+                        <div class="card-body d-flex p-3 pe-1">
+                            <div class="d-flex align-items-center">
+                                <div
+                                    class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-circle">
+                                    <!-- <i class="fi fi-rr-coins"></i> -->
+                                    <img src="./assets/images/img/image-1.png" alt="green tick">
+                                </div>
+                                <div class="numbers">
+                                    <h5 class="fw-bolder text-nowrap mb-0">
+                                        25
+                                    </h5>
+                                    <p class="fs-7 text-secondary mb-0 text-capitalize fw-bold">All Orders</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-xxl-2 col-md-4 col-sm-6">
+                    <div class="card border-0 rounded rounded-4 mb-4 mb-xxl-0">
+                        <div class="card-body d-flex p-3 pe-1">
+                            <div class="d-flex align-items-center">
+                                <div
+                                    class="me-4 me-sm-3 icon icon-shape bg-primary-light shadow-sm text-center rounded rounded-circle">
+                                    <!-- <i class="fi fi-rr-coins"></i> -->
+                                    <img class="p-2" src="./assets/images/img/image-5.png" alt="user portrait">
+                                </div>
+                                <div class="numbers">
+                                    <h5 class="fw-bolder text-nowrap mb-0">
+                                        1,564
+                                    </h5>
+                                    <p class="fs-7 text-secondary mb-0 text-capitalize fw-bold">User Registrations</p>
+                                    <p class="fs-9 text-secondary mb-0 text-capitalize"><span
+                                            class="text-success fs-8 fw-bold">+12%</span> on this week</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-xxl-2 col-md-6 col-sm-6">
+                    <div class="card border-0 rounded rounded-4 mb-4 mb-xxl-0">
+                        <div class="card-body d-flex p-3 pe-1">
+                            <div class="d-flex align-items-center">
+                                <div
+                                    class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+                                    <!-- <i class="fi fi-rr-coins"></i> -->
+                                    <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                </div>
+                                <div class="numbers">
+                                    <h5 class="fw-bolder text-nowrap mb-0">
+                                        23
+                                    </h5>
+                                    <p class="fs-7 text-secondary mb-0 text-capitalize fw-bold">Kiosks</p>
+                                    <p class="fs-9 text-secondary mb-0 text-capitalize"><span
+                                            class="text-success fs-8 fw-bold">+12%</span> on this week</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-xxl-4 col-md-6 col-sm-12">
+                    <div class="card border-0 rounded rounded-4 mb-4 mb-xxl-0">
+                        <div class="card-body d-flex p-3 pe-1">
+                            <div class="d-flex w-50 align-items-center justify-content-between">
+
+                                <div class="numbers">
+                                    <h5 class="fw-bolder text-nowrap mb-0">
+                                        ₹60,090.00
+                                    </h5>
+                                    <p class="fs-7 text-secondary mb-0 text-capitalize fw-bold">Live Gold Price</p>
+                                </div>
+
+                                <div class="icon-shape live-gold-icon text-center position-relative">
+                                    <div
+                                        class="d-flex justify-content-center bg-success-light align-items-center g-1 position-absolute above-img-tag rounded rounded-1">
+                                        +15.80%</div>
+                                    <!-- <i class="fi fi-rr-coins"></i> -->
+                                    <img class="p-0" src="./assets/images/img/Graph-3.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================== Card Section 3 for GOLD, DIAMOND & Extra ======================= -->
+        <section class="notice-cards settings-cards mb-3">
+            <div class="row nav" id="settingsTab" role="tablist">
+                <div class="nav-item col-xl-4 col-md-4 col-sm-6">
+                    <a href="#home" class="m-0 p-0 nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                        role="tab" aria-controls="home" aria-selected="true">
+                        <div class="card border-0 rounded rounded-4 card-gold-link mb-4 mb-xxl-0">
+                            <div class="card-body d-flex p-3 pe-1">
+                                <div class="d-flex align-items-center">
+                                    <div
+                                        class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+                                        <img class="p-2" src="./assets/images/img/image-3.png" alt="Gold Icon">
+                                    </div>
+                                    <div class="numbers">
+                                        <h5 class="fw-bolder text-nowrap mb-0">GOLD</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item col-xl-4 col-md-4 col-sm-6">
+                    <a href="#profile" class="m-0 p-0 nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile"
+                        type="button" role="tab" aria-controls="profile" aria-selected="false">
+                        <div class="card border-0 rounded rounded-4 card-diamond-link mb-4 mb-xxl-0">
+                            <div class="card-body d-flex p-3 pe-1">
+                                <div class="d-flex align-items-center">
+                                    <div
+                                        class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+                                        <!-- <i class="fi fi-rr-coins"></i> -->
+                                        <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                    </div>
+                                    <div class="numbers">
+                                        <h5 class="fw-bolder text-nowrap mb-0">
+                                            DIAMOND
+                                        </h5>
+                                        <!-- <p class="fs-7 text-secondary mb-0 text-capitalize fw-bold">All Orders</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-item col-xl-4 col-md-4 col-sm-6">
+                    <a href="#contact" class="m-0 p-0 nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                        type="button" role="tab" aria-controls="contact" aria-selected="false">
+                        <div class="card border-0 rounded rounded-4 card-extra-link mb-4 mb-xxl-0">
+                            <div class="card-body d-flex p-3 pe-1">
+                                <div class="d-flex align-items-center">
+                                    <div
+                                        class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+                                        <!-- <i class="fi fi-rr-coins"></i> -->
+                                        <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                    </div>
+                                    <div class="numbers">
+                                        <h5 class="fw-bolder text-nowrap mb-0">
+                                            Extra
+                                        </h5>
+                                        <!-- <p class="fs-7 text-secondary mb-0 text-capitalize fw-bold">Kiosks</p> -->
+                                        <!-- <p class="fs-9 text-secondary mb-0 text-capitalize"><span
+                                            class="text-success fs-8 fw-bold">+12%</span> on this week</p> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="tab-content" id="settingsTabContent">
+                <div class="tab-pane show active fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <!-- Content for the GOLD tab -->
+                    <div class="card h-100 border-0 rounded rounded-4">
+                        <div class="row">
+                            <div class="col-xl-4 col-md-6 col-sm-6">
+                                <div class="card border-0 rounded rounded-4 card-gold-link">
+                                    <div class="card-body d-flex p-3 pe-1">
+                                        <div class="d-flex align-items-center">
+                                            <div
+                                                class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+    
+                                                <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                            </div>
+                                            <div class="numbers">
+                                                <h5 class="fw-bolder text-nowrap mb-0">
+                                                    GOLD Category
+                                                </h5>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6 col-sm-6">
+                                <div class="card border-0 rounded rounded-4 card-diamond-link">
+                                    <div class="card-body d-flex p-3 pe-1">
+                                        <div class="d-flex align-items-center">
+                                            <div
+                                                class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+    
+                                                <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                            </div>
+                                            <div class="numbers">
+                                                <h5 class="fw-bolder text-nowrap mb-0">
+                                                    GOLD Color
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6 col-sm-6">
+                                <div class="card border-0 rounded rounded-4 card-extra-link">
+                                    <div class="card-body d-flex p-3 pe-1">
+                                        <div class="d-flex align-items-center">
+                                            <div
+                                                class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+                                                <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                            </div>
+                                            <div class="numbers">
+                                                <h5 class="fw-bolder text-nowrap mb-0">
+                                                    GOLD Alias
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6 col-sm-6">
+                                <div class="card border-0 rounded rounded-4 card-gold-link">
+                                    <div class="card-body d-flex p-3 pe-1">
+                                        <div class="d-flex align-items-center">
+                                            <div
+                                                class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+    
+                                                <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                            </div>
+                                            <div class="numbers">
+                                                <h5 class="fw-bolder text-nowrap mb-0">
+                                                    GOLD Purity
+                                                </h5>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6 col-sm-6">
+                                <div class="card border-0 rounded rounded-4 card-diamond-link">
+                                    <div class="card-body d-flex p-3 pe-1">
+                                        <div class="d-flex align-items-center">
+                                            <div
+                                                class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+    
+                                                <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                            </div>
+                                            <div class="numbers">
+                                                <h5 class="fw-bolder text-nowrap mb-0">
+                                                    GOLD Matrix
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6 col-sm-6">
+                                <div class="card border-0 rounded rounded-4 card-extra-link mb-0">
+                                    <div class="card-body d-flex p-3 pe-1">
+                                        <div class="d-flex align-items-center">
+                                            <div
+                                                class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+                                                <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                            </div>
+                                            <div class="numbers">
+                                                <h5 class="fw-bolder text-nowrap mb-0">
+                                                    GOLD Rate & Markup
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <!-- Content for the PROFILE tab -->
+                    <div class="card h-100 border-0 rounded rounded-4">
+                        <div class="row">
+                            <div class="col-xxl-4 col-md-6 col-12">
+                                <div class="card border-0 rounded rounded-4 card-gold-link">
+                                    <div class="card-body d-flex p-3 pe-1">
+                                        <div class="d-flex align-items-center">
+                                            <div
+                                                class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+    
+                                                <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                            </div>
+                                            <div class="numbers">
+                                                <h5 class="fw-bolder text-nowrap mb-0">
+                                                    DIAMOND Quality
+                                                </h5>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-md-6 col-12">
+                                <div class="card border-0 rounded rounded-4 card-diamond-link">
+                                    <div class="card-body d-flex p-3 pe-1">
+                                        <div class="d-flex align-items-center">
+                                            <div
+                                                class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+    
+                                                <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                            </div>
+                                            <div class="numbers">
+                                                <h5 class="fw-bolder text-nowrap mb-0">
+                                                    DIAMOND Color
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-md-6 col-12">
+                                <div class="card border-0 rounded rounded-4 card-extra-link">
+                                    <div class="card-body d-flex p-3 pe-1">
+                                        <div class="d-flex align-items-center">
+                                            <div
+                                                class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+                                                <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                            </div>
+                                            <div class="numbers">
+                                                <h5 class="fw-bolder text-nowrap mb-0">
+                                                    DIAMOND Alias
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-md-6 col-12">
+                                <div class="card border-0 rounded rounded-4 card-diamond-link">
+                                    <div class="card-body d-flex p-3 pe-1">
+                                        <div class="d-flex align-items-center">
+                                            <div
+                                                class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+    
+                                                <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                            </div>
+                                            <div class="numbers">
+                                                <h5 class="fw-bolder text-nowrap mb-0">
+                                                    DIAMOND Price Table
+                                                </h5>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-md-6 col-12">
+                                <div class="card border-0 rounded rounded-4 card-diamond-link">
+                                    <div class="card-body d-flex p-3 pe-1">
+                                        <div class="d-flex align-items-center">
+                                            <div
+                                                class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+    
+                                                <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                            </div>
+                                            <div class="numbers">
+                                                <h5 class="fw-bolder text-nowrap mb-0">
+                                                    DIAMOND Settings
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-md-6 col-12">
+                                <div class="card border-0 rounded rounded-4 card-extra-link">
+                                    <div class="card-body d-flex p-3 pe-1">
+                                        <div class="d-flex align-items-center">
+                                            <div
+                                                class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+                                                <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                            </div>
+                                            <div class="numbers">
+                                                <h5 class="fw-bolder text-nowrap mb-0">
+                                                    DIAMOND Shapes
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-md-6 col-12">
+                                <div class="card border-0 rounded rounded-4 card-extra-link">
+                                    <div class="card-body d-flex p-3 pe-1">
+                                        <div class="d-flex align-items-center">
+                                            <div
+                                                class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+                                                <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                            </div>
+                                            <div class="numbers">
+                                                <h5 class="fw-bolder text-nowrap mb-0">
+                                                    DIAMOND Weight Tables
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    <!-- Content for the CONTACT tab -->
+                    <div class="card h-100 border-0 rounded rounded-4">
+                        <div class="row tab-pane-subcards">
+                            <div class="col-xl-6 col-md-6 col-sm-12">
+                                <div class="card border-0 rounded rounded-4 card-gold-link">
+                                    <div class="card-body d-flex p-3 pe-1">
+                                        <div class="d-flex align-items-center">
+                                            <div
+                                                class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+    
+                                                <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                            </div>
+                                            <div class="numbers">
+                                                <h5 class="fw-bolder text-nowrap mb-0">
+                                                    Home Banners
+                                                </h5>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-6 col-sm-12">
+                                <div class="card border-0 rounded rounded-4 card-diamond-link">
+                                    <div class="card-body d-flex p-3 pe-1">
+                                        <div class="d-flex align-items-center">
+                                            <div
+                                                class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+    
+                                                <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                            </div>
+                                            <div class="numbers">
+                                                <h5 class="fw-bolder text-nowrap mb-0">
+                                                    Taxes
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-6 col-sm-12">
+                                <div class="card border-0 rounded rounded-4 card-extra-link">
+                                    <div class="card-body d-flex p-3 pe-1">
+                                        <div class="d-flex align-items-center">
+                                            <div
+                                                class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+                                                <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                            </div>
+                                            <div class="numbers">
+                                                <h5 class="fw-bolder text-nowrap mb-0">
+                                                   Discount
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-6 col-sm-12">
+                                <div class="card border-0 rounded rounded-4 card-gold-link">
+                                    <div class="card-body d-flex p-3 pe-1">
+                                        <div class="d-flex align-items-center">
+                                            <div
+                                                class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+    
+                                                <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                            </div>
+                                            <div class="numbers">
+                                                <h5 class="fw-bolder text-nowrap mb-0">
+                                                    Making Charges
+                                                </h5>
+    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-md-6 col-sm-12">
+                                <div class="card border-0 rounded rounded-4 card-diamond-link">
+                                    <div class="card-body d-flex p-3 pe-1">
+                                        <div class="d-flex align-items-center">
+                                            <div
+                                                class="me-4 me-sm-3 icon icon-shape bg-success-light shadow-sm text-center rounded rounded-4">
+    
+                                                <img class="p-2" src="./assets/images/img/image-3.png" alt="">
+                                            </div>
+                                            <div class="numbers">
+                                                <h5 class="fw-bolder text-nowrap mb-0">
+                                                    Genders
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- =========================== recent order and top selling products ========================= -->
+        <section class="d-none recent-orders-and-top-selling-products-section pt-0">
+            <div class="row mb-4 pt-0 removable">
+                <!-- dynamic datatable -->
+                <div class="col-lg-8 col-xl-7 pt-0">
+                    <div class="card table-card rounded rounded-4 border-0 mb-4">
+                        <div class="card-header rounded rounded-4 border-0 bg-white p-3 pb-0">
+                            <h6 class="mb-0">Available Backups</h6>
+                        </div>
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="table-responsive px-3 mt-2">
+                                <table id="backup-table"
+                                    class="table recent-order-table align-items-center border-none mb-0">
+                                    <thead class="sticky-top">
+                                        <tr>
+                                            <th class="ps-3 text-secondary fs-6 fw-bold opacity-7">No.</th>
+                                            <th class="ps-3 text-secondary fs-6 fw-bold opacity-7">Name</th>
+                                            <th class="text-center text-secondary fs-6 fw-bold opacity-7 ps-2">Download
+                                            </th>
+                                            <th class="text-center text-secondary fs-6 fw-bold opacity-7">Delete</th>
+                                            <!-- <th class="text-center text-secondary fs-6 fw-bold opacity-7">Total amount
+                                            </th> -->
+                                            <!-- <th class="text-secondary opacity-7"></th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-nowrap">
+                                        <!-- this is dynamically generating -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- top selling products -->
+                <div class="col-lg-4 col-xl-5">
+                    <div class="card rounded rounded-4 product-card border-0 mb-4">
+                        <div class="card-header sticky-top rounded rounded-4 border-0 bg-white p-3">
+                            <h6 class="mb-0">Shortcuts</h6>
+                        </div>
+                        <img class="bottom-line" src="./assets/images/img/line-48.svg" alt="">
+
+                        <div class="card-body px-0 pt-0 pb-2">
+                            <div class="card m-0 p-0 border-0 rounded rounded-4">
+                                <!-- <img class="bottom-line m-0 p-0" src="./assets/images/img/line-48.svg" alt=""> -->
+                                <a class="text-decoration-none text-secondary py-2" href="#">
+                                    <div class="card-body my-0 py-0 d-flex">
+                                        <div class="d-flex align-items-center">
+                                            <div class="product-image-small mb-2 me-4">
+                                                <img width="58" height="58"
+                                                    src="./assets/images/logo-icons/change-password.jpg"
+                                                    alt="external-change-password-basic-ui-elements-2.3-sbts2018-outline-sbts2018" />
+                                            </div>
+                                            <div class="pt-2 me-4 me-sm-3 me-md-4 numbers">
+                                                <h6 class="text-nowrap fw-normal">
+                                                    Change Password
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <img class="bottom-line" src="./assets/images/img/line-48.svg" alt="">
+                            </div>
+                            <div class="card border-0 rounded rounded-4">
+                                <a class="text-decoration-none text-secondary py-2" href="#">
+                                    <!-- <img class="bottom-line" src="./assets/images/img/line-48.svg" alt=""> -->
+                                    <div class="card-body my-0 py-0 d-flex">
+                                        <div class="d-flex align-items-center">
+                                            <div class="product-image-small mb-2 me-4">
+                                                <img width="58" height="58"
+                                                    src="./assets/images/logo-icons/change-password.jpg"
+                                                    alt="external-change-password-basic-ui-elements-2.3-sbts2018-outline-sbts2018" />
+                                            </div>
+                                            <div class="pt-2 me-4 me-sm-3 me-md-4 numbers">
+                                                <h6 class="text-nowrap fw-normal">
+                                                    Create New Backup
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <img class="bottom-line" src="./assets/images/img/line-48.svg" alt="">
+                            </div>
+                            <div class="card border-0 rounded rounded-4">
+                                <a class="text-decoration-none text-secondary py-2" href="#">
+                                    <!-- <img class="bottom-line" src="./assets/images/img/line-48.svg" alt=""> -->
+                                    <div class="card-body my-0 py-0 d-flex">
+                                        <div class="d-flex align-items-center">
+                                            <div class="product-image-small mb-2 me-4">
+                                                <img width="58" height="58"
+                                                    src="./assets/images/logo-icons/change-password.jpg"
+                                                    alt="external-change-password-basic-ui-elements-2.3-sbts2018-outline-sbts2018" />
+                                            </div>
+                                            <div class="pt-2 me-4 me-sm-3 me-md-4 numbers">
+                                                <h6 class="text-nowrap fw-normal">
+                                                    Help
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <img class="bottom-line" src="./assets/images/img/line-48.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Script.js -->
+    <!-- <script src="./assets/js/index.js"></script> -->
+    <!-- <script src="./assets/js/sidebar.js"></script> -->
+    <!-- <script src="https://demos.creative-tim.com/soft-ui-dashboard/assets/js/plugins/Chart.extension.js"></script> -->
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="./assets/plugins/dataTable-1.13.6.js"></script>
+    <script src="./assets/plugins/dataTable-bootstrap-3.js"></script>
+    <!-- <script src="./assets/js/recentOrders.js"></script> -->
+    <script src="./assets/js/backupTable.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"></script>
+
+    <!-- Bootstrap JS (Make sure to include Popper.js and Bootstrap JS before closing body tag) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // -----Country Code Selection
+        $("#customerPhone").intlTelInput({
+            initialCountry: "in",
+            separateDialCode: true,
+            // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+        });
+        // -----Country Code Selection
+        $("#shippingPhone").intlTelInput({
+            initialCountry: "in",
+            separateDialCode: true,
+            // utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.4/js/utils.js"
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            // Click event for the 'Submit' button
+            $("#btnSubmit").click(function () {
+                // Specify the URL of the new HTML page you want to open
+                var newPageUrl = "1.html";
+
+                // Redirect to the new page
+                window.location.href = newPageUrl;
+            });
+        });
+    </script>
+    <!-- <script>
+        $(document).ready(function () {
+            $(".card-gold-link").click(function () {
+                var shiftUrl = "settings.html";
+                window.location.href = shiftUrl;
+            })
+            $(".card-diamond-link").click(function () {
+                var shiftUrl = "settings.html";
+                window.location.href = shiftUrl;
+            })
+            $(".card-extra-link").click(function () {
+                var shiftUrl = "settings.html";
+                window.location.href = shiftUrl;
+            })
+        })
+    </script> -->
+
+</body>
+
+</html>
