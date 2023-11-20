@@ -1196,6 +1196,7 @@ div.dataTables_wrapper div.dataTables_filter{
 /* css replacements ends here */
 
 /* new changes */
+/* settings.html */
 .product-image-small{
   height: 20px;
   width: 20px;
@@ -1222,12 +1223,7 @@ div.dataTables_wrapper div.dataTables_filter{
   z-index: 100;
 }
 
-/* .tab-pane-subcards .card:hover{
-  background-color: var(--input-default-bg);
-  box-shadow: var(--shadow--extra-sm-inset-black);
-  cursor: grab;
-} */
-
+/* shadow for tab-pane section */
 /* .settings-cards .tab-content .tab-pane.show.active{
   background-color: var(--input-default-bg);
   box-shadow: var(--shadow--extra-sm);
