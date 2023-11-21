@@ -3,19 +3,19 @@
 function createTableRow(data) {
     var row = document.createElement('tr');
     row.innerHTML = `
-        <td class="align-middle">
+        <td class="align-middle border border-1">
             <p class="text-xs text-center ps-2 fw-bold mb-0">${data.goldNo}</p>
         </td>
-        <td class="align-middle">
+        <td class="align-middle border border-1">
         <p class="text-xs ps-2 fw-bold mb-0">${data.goldCategory}</p>
         </td>
-        <td class="align-middle">
+        <td class="align-middle border border-1">
             <p class="text-xs text-wrap fw-bold mb-0">${data.goldCategoryDescription}</p>
         </td>
-        <td class="align-middle text-center text-sm">
+        <td class="align-middle text-center text-sm border border-1">
             <span class="badge badge-sm"><div class="btn-group" role="group" aria-label="Basic mixed styles example">
             <button type="button" class="btn btn-primary">View</button>
-            <button type="button" class="btn btn-success">Edit</button>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#editCategoryModal" class="btn btn-success">Edit</button>
             <button type="button" class="btn btn-danger">Delete</button>
           </div></span>
         </td>

@@ -1236,6 +1236,33 @@ div.dataTables_wrapper div.dataTables_filter{
   width: 100%;
 }
 
+/* category section-page */
+.category-table .table-card {
+  max-height: 550px;
+  overflow: auto;
+}
+
+.settings-cards .tab-content .card .card{
+  height: 60px;
+}
+
+.settings-cards .tab-content .card .card .icon-shape{
+  height: 40px;
+  width: 40px;
+}
+
+.settings-cards .tab-content .card .card img{
+  /* background-color: red; */
+  height: 40px;
+  width: 40px;
+}
+
+/* edit category modals */
+.edit-category-modal .modal-content{
+  width: 100%;
+  max-width: 100%;
+}
+
 /* ======================= Media Query =========================== */
 /* ======================= Media Query =========================== */
 /* ======================= Media Query =========================== */
