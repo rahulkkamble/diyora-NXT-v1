@@ -2,30 +2,55 @@
     {
         "goldNo": "1",
         "goldCategory": "14k",
+        "goldAlias": "14KT Rose Gold",
+        "goldColor": "Rose Gold",
+        "goldColorDescription": "Rose Gold descriptional text",
+        "goldAliasCode": "AL1212",
+        "goldAliasDescription": "Gold Alias Description",
         "goldCategoryDescription": "here is description",
         "downloadLink": "https://img.icons8.com/ios/50/ring-front-view.png"
     }, 
     {
         "goldNo": "2",
         "goldCategory": "16k 650",
+        "goldAlias": "16KT Yellow Gold",
+        "goldColor": "Yellow Gold",
+        "goldColorDescription": "Yellow Gold descriptional text",
+        "goldAliasCode": "AL1212",
+        "goldAliasDescription": "Gold Alias Description",
         "goldCategoryDescription": "here is description, here is description, here is descriptionhere is descriptionhere is descriptionhere is descriptionhere is descriptionhere is descriptionhere is description",
         "downloadLink": "https://img.icons8.com/ios/50/ring-front-view.png"
     },
     {
         "goldNo": "3",
         "goldCategory": "18k 750",
+        "goldAlias": "18KT White Gold",
+        "goldColor": "White Gold",
+        "goldColorDescription": "White Gold descriptional text",
+        "goldAliasCode": "AL1212",
+        "goldAliasDescription": "Gold Alias Description",
         "goldCategoryDescription": "here is description",
         "downloadLink": "https://img.icons8.com/ios/50/ring-front-view.png"
     },
     {
         "goldNo": "4",
         "goldCategory": "20k",
+        "goldAlias": "20KT Rose Gold",
+        "goldColor": "Rose Gold",
+        "goldColorDescription": "Rose Gold descriptional text",
+        "goldAliasCode": "AL1212",
+        "goldAliasDescription": "Gold Alias Description Gold Alias Description Gold Alias Description Gold Alias Description Gold Alias Description Gold Alias Description",
         "goldCategoryDescription": "here is description",
         "downloadLink": "https://img.icons8.com/ios/50/ring-front-view.png"
     },
     {
         "goldNo": "5",
         "goldCategory": "22k",
+        "goldAlias": "22KT Two Tone Gold",
+        "goldColor": "Two Tone Gold",
+        "goldColorDescription": "Two Tone Gold descriptional text",
+        "goldAliasCode": "AL1212",
+        "goldAliasDescription": "Gold Alias Description",
         "goldCategoryDescription": "here is description",
         "downloadLink": "https://img.icons8.com/ios/50/ring-front-view.png"
     }

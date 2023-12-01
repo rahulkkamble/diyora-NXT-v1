@@ -1264,6 +1264,10 @@ div.dataTables_wrapper div.dataTables_filter{
   max-width: 100%;
 }
 
+.table-card .card-header{
+  z-index: 1001;
+}
+
 .edit-form-gold .edit-form-gold-body .removable{
   position: relative;
 }

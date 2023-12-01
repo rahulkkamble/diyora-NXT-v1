@@ -53,7 +53,7 @@ async function processData2() {
             }
         });
         const entrySelectBox = document.querySelector('div.dataTables_wrapper div.dataTables_length select');
-        entrySelectBox.style.padding = '0.694rem';
+        // entrySelectBox.style.padding = '0.694rem';
     } catch (error) {
         console.error('Error fetching data:', error);
     }
