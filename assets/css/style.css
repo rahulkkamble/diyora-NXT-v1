@@ -1258,10 +1258,24 @@ div.dataTables_wrapper div.dataTables_filter{
 }
 
 /* edit category modals */
+/* edit category modals */
 .edit-category-modal .modal-content{
   width: 100%;
   max-width: 100%;
 }
+
+.edit-form-gold .edit-form-gold-body .removable{
+  position: relative;
+}
+
+.edit-form-gold-body .removable .close-btn-in-form img{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* edit category modals closing */
+/* edit category modals closing */
 
 /* ======================= Media Query =========================== */
 /* ======================= Media Query =========================== */
