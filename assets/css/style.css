@@ -401,6 +401,12 @@ body {
 .list-icon .sidebar-icon-outside:focus {
   cursor: pointer;
 }
+.list-icon.active .sidebar-icon-outside.invert-img img,
+.list-icon .sidebar-icon-outside.invert-img:hover img,
+.list-icon .sidebar-icon-outside.invert-img:active img,
+.list-icon .sidebar-icon-outside.invert-img:focus img {
+  filter: invert(1);
+}
 
 /* .list-icon a::before {
   content: "";
@@ -1186,8 +1192,8 @@ div.dataTables_wrapper div.dataTables_filter{
 }
 
 #addCustomerForm .form-check-input[type=checkbox] {
-  border-radius: 1.5em;
-  width: 40px;
+  border-radius: .5em;
+  width: 28px;
   height: 20px;
   /* background: #5570F11F; */
   /* border: none; */
@@ -1277,9 +1283,16 @@ div.dataTables_wrapper div.dataTables_filter{
   right: 0;
   top: 0;
 }
+/* edit category modals closing */
+/* edit category modals closing */
 
-/* edit category modals closing */
-/* edit category modals closing */
+/* admin product page - tag */
+  .table-tab-content .table-card{
+    height: 100%;
+  }
+
+
+/* admin product page - tag */
 
 /* ======================= Media Query =========================== */
 /* ======================= Media Query =========================== */
