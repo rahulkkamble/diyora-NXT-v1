@@ -391,7 +391,10 @@ body {
   padding: .85rem !important;
 }
 
-.list-icon.active .sidebar-icon-outside {
+.list-icon.active .sidebar-icon-outside,
+.list-icon .sidebar-icon-outside:hover,
+.list-icon .sidebar-icon-outside:active,
+.list-icon .sidebar-icon-outside:focus {
   background-color: var(--bg-main);
 }
 
@@ -405,7 +408,7 @@ body {
 .list-icon .sidebar-icon-outside.invert-img:hover img,
 .list-icon .sidebar-icon-outside.invert-img:active img,
 .list-icon .sidebar-icon-outside.invert-img:focus img {
-  filter: invert(1);
+  filter: invert(1) brightness(100);
 }
 
 /* .list-icon a::before {

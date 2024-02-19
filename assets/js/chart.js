@@ -44,18 +44,6 @@ if (document.querySelector("#chart-line")) {
         data: salesData.map((data) => data.sales),  /* points with respect to y axis */
         maxBarThickness: 6
       },
-        // {
-        //   label: "Websites",
-        //   tension: 0.4,
-        //   borderWidth: 0,
-        //   pointRadius: 0,
-        //   borderColor: "#3A416F",
-        //   borderWidth: 3,
-        //   backgroundColor: gradientStroke2,
-        //   fill: true,
-        //   data: [30, 90, 40, 140, 290, 290, 340, 230, 400, 450],
-        //   maxBarThickness: 6
-        // },
       ],
     },
     options: {
