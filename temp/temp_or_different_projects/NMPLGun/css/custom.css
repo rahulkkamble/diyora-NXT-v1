@@ -174,3 +174,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .textarea-small{
   height: 80px;
 }
+
+.middle{
+  height: 35px;
+  margin-top: auto ;
+  margin-bottom: auto ;
+}
+
+.booking-form input,
+.booking-form label,
+.booking-form select
+{
+  margin-bottom: 10px;
+}
