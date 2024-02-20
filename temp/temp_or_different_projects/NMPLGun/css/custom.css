@@ -130,13 +130,23 @@
   transition: 0.3s;
 }
 
-@media screen and (max-width: 991px) {
+.pt-3{
+  padding-top: 1rem !important;
+}
+
+@media screen and (min-width: 992px) {
+  .pt-lg-0 {
+    padding-top: 0rem !important;
+  }
+}
+
+@media screen and (max-width: 991px) {  /* optimized */
   #home h1 {
     font-size: 120px;
   }
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 769px) {  /* optimized */
   #home h1 {
     font-size: 95px;
   }
@@ -157,22 +167,28 @@
   }
 }
 
+/* from coming soon to book now/enquire now - css edits */
 
-select option {
-  color: #999;
-  background: none;
-  padding: 0 20px;
-  float: left;
-  height: 50px;
-  border: 1px solid #555;
-  border-radius: 25px;
-  transition: all .15s ease;
-  line-height: 1.2;
-  letter-spacing: .025em;
-  display: block;
-  margin-bottom: 20px;
-  font-size: 12px;
-  font-weight: 400
+select#lethal_pistols{
+  /* padding-right: 10px; */
+  appearance: none;
+  background-image: url('../images/down-arrow-white.png');
+  background-repeat: no-repeat;
+  background-position: right 15px center; /* Adjust position of arrow icon */
+  background-size: 12%;
+}
+
+#lethal_pistols option {
+  /* Option styles here */
+  margin: .25rem .5rem;
+  padding: .25rem .5rem;
+  border-radius: 20px;
+  color: #fff;
+  background-color: black;
+}
+
+#lethal_pistols option:checked {
+  background-color: #00000099;
 }
 
 .w-100{
@@ -205,4 +221,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .booking-form textarea
 {
   margin-bottom: 10px;
+}
+
+.ps-5{
+  padding-left: 3rem !important;
 }
