@@ -130,15 +130,33 @@
   transition: 0.3s;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 991px) {
   #home h1 {
-    font-size: 100px;
-  }
-
-  #home h2 {
-    font-size: 50px;
+    font-size: 120px;
   }
 }
+
+@media screen and (max-width: 769px) {
+  #home h1 {
+    font-size: 95px;
+  }
+  .middle {
+    line-height: 2;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #home h1 {  /* change for long heading */
+    /* font-size: 100px; */
+    font-size: 15vw;
+  }
+
+  #home h2 {  /* change for as compared to h1 */
+    /* font-size: 50px; */
+    font-size: 11vw;
+  }
+}
+
 
 select option {
   color: #999;
